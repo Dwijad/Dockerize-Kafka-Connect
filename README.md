@@ -12,14 +12,14 @@ The image is available directly from [Docker Hub](https://hub.docker.com/r/wurst
 
 ### Usage
 #### Use case - 1
-
+You want kafka connect worker 
 https://github.com/1ambda/docker-kafka-connect
 https://github.com/SAP/kafka-connect-sap
 https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4MDY1OTg1NCw5OTExMTMxNjQsMjAxND
+eyJoaXN0b3J5IjpbLTg0MjE1MTE4NSw5OTExMTMxNjQsMjAxND
 EyMzc2NSwtODc4NzcxMDE3LC00ODI0Mjk2NDcsNzE5MjA1MjYw
 XX0=
 -->
