@@ -3,11 +3,11 @@
 Build docker image for secured confluent kafka Connect worker in your local docker environment with Debzeium MySQL connector and JDBC source/sink connector. Subsequently deploy the kafka connect worker in kubernetes cluster in a distributed way. 
 
 ### Prerequisite
- - You have a local kafka cluster running in PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL mode.
+ - You have a local kafka cluster running in any of the PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL mode.
  -  You have a schema registry server running with/without SSL mode.
  -  You want to convert data for Kafka Connect to and from in Avro format.
- - No other listener mode like PLAINTEXT, SSL, SSL_PLAINTEXT configured in kafka broker will not work.
- -  However, a modification in the start script 
+ -  For testing query based CDC 
+
 
 https://github.com/1ambda/docker-kafka-connect
 https://github.com/SAP/kafka-connect-sap
@@ -15,6 +15,6 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5ODg5MTUzOCwtODc4NzcxMDE3LC00OD
+eyJoaXN0b3J5IjpbLTY3MzYyMzg5NSwtODc4NzcxMDE3LC00OD
 I0Mjk2NDcsNzE5MjA1MjYwXX0=
 -->
