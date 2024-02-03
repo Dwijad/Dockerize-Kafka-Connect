@@ -6,7 +6,7 @@ Build docker image for secured confluent kafka Connect worker in your local dock
  - You have a local kafka cluster running in any of the PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL mode.
  -  You have a schema registry server running with/without SSL mode.
  -  You want to convert data for Kafka Connect to and from in Avro format.
- -  For testing query based CDC 
+ -  For testing query based CDC connector a MySQL DB server is running.
 
 
 https://github.com/1ambda/docker-kafka-connect
@@ -15,6 +15,6 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3MzYyMzg5NSwtODc4NzcxMDE3LC00OD
-I0Mjk2NDcsNzE5MjA1MjYwXX0=
+eyJoaXN0b3J5IjpbLTEzNDkxODQ4MzMsLTg3ODc3MTAxNywtND
+gyNDI5NjQ3LDcxOTIwNTI2MF19
 -->
