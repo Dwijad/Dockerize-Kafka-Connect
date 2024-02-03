@@ -42,15 +42,17 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     
     Schema registry is running in https
     $ docker run -d --name=connect-worker-1 -e BOOTSTRAP_SERVERS="kafka:9092" -e SECURITY_PROTOCOL="SASL_PLAINTEXT" -e REST_HOST_NAME="connect-worker-1"  -e LISTENER_PORT="8081" -e REST_ADVERTISED_HOST_NAME="connect-worker-1"  -e REST_ADVERTISED_LISTENER="http" -e SCHEMA_REGISTRY_MODE="HTTPS" -e BROKER_LISTENER_MODE="SASL_PLAINTEXT"  -e KAFKA_JMX_HOSTNAME="connect-worker-1" -e KAFKA_JMX_PORT="8080" -e SCHEMA_REGISTRY_URL="https://sr-service-https.default.svc:8082" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=connect-worker-1 -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml" -e SASL_USER=user1 -e SASL_PASSWORD=password -e KEY_CONVERTER_SCHEMA_REGISTRY_URL="https://sr-service-https.default.svc:8082" -e VALUE_CONVERTER_SCHEMA_REGISTRY_URL="https://sr-service-https.default.svc:8082" dwijad/kafka-connect:latest
-        
+
+### Environment variable
+ 
 https://github.com/1ambda/docker-kafka-connect
 https://github.com/SAP/kafka-connect-sap
 https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjM3OTI1MjEsLTExOTgwMzUyOTAsLT
-U4MTk4OTg0NCwxMTM5NjkzMDYxLDI3ODU0MzgxNCw5MjkwNjM2
-MTksOTkxMTEzMTY0LDIwMTQxMjM3NjUsLTg3ODc3MTAxNywtND
-gyNDI5NjQ3LDcxOTIwNTI2MF19
+eyJoaXN0b3J5IjpbOTE5NDE4ODc3LC0yMDIzNzkyNTIxLC0xMT
+k4MDM1MjkwLC01ODE5ODk4NDQsMTEzOTY5MzA2MSwyNzg1NDM4
+MTQsOTI5MDYzNjE5LDk5MTExMzE2NCwyMDE0MTIzNzY1LC04Nz
+g3NzEwMTcsLTQ4MjQyOTY0Nyw3MTkyMDUyNjBdfQ==
 -->
