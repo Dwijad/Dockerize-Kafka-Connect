@@ -9,6 +9,11 @@ Build docker image for secured kafka Connect worker in your local docker environ
  - No other listener mode like PLAINTEXT, SSL, SSL_PLAINTEXT configured in kafka broker will not work.
  -  However, a modification in the start script 
 
+https://github.com/1ambda/docker-kafka-connect
+https://github.com/SAP/kafka-connect-sap
+https://github.com/debezium/debezium
+https://github.com/wurstmeister/kafka-docker
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE5MjA1MjYwXX0=
+eyJoaXN0b3J5IjpbLTQ4MjQyOTY0Nyw3MTkyMDUyNjBdfQ==
 -->
