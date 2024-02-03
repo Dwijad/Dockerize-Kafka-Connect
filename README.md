@@ -8,6 +8,7 @@ The image is available directly from [Docker Hub](https://hub.docker.com/r/wurst
  -  You have a schema registry server running with/without SSL mode.
  -  You want to convert data for Kafka Connect to and from in Avro format.
  -  For testing query based CDC connector a MySQL DB server is running.
+ -  For rebuilding Docker image, install docker with buildx plugin as described [here](https://docs.docker.com/engine/install/ubuntu/).
 
 
 https://github.com/1ambda/docker-kafka-connect
@@ -16,6 +17,6 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY0OTk2OTg1LC04Nzg3NzEwMTcsLTQ4Mj
+eyJoaXN0b3J5IjpbODMxNzI2NDI4LC04Nzg3NzEwMTcsLTQ4Mj
 QyOTY0Nyw3MTkyMDUyNjBdfQ==
 -->
