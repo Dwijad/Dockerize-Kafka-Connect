@@ -12,7 +12,9 @@ The image is available directly from [Docker Hub](https://hub.docker.com/r/wurst
 
 ### Usage
 #### Use case - 1
-Run Kafka connect worker with Kafka broker listener configured in PLAINTEXT mode. The schema registry is running 
+Run Kafka connect worker with Kafka broker listener configured in PLAINTEXT mode. The schema registry is running in secured/non-secured mode.
+
+
 
 https://github.com/1ambda/docker-kafka-connect
 https://github.com/SAP/kafka-connect-sap
@@ -20,7 +22,7 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjgyMzk0Nyw5OTExMTMxNjQsMjAxND
+eyJoaXN0b3J5IjpbMTA5Njk0MDg4Niw5OTExMTMxNjQsMjAxND
 EyMzc2NSwtODc4NzcxMDE3LC00ODI0Mjk2NDcsNzE5MjA1MjYw
 XX0=
 -->
