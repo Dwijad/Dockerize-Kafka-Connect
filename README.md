@@ -10,13 +10,15 @@ The image is available directly from [Docker Hub](https://hub.docker.com/r/wurst
  -  For testing query based CDC connector a MySQL DB server is configured and running.
  -  For rebuilding Docker image, install docker with buildx plugin as described [here](https://docs.docker.com/engine/install/ubuntu/).
 
-Rebuil
+### Usage
+#### Use cae
 https://github.com/1ambda/docker-kafka-connect
 https://github.com/SAP/kafka-connect-sap
 https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTkxMTEzMTY0LDIwMTQxMjM3NjUsLTg3OD
-c3MTAxNywtNDgyNDI5NjQ3LDcxOTIwNTI2MF19
+eyJoaXN0b3J5IjpbLTk2OTcwMzIxNSw5OTExMTMxNjQsMjAxND
+EyMzc2NSwtODc4NzcxMDE3LC00ODI0Mjk2NDcsNzE5MjA1MjYw
+XX0=
 -->
