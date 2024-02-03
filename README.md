@@ -13,8 +13,8 @@ https://github.com/1ambda/docker-kafka-connect
 https://github.com/SAP/kafka-connect-sap
 https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
-https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html
+https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MTUwOTUzMywtNDgyNDI5NjQ3LDcxOT
+eyJoaXN0b3J5IjpbLTg3ODc3MTAxNywtNDgyNDI5NjQ3LDcxOT
 IwNTI2MF19
 -->
