@@ -11,8 +11,8 @@ The image is available directly from [Docker Hub](https://hub.docker.com/r/wurst
  -  For rebuilding Docker image, install docker with buildx plugin as described [here](https://docs.docker.com/engine/install/ubuntu/).
 
 ### Usage
-#### Usecase - 1
-Kafka connect worker with Kafka broker listener configured in PLAINTEXT mode
+#### Use case - 1
+Kafka connect worker with Kafka broker listener configured in PLAINTEXT mode.
 
 https://github.com/1ambda/docker-kafka-connect
 https://github.com/SAP/kafka-connect-sap
@@ -20,7 +20,7 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0NDgyMTA5NCw5OTExMTMxNjQsMjAxND
-EyMzc2NSwtODc4NzcxMDE3LC00ODI0Mjk2NDcsNzE5MjA1MjYw
-XX0=
+eyJoaXN0b3J5IjpbLTE4NTg4MTkxMDAsOTkxMTEzMTY0LDIwMT
+QxMjM3NjUsLTg3ODc3MTAxNywtNDgyNDI5NjQ3LDcxOTIwNTI2
+MF19
 -->
