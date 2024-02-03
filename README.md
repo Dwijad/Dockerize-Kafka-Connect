@@ -6,9 +6,9 @@ Build docker image for secured kafka Connect worker in your local docker environ
  -  You want to leverage your local kafka cluster running in SSL_SASL mode.
  -  You have a schema registry server running in SSL mode.
  -  You want to convert data for Kafka Connect to and from in Avro format.
- - No other listener mode like PLAINTEXT, SSL, SSL_PLAINTEXT will not work.
+ - No other listener mode like PLAINTEXT, SSL, SSL_PLAINTEXT configured in kafka broker will not work.
  -  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1OTE0MzgzOF19
+eyJoaXN0b3J5IjpbNzIyODMwNDI4XX0=
 -->
