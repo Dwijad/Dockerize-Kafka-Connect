@@ -1,9 +1,9 @@
 # # Dockerize Kafka Connect Worker
 
-Kafka Connect distributed Worker setup 
+Kafka Connect distributed Worker setup with Debzeium MySQL connector and JDBC source/sink connector.
 
 
-# Files
+## This connector is for you if
 
 StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
 
@@ -142,5 +142,5 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5OTYxMzEyXX0=
+eyJoaXN0b3J5IjpbLTU1NzIzMDA2MF19
 -->
