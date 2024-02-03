@@ -44,14 +44,32 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     $ docker run -d --name=connect-worker-1 -e BOOTSTRAP_SERVERS="kafka:9092" -e SECURITY_PROTOCOL="SASL_PLAINTEXT" -e REST_HOST_NAME="connect-worker-1"  -e LISTENER_PORT="8081" -e REST_ADVERTISED_HOST_NAME="connect-worker-1"  -e REST_ADVERTISED_LISTENER="http" -e SCHEMA_REGISTRY_MODE="HTTPS" -e BROKER_LISTENER_MODE="SASL_PLAINTEXT"  -e KAFKA_JMX_HOSTNAME="connect-worker-1" -e KAFKA_JMX_PORT="8080" -e SCHEMA_REGISTRY_URL="https://sr-service-https.default.svc:8082" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=connect-worker-1 -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml" -e SASL_USER=user1 -e SASL_PASSWORD=password -e KEY_CONVERTER_SCHEMA_REGISTRY_URL="https://sr-service-https.default.svc:8082" -e VALUE_CONVERTER_SCHEMA_REGISTRY_URL="https://sr-service-https.default.svc:8082" dwijad/kafka-connect:latest
 
 ### Docker environment variable
-    Name: UID
+   Name: UID
     Default value: 1000
     Description: User ID used to build Dockerfile
 
 
-Name: GID
-Default value: 1000
-Description: Group ID used to build Dockerfile
+   Name: GID
+   Default value: 1000
+   Description: Group ID used to build Dockerfile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     UID=1000 \
     GID=1000 \
@@ -149,9 +167,9 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTM3MTA2MTYsLTIxOTQ2MDY1NCwtMj
-AyMzc5MjUyMSwtMTE5ODAzNTI5MCwtNTgxOTg5ODQ0LDExMzk2
-OTMwNjEsMjc4NTQzODE0LDkyOTA2MzYxOSw5OTExMTMxNjQsMj
-AxNDEyMzc2NSwtODc4NzcxMDE3LC00ODI0Mjk2NDcsNzE5MjA1
-MjYwXX0=
+eyJoaXN0b3J5IjpbMTM1NjIxMTg2MiwtMjE5NDYwNjU0LC0yMD
+IzNzkyNTIxLC0xMTk4MDM1MjkwLC01ODE5ODk4NDQsMTEzOTY5
+MzA2MSwyNzg1NDM4MTQsOTI5MDYzNjE5LDk5MTExMzE2NCwyMD
+E0MTIzNzY1LC04Nzg3NzEwMTcsLTQ4MjQyOTY0Nyw3MTkyMDUy
+NjBdfQ==
 -->
