@@ -20,6 +20,10 @@ If your kafka broker is running on SASL_SSL or SSL mode then you have to rebuild
     &&  ADD  --chown=kafka:kafka  --chmod=755  your-local-folder/kafka.keystore.jks $KAFKA_HOME/script/ca \
     &&  ADD  --chown=kafka:kafka  --chmod=755  your-local-folder/kafka.truststore.jks $KAFKA_HOME/script/ca
 
+Build the image
+
+    $ DOCKER_BUILDKIT=1 docker buildx build -t dwijad/kafka-connect:latest --no-cache --progress=plain .
+
 Now you can run the kafka connect docker image when the broker is using either of the SASL_SSL or SSL mode by using use case - II or use case IV.
 
 #### Use case - I
@@ -412,11 +416,11 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjIxMTEzODksLTEyOTkzMTI2MzIsMT
-U3OTU1ODc1OCw4MTIwNDA4MzMsMTM0MjExNzk5MiwtMTE2NzU3
-MDEwOSwyMzE4NDU2MTAsLTE4Mzg2Mzk4NTAsLTg0MTk3MDQ4OC
-w3MDQxMzE0MTcsLTExMDU2NDI2MzYsNzAxMDMyNjk1LC0xNTgy
-MDA4MzAsNzU4MjMzMzUxLC0xMzc3MTA1NjE1LDIwNDU4NjM0Mi
-wxMDkzMzg4NDE0LDMzNjUwMjQ2MywxODk4MzEwNTQ0LC0yMTk0
-NjA2NTRdfQ==
+eyJoaXN0b3J5IjpbLTE4MTgwOTY5MjMsLTE4NjIxMTEzODksLT
+EyOTkzMTI2MzIsMTU3OTU1ODc1OCw4MTIwNDA4MzMsMTM0MjEx
+Nzk5MiwtMTE2NzU3MDEwOSwyMzE4NDU2MTAsLTE4Mzg2Mzk4NT
+AsLTg0MTk3MDQ4OCw3MDQxMzE0MTcsLTExMDU2NDI2MzYsNzAx
+MDMyNjk1LC0xNTgyMDA4MzAsNzU4MjMzMzUxLC0xMzc3MTA1Nj
+E1LDIwNDU4NjM0MiwxMDkzMzg4NDE0LDMzNjUwMjQ2MywxODk4
+MzEwNTQ0XX0=
 -->
