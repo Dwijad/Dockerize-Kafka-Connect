@@ -82,8 +82,14 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Default value: false
     Description: Exclude/Include the verbose schema information(Value) from each record.
     
-
-    OFFSET_STORAGE_TOPIC \
+    Name: OFFSET_STORAGE_TOPIC
+    Default value: connect-offsets
+    Description: The name of the topic where connector and task configuration offsets are stored.
+    
+    Name: CONFIG_STORAGE_TOPIC
+    Default value: connect-configs
+    Description: The name of the topic where connector and task configuration offsets are stored.
+    
     CONFIG_STORAGE_TOPIC \
     STATUS_STORAGE_TOPIC \
     REST_HOST_NAME \
@@ -170,9 +176,9 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4Nzg4MjU4MywxMDkzMzg4NDE0LDMzNj
-UwMjQ2MywxODk4MzEwNTQ0LC0yMTk0NjA2NTQsLTIwMjM3OTI1
-MjEsLTExOTgwMzUyOTAsLTU4MTk4OTg0NCwxMTM5NjkzMDYxLD
-I3ODU0MzgxNCw5MjkwNjM2MTksOTkxMTEzMTY0LDIwMTQxMjM3
-NjUsLTg3ODc3MTAxNywtNDgyNDI5NjQ3LDcxOTIwNTI2MF19
+eyJoaXN0b3J5IjpbMjM5Mzc2NTU2LDEwOTMzODg0MTQsMzM2NT
+AyNDYzLDE4OTgzMTA1NDQsLTIxOTQ2MDY1NCwtMjAyMzc5MjUy
+MSwtMTE5ODAzNTI5MCwtNTgxOTg5ODQ0LDExMzk2OTMwNjEsMj
+c4NTQzODE0LDkyOTA2MzYxOSw5OTExMTMxNjQsMjAxNDEyMzc2
+NSwtODc4NzcxMDE3LC00ODI0Mjk2NDcsNzE5MjA1MjYwXX0=
 -->
