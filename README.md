@@ -17,8 +17,9 @@ If your kafka broker is running on SASL_SSL or SSL mode then you have to rebuild
 
     FROM dwijad/kafka-connect:latest
     RUN echo "===> Updating  keystore and truststore files===" \ 
-    &&  ADD  --chown=kafka:kafka  --chmod=755  your-local-folder/kafka.keystore.jks $KAFKA_HOME/script/ca \
-    &&  ADD  --chown=kafka:kafka  --chmod=755  your-local-folder/kafka.truststore.jks $KAFKA_HOME/script/ca
+    &&  ADD  --chown=kafka:kafka  --chmod=755  your-local-folder/kafka-broker-0.keystore.jks $KAFKA_HOME/script/ca \
+    &&  ADD  --chown=kafka:kafka  --chmod=755  your-local-folder/kafka.truststore.jks $KAFKA_HOME/script/ca \
+    && ADD  --chown=kafka:kafka  --chmod=755  your-local-folder/kafka.truststore.jks $KAFKA_HOME/script/ca
 
 Build the image
 
@@ -418,11 +419,11 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgxNjcxNTg4LC0xODE4MDk2OTIzLC0xOD
-YyMTExMzg5LC0xMjk5MzEyNjMyLDE1Nzk1NTg3NTgsODEyMDQw
-ODMzLDEzNDIxMTc5OTIsLTExNjc1NzAxMDksMjMxODQ1NjEwLC
-0xODM4NjM5ODUwLC04NDE5NzA0ODgsNzA0MTMxNDE3LC0xMTA1
-NjQyNjM2LDcwMTAzMjY5NSwtMTU4MjAwODMwLDc1ODIzMzM1MS
-wtMTM3NzEwNTYxNSwyMDQ1ODYzNDIsMTA5MzM4ODQxNCwzMzY1
-MDI0NjNdfQ==
+eyJoaXN0b3J5IjpbLTMyNzQzMDYwNiw0ODE2NzE1ODgsLTE4MT
+gwOTY5MjMsLTE4NjIxMTEzODksLTEyOTkzMTI2MzIsMTU3OTU1
+ODc1OCw4MTIwNDA4MzMsMTM0MjExNzk5MiwtMTE2NzU3MDEwOS
+wyMzE4NDU2MTAsLTE4Mzg2Mzk4NTAsLTg0MTk3MDQ4OCw3MDQx
+MzE0MTcsLTExMDU2NDI2MzYsNzAxMDMyNjk1LC0xNTgyMDA4Mz
+AsNzU4MjMzMzUxLC0xMzc3MTA1NjE1LDIwNDU4NjM0MiwxMDkz
+Mzg4NDE0XX0=
 -->
