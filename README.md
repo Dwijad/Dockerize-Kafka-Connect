@@ -204,7 +204,7 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
 
     Name: PRODUCER_REQUEST_TIMEOUT_MS
     Default value: 20000
-    Description: The worker listener and Rest server port number.
+    Description: The configuration controls the maximum amount of time the producer will wait for the response of a request.
     
     Name: PRODUCER_RETRY_BACKOFF_MS
     Default value: 500
@@ -401,11 +401,11 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkwNDA5MzksLTExNjc1NzAxMDksMjMxOD
-Q1NjEwLC0xODM4NjM5ODUwLC04NDE5NzA0ODgsNzA0MTMxNDE3
-LC0xMTA1NjQyNjM2LDcwMTAzMjY5NSwtMTU4MjAwODMwLDc1OD
-IzMzM1MSwtMTM3NzEwNTYxNSwyMDQ1ODYzNDIsMTA5MzM4ODQx
-NCwzMzY1MDI0NjMsMTg5ODMxMDU0NCwtMjE5NDYwNjU0LC0yMD
-IzNzkyNTIxLC0xMTk4MDM1MjkwLC01ODE5ODk4NDQsMTEzOTY5
-MzA2MV19
+eyJoaXN0b3J5IjpbMTM0MjExNzk5MiwtMTE2NzU3MDEwOSwyMz
+E4NDU2MTAsLTE4Mzg2Mzk4NTAsLTg0MTk3MDQ4OCw3MDQxMzE0
+MTcsLTExMDU2NDI2MzYsNzAxMDMyNjk1LC0xNTgyMDA4MzAsNz
+U4MjMzMzUxLC0xMzc3MTA1NjE1LDIwNDU4NjM0MiwxMDkzMzg4
+NDE0LDMzNjUwMjQ2MywxODk4MzEwNTQ0LC0yMTk0NjA2NTQsLT
+IwMjM3OTI1MjEsLTExOTgwMzUyOTAsLTU4MTk4OTg0NCwxMTM5
+NjkzMDYxXX0=
 -->
