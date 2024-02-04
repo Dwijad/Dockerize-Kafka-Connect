@@ -280,7 +280,7 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     
     Name: KEY_CONVERTER_SCHEMA_REGISTRY_SSL_KEYSTORE_PASSWORD 
     Default value: password
-    Description: The SSL key password for schema registry key  converter.
+    Description: The SSL keystore password for schema registry key  converter.
     
     Name: KEY_CONVERTER_SCHEMA_REGISTRY_SSL_KEY_PASSWORD 
     Default value: password
@@ -401,11 +401,11 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTg1MDUwNiwtODQxOTcwNDg4LDcwND
-EzMTQxNywtMTEwNTY0MjYzNiw3MDEwMzI2OTUsLTE1ODIwMDgz
-MCw3NTgyMzMzNTEsLTEzNzcxMDU2MTUsMjA0NTg2MzQyLDEwOT
-MzODg0MTQsMzM2NTAyNDYzLDE4OTgzMTA1NDQsLTIxOTQ2MDY1
-NCwtMjAyMzc5MjUyMSwtMTE5ODAzNTI5MCwtNTgxOTg5ODQ0LD
-ExMzk2OTMwNjEsMjc4NTQzODE0LDkyOTA2MzYxOSw5OTExMTMx
-NjRdfQ==
+eyJoaXN0b3J5IjpbLTEzMTUzMTUwOTcsLTg0MTk3MDQ4OCw3MD
+QxMzE0MTcsLTExMDU2NDI2MzYsNzAxMDMyNjk1LC0xNTgyMDA4
+MzAsNzU4MjMzMzUxLC0xMzc3MTA1NjE1LDIwNDU4NjM0MiwxMD
+kzMzg4NDE0LDMzNjUwMjQ2MywxODk4MzEwNTQ0LC0yMTk0NjA2
+NTQsLTIwMjM3OTI1MjEsLTExOTgwMzUyOTAsLTU4MTk4OTg0NC
+wxMTM5NjkzMDYxLDI3ODU0MzgxNCw5MjkwNjM2MTksOTkxMTEz
+MTY0XX0=
 -->
