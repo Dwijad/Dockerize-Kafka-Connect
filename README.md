@@ -64,9 +64,12 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     
     Name: GROUP_ID
     Default value: connect-cluster
-    Description: A list of host/port pairs to use for establishing the initial connection to the Kafka cluster.
+    Description: A unique string that identifies the Connect cluster group this Worker belongs to.
    
-    GROUP_ID \
+    Name: KEY_CONVERTER
+    Default value: org.apache.kafka.connect.json.JsonConverter
+    Description: A unique string that identifies the Connect cluster group this Worker belongs to.
+    
     KEY_CONVERTER \
     VALUE_CONVERTER \
     KEY_CONVERTER_SCHEMAS_ENABLE \
@@ -158,9 +161,9 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxODg0OTA3MywxMDkzMzg4NDE0LDMzNj
-UwMjQ2MywxODk4MzEwNTQ0LC0yMTk0NjA2NTQsLTIwMjM3OTI1
-MjEsLTExOTgwMzUyOTAsLTU4MTk4OTg0NCwxMTM5NjkzMDYxLD
-I3ODU0MzgxNCw5MjkwNjM2MTksOTkxMTEzMTY0LDIwMTQxMjM3
-NjUsLTg3ODc3MTAxNywtNDgyNDI5NjQ3LDcxOTIwNTI2MF19
+eyJoaXN0b3J5IjpbNTUyNDg4NTg3LDEwOTMzODg0MTQsMzM2NT
+AyNDYzLDE4OTgzMTA1NDQsLTIxOTQ2MDY1NCwtMjAyMzc5MjUy
+MSwtMTE5ODAzNTI5MCwtNTgxOTg5ODQ0LDExMzk2OTMwNjEsMj
+c4NTQzODE0LDkyOTA2MzYxOSw5OTExMTMxNjQsMjAxNDEyMzc2
+NSwtODc4NzcxMDE3LC00ODI0Mjk2NDcsNzE5MjA1MjYwXX0=
 -->
