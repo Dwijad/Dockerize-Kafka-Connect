@@ -94,7 +94,10 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Default value: connect-status
     Description: The name of the topic where connector and task configuration status updates are stored.
     
-
+    Name: REST_HOST_NAME
+    Default value: Hostname of the container
+    Description: The host name for REST server.
+    
     REST_HOST_NAME \
     LISTENER_PORT \
     REST_ADVERTISED_HOST_NAME \
@@ -179,9 +182,10 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0NTg2MzQyLDEwOTMzODg0MTQsMzM2NT
-AyNDYzLDE4OTgzMTA1NDQsLTIxOTQ2MDY1NCwtMjAyMzc5MjUy
-MSwtMTE5ODAzNTI5MCwtNTgxOTg5ODQ0LDExMzk2OTMwNjEsMj
-c4NTQzODE0LDkyOTA2MzYxOSw5OTExMTMxNjQsMjAxNDEyMzc2
-NSwtODc4NzcxMDE3LC00ODI0Mjk2NDcsNzE5MjA1MjYwXX0=
+eyJoaXN0b3J5IjpbLTE5MzczNDk4MjYsMjA0NTg2MzQyLDEwOT
+MzODg0MTQsMzM2NTAyNDYzLDE4OTgzMTA1NDQsLTIxOTQ2MDY1
+NCwtMjAyMzc5MjUyMSwtMTE5ODAzNTI5MCwtNTgxOTg5ODQ0LD
+ExMzk2OTMwNjEsMjc4NTQzODE0LDkyOTA2MzYxOSw5OTExMTMx
+NjQsMjAxNDEyMzc2NSwtODc4NzcxMDE3LC00ODI0Mjk2NDcsNz
+E5MjA1MjYwXX0=
 -->
