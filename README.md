@@ -59,6 +59,8 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Description: Kafka files/folder owner 
   
     Name: BOOTSTRAP_SERVERS
+    Default value: 
+    Description: A list of host/port pairs to use for establishing the initial connection to the Kafka cluster.
     
     BOOTSTRAP_SERVERS \
     GROUP_ID \
@@ -153,7 +155,7 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNjgyMzM2MiwzMzY1MDI0NjMsMTg5OD
+eyJoaXN0b3J5IjpbMTA5MzM4ODQxNCwzMzY1MDI0NjMsMTg5OD
 MxMDU0NCwtMjE5NDYwNjU0LC0yMDIzNzkyNTIxLC0xMTk4MDM1
 MjkwLC01ODE5ODk4NDQsMTEzOTY5MzA2MSwyNzg1NDM4MTQsOT
 I5MDYzNjE5LDk5MTExMzE2NCwyMDE0MTIzNzY1LC04Nzg3NzEw
