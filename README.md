@@ -379,12 +379,12 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Description: The JMX Port.
     
     Name: KAFKA_JMX_HOSTNAME
-    Default value: 8081
+    Default value: connect-worker-1
     Description: The hostname associated with locally created remote objects.
     
     Name: KAFKA_JMX_OPTS
-    Default value: 8081
-    Description: The worker listener and Rest server port number.
+    Default value: "-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=connect-worker-1 -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml"
+    Description: The JMX options.
 
     Name: BROKER_LISTENER_MODE
     Default value: SASL_SSL
@@ -401,11 +401,11 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDU2NDI2MzYsNzAxMDMyNjk1LC0xNT
-gyMDA4MzAsNzU4MjMzMzUxLC0xMzc3MTA1NjE1LDIwNDU4NjM0
-MiwxMDkzMzg4NDE0LDMzNjUwMjQ2MywxODk4MzEwNTQ0LC0yMT
-k0NjA2NTQsLTIwMjM3OTI1MjEsLTExOTgwMzUyOTAsLTU4MTk4
-OTg0NCwxMTM5NjkzMDYxLDI3ODU0MzgxNCw5MjkwNjM2MTksOT
-kxMTEzMTY0LDIwMTQxMjM3NjUsLTg3ODc3MTAxNywtNDgyNDI5
-NjQ3XX0=
+eyJoaXN0b3J5IjpbNzA0MTMxNDE3LC0xMTA1NjQyNjM2LDcwMT
+AzMjY5NSwtMTU4MjAwODMwLDc1ODIzMzM1MSwtMTM3NzEwNTYx
+NSwyMDQ1ODYzNDIsMTA5MzM4ODQxNCwzMzY1MDI0NjMsMTg5OD
+MxMDU0NCwtMjE5NDYwNjU0LC0yMDIzNzkyNTIxLC0xMTk4MDM1
+MjkwLC01ODE5ODk4NDQsMTEzOTY5MzA2MSwyNzg1NDM4MTQsOT
+I5MDYzNjE5LDk5MTExMzE2NCwyMDE0MTIzNzY1LC04Nzg3NzEw
+MTddfQ==
 -->
