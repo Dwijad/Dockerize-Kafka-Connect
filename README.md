@@ -331,16 +331,16 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Description: The worker listener and Rest server port number.
     
     Name: VALUE_CONVERTER_SCHEMA_REGISTRY_SSL_TRUSTSTORE_TYPE
-    Default value: 8081
-    Description: The worker listener and Rest server port number.
+    Default value: PEM
+    Description: The truststore .
     
     Name: SCHEMA_REGISTRY_URL
-    Default value: 8081
-    Description: The worker listener and Rest server port number.
+    Default value: https://127.0.0.1:8082
+    Description: Schema registry URL.
     
     Name: SCHEMA_REGISTRY_SSL_TRUSTSTORE_PASSWORD
     Default value: password
-    Description: The worker listener and Rest server port number.
+    Description: SSL truststore password while connecting to secured schema registry server.
     
     Name: SCHEMA_REGISTRY_SSL_TRUSTSTORE_LOCATION
     Default value: /u01/cnfkfk/etc/ssl/kafka.truststore.jks
@@ -401,7 +401,7 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3OTQ5NzQ0MCwtODQxOTcwNDg4LDcwND
+eyJoaXN0b3J5IjpbMTg1OTI0NTExNiwtODQxOTcwNDg4LDcwND
 EzMTQxNywtMTEwNTY0MjYzNiw3MDEwMzI2OTUsLTE1ODIwMDgz
 MCw3NTgyMzMzNTEsLTEzNzcxMDU2MTUsMjA0NTg2MzQyLDEwOT
 MzODg0MTQsMzM2NTAyNDYzLDE4OTgzMTA1NDQsLTIxOTQ2MDY1
