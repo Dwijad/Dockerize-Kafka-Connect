@@ -74,7 +74,7 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Default value: org.apache.kafka.connect.json.JsonConverter
     Description: Converter class for value Connect data.
     
-    Name: KEY_CONVERTER
+    Name: KEY_CONVERTER_SCHEMAS_ENABLE
     Default value: org.apache.kafka.connect.json.JsonConverter
     Description: Converter class for key Connect data.
     
@@ -167,7 +167,7 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1MDEyMDc1MCwxMDkzMzg4NDE0LDMzNj
+eyJoaXN0b3J5IjpbMTkwNDYwMzE4OSwxMDkzMzg4NDE0LDMzNj
 UwMjQ2MywxODk4MzEwNTQ0LC0yMTk0NjA2NTQsLTIwMjM3OTI1
 MjEsLTExOTgwMzUyOTAsLTU4MTk4OTg0NCwxMTM5NjkzMDYxLD
 I3ODU0MzgxNCw5MjkwNjM2MTksOTkxMTEzMTY0LDIwMTQxMjM3
