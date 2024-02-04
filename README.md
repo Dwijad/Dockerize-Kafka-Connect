@@ -151,16 +151,16 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Description: The worker listener and Rest server port number.
     
     Name: SSL_KEYSTORE_PASSWORD
-    Default value: 8081
-    Description: The worker listener and Rest server port number.
+    Default value: password
+    Description: The SSL keystore password.
     
     Name: SSL_KEY_PASSWORD
-    Default value: 8081
-    Description: The worker listener and Rest server port number.
+    Default value: password
+    Description: The SSL key password.
  
     Name: CONSUMER_SSL_ENDPOINT_IDENTIFICATION_ALGORITHM
     Default value: 
-    Description: The worker listener and Rest server port number.
+    Description: Algorithm used by consumer to validate Kafka server host name.
      
     Name: CONSUMER_REQUEST_TIMEOUT_MS
     Default value: 20000
@@ -200,7 +200,7 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     
     Name: PRODUCER_SSL_ENDPOINT_IDENTIFICATION_ALGORITHM
     Default value: 
-    Description: Used by producer to validate Kafka server host name..
+    Description: Algorithm used by producer to validate Kafka server host name.
 
     Name: PRODUCER_REQUEST_TIMEOUT_MS
     Default value: 20000
@@ -401,11 +401,11 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzODE1ODIwMywxMzQyMTE3OTkyLC0xMT
-Y3NTcwMTA5LDIzMTg0NTYxMCwtMTgzODYzOTg1MCwtODQxOTcw
-NDg4LDcwNDEzMTQxNywtMTEwNTY0MjYzNiw3MDEwMzI2OTUsLT
-E1ODIwMDgzMCw3NTgyMzMzNTEsLTEzNzcxMDU2MTUsMjA0NTg2
-MzQyLDEwOTMzODg0MTQsMzM2NTAyNDYzLDE4OTgzMTA1NDQsLT
-IxOTQ2MDY1NCwtMjAyMzc5MjUyMSwtMTE5ODAzNTI5MCwtNTgx
-OTg5ODQ0XX0=
+eyJoaXN0b3J5IjpbMjE0MzM4NzcyLDEzNDIxMTc5OTIsLTExNj
+c1NzAxMDksMjMxODQ1NjEwLC0xODM4NjM5ODUwLC04NDE5NzA0
+ODgsNzA0MTMxNDE3LC0xMTA1NjQyNjM2LDcwMTAzMjY5NSwtMT
+U4MjAwODMwLDc1ODIzMzM1MSwtMTM3NzEwNTYxNSwyMDQ1ODYz
+NDIsMTA5MzM4ODQxNCwzMzY1MDI0NjMsMTg5ODMxMDU0NCwtMj
+E5NDYwNjU0LC0yMDIzNzkyNTIxLC0xMTk4MDM1MjkwLC01ODE5
+ODk4NDRdfQ==
 -->
