@@ -314,11 +314,26 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Default value: 8081
     Description: The worker listener and Rest server port number.
     
-    VALUE_CONVERTER_SCHEMA_REGISTRY_SSL_KEYSTORE_PASSWORD \
-    VALUE_CONVERTER_SCHEMA_REGISTRY_SSL_KEY_PASSWORD \
-    VALUE_CONVERTER_SCHEMA_REGISTRY_URL \
-    VALUE_CONVERTER_BASIC_AUTH_CREDENTIALS_SOURCE \
-    VALUE_CONVERTER_BASIC_AUTH_USER_INFO \
+    Name: VALUE_CONVERTER_SCHEMA_REGISTRY_SSL_KEY_PASSWORD
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+     
+    Name: VALUE_CONVERTER_SCHEMA_REGISTRY_URL
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+    
+    Name: VALUE_CONVERTER_BASIC_AUTH_CREDENTIALS_SOURCE
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+    
+    Name: VALUE_CONVERTER_BASIC_AUTH_USER_INFO
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+    
+    Name: VALUE_CONVERTER_SCHEMA_REGISTRY_SSL_TRUSTSTORE_TYPE
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+    
     VALUE_CONVERTER_SCHEMA_REGISTRY_SSL_TRUSTSTORE_TYPE \
     SCHEMA_REGISTRY_URL \
     SCHEMA_REGISTRY_SSL_TRUSTSTORE_PASSWORD \
@@ -344,10 +359,10 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU5NTA3NDg0LDc1ODIzMzM1MSwtMTM3Nz
-EwNTYxNSwyMDQ1ODYzNDIsMTA5MzM4ODQxNCwzMzY1MDI0NjMs
-MTg5ODMxMDU0NCwtMjE5NDYwNjU0LC0yMDIzNzkyNTIxLC0xMT
-k4MDM1MjkwLC01ODE5ODk4NDQsMTEzOTY5MzA2MSwyNzg1NDM4
-MTQsOTI5MDYzNjE5LDk5MTExMzE2NCwyMDE0MTIzNzY1LC04Nz
-g3NzEwMTcsLTQ4MjQyOTY0Nyw3MTkyMDUyNjBdfQ==
+eyJoaXN0b3J5IjpbLTc5OTAzMzI0Nyw3NTgyMzMzNTEsLTEzNz
+cxMDU2MTUsMjA0NTg2MzQyLDEwOTMzODg0MTQsMzM2NTAyNDYz
+LDE4OTgzMTA1NDQsLTIxOTQ2MDY1NCwtMjAyMzc5MjUyMSwtMT
+E5ODAzNTI5MCwtNTgxOTg5ODQ0LDExMzk2OTMwNjEsMjc4NTQz
+ODE0LDkyOTA2MzYxOSw5OTExMTMxNjQsMjAxNDEyMzc2NSwtOD
+c4NzcxMDE3LC00ODI0Mjk2NDcsNzE5MjA1MjYwXX0=
 -->
