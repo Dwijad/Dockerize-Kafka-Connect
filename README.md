@@ -115,7 +115,7 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Description: The worker listener and Rest server port number.
     
     Name: CONFIG_PROVIDERS_FILE_CLASS
-    Default value: 8081
+    Default value: org.apache.kafka.common.config.provider.FileConfigProvider
     Description: The worker listener and Rest server port number.
     
     Name: SSL_ENDPOINT_IDENTIFICATION_ALGORITHM
@@ -401,11 +401,11 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjQ4NTY0MzAsODEyMDQwODMzLDEzND
-IxMTc5OTIsLTExNjc1NzAxMDksMjMxODQ1NjEwLC0xODM4NjM5
-ODUwLC04NDE5NzA0ODgsNzA0MTMxNDE3LC0xMTA1NjQyNjM2LD
-cwMTAzMjY5NSwtMTU4MjAwODMwLDc1ODIzMzM1MSwtMTM3NzEw
-NTYxNSwyMDQ1ODYzNDIsMTA5MzM4ODQxNCwzMzY1MDI0NjMsMT
-g5ODMxMDU0NCwtMjE5NDYwNjU0LC0yMDIzNzkyNTIxLC0xMTk4
-MDM1MjkwXX0=
+eyJoaXN0b3J5IjpbMTU3OTU1ODc1OCw4MTIwNDA4MzMsMTM0Mj
+ExNzk5MiwtMTE2NzU3MDEwOSwyMzE4NDU2MTAsLTE4Mzg2Mzk4
+NTAsLTg0MTk3MDQ4OCw3MDQxMzE0MTcsLTExMDU2NDI2MzYsNz
+AxMDMyNjk1LC0xNTgyMDA4MzAsNzU4MjMzMzUxLC0xMzc3MTA1
+NjE1LDIwNDU4NjM0MiwxMDkzMzg4NDE0LDMzNjUwMjQ2MywxOD
+k4MzEwNTQ0LC0yMTk0NjA2NTQsLTIwMjM3OTI1MjEsLTExOTgw
+MzUyOTBdfQ==
 -->
