@@ -13,13 +13,13 @@ The image is available directly from [Docker Hub](https://hub.docker.com/r/wurst
 ### Usage
 You can run the docker image if the kafka broker you want to make use of is running on PLAINTEXT or SASL_PLAINTEXT mode as described below(Use case - I and Use case - IV)
 
-If your kafka broker is running on SASL_SSL or SSL mode then you have to rebuild the docker image by incorporating the truststore and keystore file of your  kafka broker.
+If your kafka broker is running on SASL_SSL or SSL mode then you have to rebuild the docker image by incorporating the truststore/keystore file and public CA cert of your  kafka broker.
 
     FROM dwijad/kafka-connect:latest
     RUN echo "===> Updating  keystore and truststore files===" \ 
     &&  ADD  --chown=kafka:kafka  --chmod=755  your-local-folder/kafka-broker-0.keystore.jks $KAFKA_HOME/script/ca \
     &&  ADD  --chown=kafka:kafka  --chmod=755  your-local-folder/kafka.truststore.jks $KAFKA_HOME/script/ca \
-    && ADD  --chown=kafka:kafka  --chmod=755  your-local-folder/kafka.truststore.jks $KAFKA_HOME/script/ca
+    &&  ADD  --chown=kafka:kafka  --chmod=755  your-local-folder/ca-cert $KAFKA_HOME/script/ca
 
 Build the image
 
@@ -419,11 +419,11 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyNzQzMDYwNiw0ODE2NzE1ODgsLTE4MT
-gwOTY5MjMsLTE4NjIxMTEzODksLTEyOTkzMTI2MzIsMTU3OTU1
-ODc1OCw4MTIwNDA4MzMsMTM0MjExNzk5MiwtMTE2NzU3MDEwOS
-wyMzE4NDU2MTAsLTE4Mzg2Mzk4NTAsLTg0MTk3MDQ4OCw3MDQx
-MzE0MTcsLTExMDU2NDI2MzYsNzAxMDMyNjk1LC0xNTgyMDA4Mz
-AsNzU4MjMzMzUxLC0xMzc3MTA1NjE1LDIwNDU4NjM0MiwxMDkz
-Mzg4NDE0XX0=
+eyJoaXN0b3J5IjpbMTk5Mzk3OTk4LDQ4MTY3MTU4OCwtMTgxOD
+A5NjkyMywtMTg2MjExMTM4OSwtMTI5OTMxMjYzMiwxNTc5NTU4
+NzU4LDgxMjA0MDgzMywxMzQyMTE3OTkyLC0xMTY3NTcwMTA5LD
+IzMTg0NTYxMCwtMTgzODYzOTg1MCwtODQxOTcwNDg4LDcwNDEz
+MTQxNywtMTEwNTY0MjYzNiw3MDEwMzI2OTUsLTE1ODIwMDgzMC
+w3NTgyMzMzNTEsLTEzNzcxMDU2MTUsMjA0NTg2MzQyLDEwOTMz
+ODg0MTRdfQ==
 -->
