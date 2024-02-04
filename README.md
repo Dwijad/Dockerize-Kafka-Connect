@@ -31,6 +31,8 @@ Run Kafka connect worker with Kafka broker listener configured in PLAINTEXT mode
 
     $ docker run -d --name=connect-worker-1 -e BOOTSTRAP_SERVERS="kafka:9092" -e SECURITY_PROTOCOL="PLAINTEXT" -e REST_HOST_NAME="connect-worker-1"  -e LISTENER_PORT="8081" -e REST_ADVERTISED_HOST_NAME="connect-worker-1"  -e REST_ADVERTISED_LISTENER="http" -e SCHEMA_REGISTRY_MODE="HTTP" -e BROKER_LISTENER_MODE="PLAINTEXT"  -e KAFKA_JMX_HOSTNAME="connect-worker-1" -e KAFKA_JMX_PORT="8080" -e SCHEMA_REGISTRY_URL="http://sr-service-http.default.svc:8081" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=connect-worker-1 -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml" dwijad/kafka-connect:latest 
 
+Generated connect distributed properties file 
+
 #### Use case - II
 Run Kafka connect worker with Kafka broker listener configured in SSL mode. The schema registry is running in either secured or non-secured mode.
 
@@ -416,11 +418,11 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTgwOTY5MjMsLTE4NjIxMTEzODksLT
-EyOTkzMTI2MzIsMTU3OTU1ODc1OCw4MTIwNDA4MzMsMTM0MjEx
-Nzk5MiwtMTE2NzU3MDEwOSwyMzE4NDU2MTAsLTE4Mzg2Mzk4NT
-AsLTg0MTk3MDQ4OCw3MDQxMzE0MTcsLTExMDU2NDI2MzYsNzAx
-MDMyNjk1LC0xNTgyMDA4MzAsNzU4MjMzMzUxLC0xMzc3MTA1Nj
-E1LDIwNDU4NjM0MiwxMDkzMzg4NDE0LDMzNjUwMjQ2MywxODk4
-MzEwNTQ0XX0=
+eyJoaXN0b3J5IjpbNDgxNjcxNTg4LC0xODE4MDk2OTIzLC0xOD
+YyMTExMzg5LC0xMjk5MzEyNjMyLDE1Nzk1NTg3NTgsODEyMDQw
+ODMzLDEzNDIxMTc5OTIsLTExNjc1NzAxMDksMjMxODQ1NjEwLC
+0xODM4NjM5ODUwLC04NDE5NzA0ODgsNzA0MTMxNDE3LC0xMTA1
+NjQyNjM2LDcwMTAzMjY5NSwtMTU4MjAwODMwLDc1ODIzMzM1MS
+wtMTM3NzEwNTYxNSwyMDQ1ODYzNDIsMTA5MzM4ODQxNCwzMzY1
+MDI0NjNdfQ==
 -->
