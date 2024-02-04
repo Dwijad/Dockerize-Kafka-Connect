@@ -287,12 +287,12 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Description: The worker listener and Rest server port number.
     
     Name: KEY_CONVERTER_SCHEMA_REGISTRY_URL 
-    Default value: 8081
-    Description: The worker listener and Rest server port number.
+    Default value: https://127.0.0.1:8082    
+    Description: Schema registry URL for value converter.
 
     Name: KEY_CONVERTER_BASIC_AUTH_CREDENTIALS_SOURCE
-    Default value: 8081
-    Description: The worker listener and Rest server port number.
+    Default value: USER_INFO    
+    Description: Specifies the configuration property(ies) that provide the basic authentication credentials for key converter.
   
     Name: KEY_CONVERTER_BASIC_AUTH_USER_INFO
     Default value: user1:password    
@@ -401,7 +401,7 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxNzUxMzcxMSwtODQxOTcwNDg4LDcwND
+eyJoaXN0b3J5IjpbMTMyNTUzNzUwOCwtODQxOTcwNDg4LDcwND
 EzMTQxNywtMTEwNTY0MjYzNiw3MDEwMzI2OTUsLTE1ODIwMDgz
 MCw3NTgyMzMzNTEsLTEzNzcxMDU2MTUsMjA0NTg2MzQyLDEwOT
 MzODg0MTQsMzM2NTAyNDYzLDE4OTgzMTA1NDQsLTIxOTQ2MDY1
