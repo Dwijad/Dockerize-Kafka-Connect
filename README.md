@@ -11,7 +11,7 @@ The image is available directly from [Docker Hub](https://hub.docker.com/r/wurst
  -  For rebuilding Docker image, install docker with buildx plugin as described [here](https://docs.docker.com/engine/install/ubuntu/).
 
 ### Usage
-You can run the docker image if the broker is running on PLAINTEXT, SASL_PLAINT 
+You can run the docker image if the kafka broker you want make use of  is running on PLAINTEXT, or SASL_PLAINTEXT mode.  
 
 #### Use case - I
 Run Kafka connect worker with Kafka broker listener configured in PLAINTEXT mode. The schema registry is running in either secured or non-secured mode.
@@ -403,11 +403,11 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2OTQ0NjU0OCwtMTI5OTMxMjYzMiwxNT
-c5NTU4NzU4LDgxMjA0MDgzMywxMzQyMTE3OTkyLC0xMTY3NTcw
-MTA5LDIzMTg0NTYxMCwtMTgzODYzOTg1MCwtODQxOTcwNDg4LD
-cwNDEzMTQxNywtMTEwNTY0MjYzNiw3MDEwMzI2OTUsLTE1ODIw
-MDgzMCw3NTgyMzMzNTEsLTEzNzcxMDU2MTUsMjA0NTg2MzQyLD
-EwOTMzODg0MTQsMzM2NTAyNDYzLDE4OTgzMTA1NDQsLTIxOTQ2
-MDY1NF19
+eyJoaXN0b3J5IjpbODI5OTkxNzYyLC0xMjk5MzEyNjMyLDE1Nz
+k1NTg3NTgsODEyMDQwODMzLDEzNDIxMTc5OTIsLTExNjc1NzAx
+MDksMjMxODQ1NjEwLC0xODM4NjM5ODUwLC04NDE5NzA0ODgsNz
+A0MTMxNDE3LC0xMTA1NjQyNjM2LDcwMTAzMjY5NSwtMTU4MjAw
+ODMwLDc1ODIzMzM1MSwtMTM3NzEwNTYxNSwyMDQ1ODYzNDIsMT
+A5MzM4ODQxNCwzMzY1MDI0NjMsMTg5ODMxMDU0NCwtMjE5NDYw
+NjU0XX0=
 -->
