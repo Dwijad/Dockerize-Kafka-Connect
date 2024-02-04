@@ -56,9 +56,10 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
 
     Name: USERNAME 
     Default value: kafka
-    Description: Kafka 
-
-    USERNAME=kafka \
+    Description: Kafka files/folder owner 
+  
+    Name: BOOTSTRAP_SERVERS
+    
     BOOTSTRAP_SERVERS \
     GROUP_ID \
     KEY_CONVERTER \
@@ -152,9 +153,9 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzczNTg4NTAsMzM2NTAyNDYzLDE4OT
-gzMTA1NDQsLTIxOTQ2MDY1NCwtMjAyMzc5MjUyMSwtMTE5ODAz
-NTI5MCwtNTgxOTg5ODQ0LDExMzk2OTMwNjEsMjc4NTQzODE0LD
-kyOTA2MzYxOSw5OTExMTMxNjQsMjAxNDEyMzc2NSwtODc4Nzcx
-MDE3LC00ODI0Mjk2NDcsNzE5MjA1MjYwXX0=
+eyJoaXN0b3J5IjpbMTUzNjgyMzM2MiwzMzY1MDI0NjMsMTg5OD
+MxMDU0NCwtMjE5NDYwNjU0LC0yMDIzNzkyNTIxLC0xMTk4MDM1
+MjkwLC01ODE5ODk4NDQsMTEzOTY5MzA2MSwyNzg1NDM4MTQsOT
+I5MDYzNjE5LDk5MTExMzE2NCwyMDE0MTIzNzY1LC04Nzg3NzEw
+MTcsLTQ4MjQyOTY0Nyw3MTkyMDUyNjBdfQ==
 -->
