@@ -216,7 +216,7 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     
     Name: PRODUCER_SSL_PROTOCOL
     Default value: TLS
-    Description: The worker listener and Rest server port number.
+    Description: The SSL protocol used by producer.
        
     Name: PRODUCER_SSL_TRUSTSTORE_LOCATION
     Default value: /u01/cnfkfk/etc/ssl/kafka.truststore.jks
@@ -401,11 +401,11 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjc1NzAxMDksMjMxODQ1NjEwLC0xOD
-M4NjM5ODUwLC04NDE5NzA0ODgsNzA0MTMxNDE3LC0xMTA1NjQy
-NjM2LDcwMTAzMjY5NSwtMTU4MjAwODMwLDc1ODIzMzM1MSwtMT
-M3NzEwNTYxNSwyMDQ1ODYzNDIsMTA5MzM4ODQxNCwzMzY1MDI0
-NjMsMTg5ODMxMDU0NCwtMjE5NDYwNjU0LC0yMDIzNzkyNTIxLC
-0xMTk4MDM1MjkwLC01ODE5ODk4NDQsMTEzOTY5MzA2MSwyNzg1
-NDM4MTRdfQ==
+eyJoaXN0b3J5IjpbLTIxNzA5MDU4MSwtMTE2NzU3MDEwOSwyMz
+E4NDU2MTAsLTE4Mzg2Mzk4NTAsLTg0MTk3MDQ4OCw3MDQxMzE0
+MTcsLTExMDU2NDI2MzYsNzAxMDMyNjk1LC0xNTgyMDA4MzAsNz
+U4MjMzMzUxLC0xMzc3MTA1NjE1LDIwNDU4NjM0MiwxMDkzMzg4
+NDE0LDMzNjUwMjQ2MywxODk4MzEwNTQ0LC0yMTk0NjA2NTQsLT
+IwMjM3OTI1MjEsLTExOTgwMzUyOTAsLTU4MTk4OTg0NCwxMTM5
+NjkzMDYxXX0=
 -->
