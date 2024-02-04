@@ -76,13 +76,13 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     
     Name: KEY_CONVERTER_SCHEMAS_ENABLE
     Default value: false
-    Description: Exclude/Include the verbose schema information() from each record.
+    Description: Exclude/Include the verbose schema information(Key) from each record.
     
-    Name: KEY_CONVERTER_SCHEMAS_ENABLE
+    Name: VALUE_CONVERTER_SCHEMAS_ENABLE
     Default value: false
-    Description: Exclude/Include the verbose schema information from each record.
+    Description: Exclude/Include the verbose schema information(Value) from each record.
     
-    VALUE_CONVERTER_SCHEMAS_ENABLE \
+
     OFFSET_STORAGE_TOPIC \
     CONFIG_STORAGE_TOPIC \
     STATUS_STORAGE_TOPIC \
@@ -170,7 +170,7 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyNzc2Mzc4OSwxMDkzMzg4NDE0LDMzNj
+eyJoaXN0b3J5IjpbLTc4Nzg4MjU4MywxMDkzMzg4NDE0LDMzNj
 UwMjQ2MywxODk4MzEwNTQ0LC0yMTk0NjA2NTQsLTIwMjM3OTI1
 MjEsLTExOTgwMzUyOTAsLTU4MTk4OTg0NCwxMTM5NjkzMDYxLD
 I3ODU0MzgxNCw5MjkwNjM2MTksOTkxMTEzMTY0LDIwMTQxMjM3
