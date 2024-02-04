@@ -166,15 +166,29 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Default value: 8081
     Description: The worker listener and Rest server port number.
     
-    Name: CONSUMER_REQUEST_TIMEOUT_MS
+    Name: CONSUMER_RETRY_BACKOFF_MS
     Default value: 8081
     Description: The worker listener and Rest server port number.
     
-    CONSUMER_RETRY_BACKOFF_MS \
-    CONSUMER_SECURITY_PROTOCOL \
-    CONSUMER_SSL_PROTOCOL \
-    CONSUMER_SSL_TRUSTSTORE_LOCATION \
-    CONSUMER_SSL_TRUSTSTORE_PASSWORD \
+    Name: CONSUMER_SECURITY_PROTOCOL
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+    
+    Name: CONSUMER_SSL_PROTOCOL
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+    
+    Name: CONSUMER_SSL_TRUSTSTORE_LOCATION
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+    
+    Name: CONSUMER_SSL_TRUSTSTORE_PASSWORD
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+      Name: CONSUMER_SSL_TRUSTSTORE_PASSWORD
+    Default value: 8081
+    Description: The worker listener and Rest server port number. 
+ \
     CONSUMER_SSL_KEYSTORE_LOCATION \
     CONSUMER_SSL_KEYSTORE_PASSWORD \
     CONSUMER_SSL_KEY_PASSWORD \
@@ -236,7 +250,7 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MTcwNzY3LDc1ODIzMzM1MSwtMTM3Nz
+eyJoaXN0b3J5IjpbLTIzOTc5MDY4LDc1ODIzMzM1MSwtMTM3Nz
 EwNTYxNSwyMDQ1ODYzNDIsMTA5MzM4ODQxNCwzMzY1MDI0NjMs
 MTg5ODMxMDU0NCwtMjE5NDYwNjU0LC0yMDIzNzkyNTIxLC0xMT
 k4MDM1MjkwLC01ODE5ODk4NDQsMTEzOTY5MzA2MSwyNzg1NDM4
