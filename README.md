@@ -104,7 +104,7 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
    
     Name: REST_ADVERTISED_HOST_NAME
     Default value: connect-worker-1
-    Description: The REST server advertised host name.
+    Description: The host name advertised by the REST server. 
     
     Name: PLUGIN_PATH
     Default value: file
@@ -401,11 +401,11 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTkzMTI2MzIsMTU3OTU1ODc1OCw4MT
-IwNDA4MzMsMTM0MjExNzk5MiwtMTE2NzU3MDEwOSwyMzE4NDU2
-MTAsLTE4Mzg2Mzk4NTAsLTg0MTk3MDQ4OCw3MDQxMzE0MTcsLT
-ExMDU2NDI2MzYsNzAxMDMyNjk1LC0xNTgyMDA4MzAsNzU4MjMz
-MzUxLC0xMzc3MTA1NjE1LDIwNDU4NjM0MiwxMDkzMzg4NDE0LD
-MzNjUwMjQ2MywxODk4MzEwNTQ0LC0yMTk0NjA2NTQsLTIwMjM3
-OTI1MjFdfQ==
+eyJoaXN0b3J5IjpbLTE1MDY4Mjk0ODIsLTEyOTkzMTI2MzIsMT
+U3OTU1ODc1OCw4MTIwNDA4MzMsMTM0MjExNzk5MiwtMTE2NzU3
+MDEwOSwyMzE4NDU2MTAsLTE4Mzg2Mzk4NTAsLTg0MTk3MDQ4OC
+w3MDQxMzE0MTcsLTExMDU2NDI2MzYsNzAxMDMyNjk1LC0xNTgy
+MDA4MzAsNzU4MjMzMzUxLC0xMzc3MTA1NjE1LDIwNDU4NjM0Mi
+wxMDkzMzg4NDE0LDMzNjUwMjQ2MywxODk4MzEwNTQ0LC0yMTk0
+NjA2NTRdfQ==
 -->
