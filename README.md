@@ -263,12 +263,12 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Description: The worker listener and Rest server port number.
     
     Name: SASL_USER
-    Default value: 8081
-    Description: The worker listener and Rest server port number.
+    Default value: user1
+    Description: Basic username.
     
     Name: SASL_PASSWORD
     Default value: password
-    Description: The worker listener and Rest server port number.
+    Description: Password for SASL_USER.
     
     Name: KEY_CONVERTER_SCHEMA_REGISTRY_SSL_TRUSTSTORE_LOCATION
     Default value: /u01/cnfkfk/etc/ssl/kafka.truststore.jks
@@ -401,11 +401,11 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3NTg1MjI5MywtODQxOTcwNDg4LDcwND
-EzMTQxNywtMTEwNTY0MjYzNiw3MDEwMzI2OTUsLTE1ODIwMDgz
-MCw3NTgyMzMzNTEsLTEzNzcxMDU2MTUsMjA0NTg2MzQyLDEwOT
-MzODg0MTQsMzM2NTAyNDYzLDE4OTgzMTA1NDQsLTIxOTQ2MDY1
-NCwtMjAyMzc5MjUyMSwtMTE5ODAzNTI5MCwtNTgxOTg5ODQ0LD
-ExMzk2OTMwNjEsMjc4NTQzODE0LDkyOTA2MzYxOSw5OTExMTMx
-NjRdfQ==
+eyJoaXN0b3J5IjpbNDY0NjgwMDU3LC04NDE5NzA0ODgsNzA0MT
+MxNDE3LC0xMTA1NjQyNjM2LDcwMTAzMjY5NSwtMTU4MjAwODMw
+LDc1ODIzMzM1MSwtMTM3NzEwNTYxNSwyMDQ1ODYzNDIsMTA5Mz
+M4ODQxNCwzMzY1MDI0NjMsMTg5ODMxMDU0NCwtMjE5NDYwNjU0
+LC0yMDIzNzkyNTIxLC0xMTk4MDM1MjkwLC01ODE5ODk4NDQsMT
+EzOTY5MzA2MSwyNzg1NDM4MTQsOTI5MDYzNjE5LDk5MTExMzE2
+NF19
 -->
