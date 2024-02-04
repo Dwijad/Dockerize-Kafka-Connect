@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: connect-worker-1
+  name: connect-worker-1
+spec:
+  containers:
+  - image: dwijad/kafka-connect:latest
+    name: kafka-connect-1
+    env:
+    - name: BOOTSTRAP_SERVERS
+      value: "release-kafka.default.svc.cluster.local:9092"
+    - name: SASL_USER
+      value: "user1"
+    - name: SECURITY_PROTOCOL
+      value: "SASL_SSL"
+    - name: SASL_PASSWORD
+      value: "password"
+    - name: REST_HOST_NAME
+      value: "connect-worker-1"
+    - name: LISTENER_PORT
+      value: "8081"
+    - name: REST_ADVERTISED_HOST_NAME
+      value: "connect-worker-1"
+    - name: REST_ADVERTISED_LISTENER
+      value: "https"
+    - name: SCHEMA_REGISTRY_URL
+      value: "http://sr-service-http.default.svc:8081"
+    - name: KEY_CONVERTER_SCHEMA_REGISTRY_URL
+      value: "http://sr-service-http.default.svc:8081"
+    - name: VALUE_CONVERTER_SCHEMA_REGISTRY_URL
+      value: "http://sr-service-http.default.svc:8081"
+    - name: KAFKA_JMX_PORT
+      value: "8080"
+    - name: KAFKA_JMX_OPTS
+      value: "-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=connect-worker-1 -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml"
+    - name: KAFKA_JMX_HOSTNAME
+      value: "connect-worker-1"
+    - name: BROKER_LISTENER_MODE
+      value: "SASL_SSL"
+    - name: SCHEMA_REGISTRY_MODE
+      value: "HTTP"
+    resources: {}
+  imagePullSecrets:
+    - name: regcred
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
