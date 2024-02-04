@@ -259,8 +259,8 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Description: The worker listener and Rest server port number.
     
     Name: CONSUMER_SASL_MECHANISM
-    Default value: 8081
-    Description: The worker listener and Rest server port number.
+    Default value: PLAIN
+    Description: The SASL mechanism consumer uses to connect 
     
     Name: SASL_USER
     Default value: user1
@@ -401,7 +401,7 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY0NjgwMDU3LC04NDE5NzA0ODgsNzA0MT
+eyJoaXN0b3J5IjpbNzM2ODM5NjE3LC04NDE5NzA0ODgsNzA0MT
 MxNDE3LC0xMTA1NjQyNjM2LDcwMTAzMjY5NSwtMTU4MjAwODMw
 LDc1ODIzMzM1MSwtMTM3NzEwNTYxNSwyMDQ1ODYzNDIsMTA5Mz
 M4ODQxNCwzMzY1MDI0NjMsMTg5ODMxMDU0NCwtMjE5NDYwNjU0
