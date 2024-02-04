@@ -239,16 +239,16 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Description: The worker listener and Rest server port number.
     
     Name: SASL_JAAS_CONFIG
-    Default value: 8081
-    Description: The worker listener and Rest server port number.
+    Default value: org.apache.kafka.common.security.plain.PlainLoginModule
+    Description: Specify the producer JAAS configuration.
     
     Name: PRODUCER_SASL_JAAS_CONFIG 
-    Default value: 8081
-    Description: The worker listener and Rest server port number.
+    Default value: org.apache.kafka.common.security.plain.PlainLoginModule
+    Description: Specify the producer JAAS configuration.
     
     Name: CONSUMER_SASL_JAAS_CONFIG 
     Default value: org.apache.kafka.common.security.plain.PlainLoginModule
-    Description: The worker listener and Rest server port number.
+    Description: Specify the consumer JAAS configuration.
     
     Name: SASL_MECHANISM
     Default value: PLAIN
@@ -401,7 +401,7 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3MzE1NzAyMCwtMTgzODYzOTg1MCwtOD
+eyJoaXN0b3J5IjpbMTAzNjYwNDk0NiwtMTgzODYzOTg1MCwtOD
 QxOTcwNDg4LDcwNDEzMTQxNywtMTEwNTY0MjYzNiw3MDEwMzI2
 OTUsLTE1ODIwMDgzMCw3NTgyMzMzNTEsLTEzNzcxMDU2MTUsMj
 A0NTg2MzQyLDEwOTMzODg0MTQsMzM2NTAyNDYzLDE4OTgzMTA1
