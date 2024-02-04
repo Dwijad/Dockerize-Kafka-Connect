@@ -46,37 +46,18 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
 ### Using docker compose
 
 ### Docker environment variable
-    Name: `UID`
-    Default value: `1000`
-    Description: `User ID used to build Dockerfile`
+    Name: UID
+    Default value: 1000
+    Description: User ID used to build Dockerfile   
 
+    Name: GID
+    Default value: 1000
+    Description: Group ID used to build Dockerfile
 
-   
+    Name: Username 
+    Defaul
+ 
 
-   Name: `GID`
-    Default value: `1000`
-    Description: `Group ID used to build Dockerfile`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    UID=1000 \
-    GID=1000 \
     USERNAME=kafka \
     BOOTSTRAP_SERVERS \
     GROUP_ID \
@@ -171,7 +152,7 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzEwMzM3OTUsMzM2NTAyNDYzLDE4OT
+eyJoaXN0b3J5IjpbLTE4ODQ2MTY4OTcsMzM2NTAyNDYzLDE4OT
 gzMTA1NDQsLTIxOTQ2MDY1NCwtMjAyMzc5MjUyMSwtMTE5ODAz
 NTI5MCwtNTgxOTg5ODQ0LDExMzk2OTMwNjEsMjc4NTQzODE0LD
 kyOTA2MzYxOSw5OTExMTMxNjQsMjAxNDEyMzc2NSwtODc4Nzcx
