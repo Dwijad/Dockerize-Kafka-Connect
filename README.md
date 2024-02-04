@@ -388,11 +388,11 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
 
     Name: BROKER_LISTENER_MODE
     Default value: SASL_SSL
-    Description: The worker listener and Rest server port number.
+    Description: Kafka Broker listener mode.
     
     Name: SCHEMA_REGISTRY_MODE
     Default value: NULL
-    Description: Kafka connect connection scheme to schema registry server. 
+    Description: Kafka connect connection scheme to schema registry server. Values can be either HTTP or HTTPS
 
 
 https://github.com/1ambda/docker-kafka-connect
@@ -401,11 +401,11 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNDA5MzA5Nyw3MDEwMzI2OTUsLTE1OD
-IwMDgzMCw3NTgyMzMzNTEsLTEzNzcxMDU2MTUsMjA0NTg2MzQy
-LDEwOTMzODg0MTQsMzM2NTAyNDYzLDE4OTgzMTA1NDQsLTIxOT
-Q2MDY1NCwtMjAyMzc5MjUyMSwtMTE5ODAzNTI5MCwtNTgxOTg5
-ODQ0LDExMzk2OTMwNjEsMjc4NTQzODE0LDkyOTA2MzYxOSw5OT
-ExMTMxNjQsMjAxNDEyMzc2NSwtODc4NzcxMDE3LC00ODI0Mjk2
-NDddfQ==
+eyJoaXN0b3J5IjpbNzUzNTIwODEwLDcwMTAzMjY5NSwtMTU4Mj
+AwODMwLDc1ODIzMzM1MSwtMTM3NzEwNTYxNSwyMDQ1ODYzNDIs
+MTA5MzM4ODQxNCwzMzY1MDI0NjMsMTg5ODMxMDU0NCwtMjE5ND
+YwNjU0LC0yMDIzNzkyNTIxLC0xMTk4MDM1MjkwLC01ODE5ODk4
+NDQsMTEzOTY5MzA2MSwyNzg1NDM4MTQsOTI5MDYzNjE5LDk5MT
+ExMzE2NCwyMDE0MTIzNzY1LC04Nzg3NzEwMTcsLTQ4MjQyOTY0
+N119
 -->
