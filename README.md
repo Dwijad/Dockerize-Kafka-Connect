@@ -199,8 +199,8 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Description: The worker listener and Rest server port number.
     
     Name: PRODUCER_SSL_ENDPOINT_IDENTIFICATION_ALGORITHM
-    Default value: 8081
-    Description: The worker listener and Rest server port number.
+    Default value: 
+    Description: Used by producer to validate Kafka server host name..
 
     Name: PRODUCER_REQUEST_TIMEOUT_MS
     Default value: 20000
@@ -401,11 +401,11 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MjExNzk5MiwtMTE2NzU3MDEwOSwyMz
-E4NDU2MTAsLTE4Mzg2Mzk4NTAsLTg0MTk3MDQ4OCw3MDQxMzE0
-MTcsLTExMDU2NDI2MzYsNzAxMDMyNjk1LC0xNTgyMDA4MzAsNz
-U4MjMzMzUxLC0xMzc3MTA1NjE1LDIwNDU4NjM0MiwxMDkzMzg4
-NDE0LDMzNjUwMjQ2MywxODk4MzEwNTQ0LC0yMTk0NjA2NTQsLT
-IwMjM3OTI1MjEsLTExOTgwMzUyOTAsLTU4MTk4OTg0NCwxMTM5
-NjkzMDYxXX0=
+eyJoaXN0b3J5IjpbLTg5Mzc2MjI4NywxMzQyMTE3OTkyLC0xMT
+Y3NTcwMTA5LDIzMTg0NTYxMCwtMTgzODYzOTg1MCwtODQxOTcw
+NDg4LDcwNDEzMTQxNywtMTEwNTY0MjYzNiw3MDEwMzI2OTUsLT
+E1ODIwMDgzMCw3NTgyMzMzNTEsLTEzNzcxMDU2MTUsMjA0NTg2
+MzQyLDEwOTMzODg0MTQsMzM2NTAyNDYzLDE4OTgzMTA1NDQsLT
+IxOTQ2MDY1NCwtMjAyMzc5MjUyMSwtMTE5ODAzNTI5MCwtNTgx
+OTg5ODQ0XX0=
 -->
