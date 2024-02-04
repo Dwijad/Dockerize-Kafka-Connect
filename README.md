@@ -13,12 +13,14 @@ The image is available directly from [Docker Hub](https://hub.docker.com/r/wurst
 ### Usage
 You can run the docker image if the kafka broker you want to make use of is running on PLAINTEXT or SASL_PLAINTEXT mode as described below(Use case - I and Use case - IV)
 
-If your kafka broker is running on SASL_SSL or SSL mode then you have to rebuild the docker image incorporating the truststore and keystore file of your    kafka broker.
+If your kafka broker is running on SASL_SSL or SSL mode then you have to rebuild the docker image by incorporating the truststore and keystore file of your  kafka broker.
 
     FROM dwijad/kafka-connect:latest
     RUN echo "===> Updating  keystore and truststore files===" \ 
     &&  ADD  --chown=kafka:kafka  --chmod=755  your-local-folder/kafka.keystore.jks $KAFKA_HOME/script/ca \
     &&  ADD  --chown=kafka:kafka  --chmod=755  your-local-folder/kafka.truststore.jks $KAFKA_HOME/script/ca
+
+Now you can run the kafka connect docker image when the broker is using either of the
 
 #### Use case - I
 Run Kafka connect worker with Kafka broker listener configured in PLAINTEXT mode. The schema registry is running in either secured or non-secured mode.
@@ -410,7 +412,7 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTM2NDQzMzksLTEyOTkzMTI2MzIsMT
+eyJoaXN0b3J5IjpbLTEzNzA5NjQ1NDUsLTEyOTkzMTI2MzIsMT
 U3OTU1ODc1OCw4MTIwNDA4MzMsMTM0MjExNzk5MiwtMTE2NzU3
 MDEwOSwyMzE4NDU2MTAsLTE4Mzg2Mzk4NTAsLTg0MTk3MDQ4OC
 w3MDQxMzE0MTcsLTExMDU2NDI2MzYsNzAxMDMyNjk1LC0xNTgy
