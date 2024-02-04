@@ -88,10 +88,13 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     
     Name: CONFIG_STORAGE_TOPIC
     Default value: connect-configs
-    Description: The name of the topic where connector and task configuration offsets are stored.
+    Description: The name of the topic where connector and task configuration data are stored.
     
-    CONFIG_STORAGE_TOPIC \
-    STATUS_STORAGE_TOPIC \
+    Name: STATUS_STORAGE_TOPIC
+    Default value: connect-status
+    Description: The name of the topic where connector and task configuration status updates are stored.
+    
+
     REST_HOST_NAME \
     LISTENER_PORT \
     REST_ADVERTISED_HOST_NAME \
@@ -176,7 +179,7 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM5Mzc2NTU2LDEwOTMzODg0MTQsMzM2NT
+eyJoaXN0b3J5IjpbMjA0NTg2MzQyLDEwOTMzODg0MTQsMzM2NT
 AyNDYzLDE4OTgzMTA1NDQsLTIxOTQ2MDY1NCwtMjAyMzc5MjUy
 MSwtMTE5ODAzNTI5MCwtNTgxOTg5ODQ0LDExMzk2OTMwNjEsMj
 c4NTQzODE0LDkyOTA2MzYxOSw5OTExMTMxNjQsMjAxNDEyMzc2
