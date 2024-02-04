@@ -146,15 +146,30 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Default value: 8081
     Description: The worker listener and Rest server port number.
      
-    Name: SSL_TRUSTSTORE_PASSWORD
+    Name: SSL_KEYSTORE_LOCATION
     Default value: 8081
     Description: The worker listener and Rest server port number.
     
-    SSL_KEYSTORE_LOCATION \
-    SSL_KEYSTORE_PASSWORD \
-    SSL_KEY_PASSWORD \
-    CONSUMER_SSL_ENDPOINT_IDENTIFICATION_ALGORITHM \
-    CONSUMER_REQUEST_TIMEOUT_MS \
+    Name: SSL_KEYSTORE_PASSWORD
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+    
+    Name: SSL_KEY_PASSWORD
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+ 
+    Name: CONSUMER_SSL_ENDPOINT_IDENTIFICATION_ALGORITHM
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+     
+    Name: CONSUMER_REQUEST_TIMEOUT_MS
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+    
+    Name: CONSUMER_REQUEST_TIMEOUT_MS
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+    
     CONSUMER_RETRY_BACKOFF_MS \
     CONSUMER_SECURITY_PROTOCOL \
     CONSUMER_SSL_PROTOCOL \
@@ -221,10 +236,10 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTU0MTc5Nyw3NTgyMzMzNTEsLTEzNz
-cxMDU2MTUsMjA0NTg2MzQyLDEwOTMzODg0MTQsMzM2NTAyNDYz
-LDE4OTgzMTA1NDQsLTIxOTQ2MDY1NCwtMjAyMzc5MjUyMSwtMT
-E5ODAzNTI5MCwtNTgxOTg5ODQ0LDExMzk2OTMwNjEsMjc4NTQz
-ODE0LDkyOTA2MzYxOSw5OTExMTMxNjQsMjAxNDEyMzc2NSwtOD
-c4NzcxMDE3LC00ODI0Mjk2NDcsNzE5MjA1MjYwXX0=
+eyJoaXN0b3J5IjpbMTU2MTcwNzY3LDc1ODIzMzM1MSwtMTM3Nz
+EwNTYxNSwyMDQ1ODYzNDIsMTA5MzM4ODQxNCwzMzY1MDI0NjMs
+MTg5ODMxMDU0NCwtMjE5NDYwNjU0LC0yMDIzNzkyNTIxLC0xMT
+k4MDM1MjkwLC01ODE5ODk4NDQsMTEzOTY5MzA2MSwyNzg1NDM4
+MTQsOTI5MDYzNjE5LDk5MTExMzE2NCwyMDE0MTIzNzY1LC04Nz
+g3NzEwMTcsLTQ4MjQyOTY0Nyw3MTkyMDUyNjBdfQ==
 -->
