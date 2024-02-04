@@ -375,12 +375,12 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Description: The worker listener and Rest server port number.
     
     Name: KAFKA_JMX_PORT
-    Default value: 8081
-    Description: The worker listener and Rest server port number.
+    Default value: 8080
+    Description: The JMX Port.
     
     Name: KAFKA_JMX_HOSTNAME
     Default value: 8081
-    Description: The worker listener and Rest server port number.
+    Description: The hostname associated with locally created remote objects.
     
     Name: KAFKA_JMX_OPTS
     Default value: 8081
@@ -401,11 +401,11 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUzNTIwODEwLDcwMTAzMjY5NSwtMTU4Mj
-AwODMwLDc1ODIzMzM1MSwtMTM3NzEwNTYxNSwyMDQ1ODYzNDIs
-MTA5MzM4ODQxNCwzMzY1MDI0NjMsMTg5ODMxMDU0NCwtMjE5ND
-YwNjU0LC0yMDIzNzkyNTIxLC0xMTk4MDM1MjkwLC01ODE5ODk4
-NDQsMTEzOTY5MzA2MSwyNzg1NDM4MTQsOTI5MDYzNjE5LDk5MT
-ExMzE2NCwyMDE0MTIzNzY1LC04Nzg3NzEwMTcsLTQ4MjQyOTY0
-N119
+eyJoaXN0b3J5IjpbLTExMDU2NDI2MzYsNzAxMDMyNjk1LC0xNT
+gyMDA4MzAsNzU4MjMzMzUxLC0xMzc3MTA1NjE1LDIwNDU4NjM0
+MiwxMDkzMzg4NDE0LDMzNjUwMjQ2MywxODk4MzEwNTQ0LC0yMT
+k0NjA2NTQsLTIwMjM3OTI1MjEsLTExOTgwMzUyOTAsLTU4MTk4
+OTg0NCwxMTM5NjkzMDYxLDI3ODU0MzgxNCw5MjkwNjM2MTksOT
+kxMTEzMTY0LDIwMTQxMjM3NjUsLTg3ODc3MTAxNywtNDgyNDI5
+NjQ3XX0=
 -->
