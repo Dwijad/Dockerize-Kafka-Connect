@@ -252,7 +252,7 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     
     Name: SASL_MECHANISM
     Default value: PLAIN
-    Description: The worker listener and Rest server port number.
+    Description: The sasl mechanism 
     
     Name: PRODUCER_SASL_MECHANISM
     Default value: PLAIN
@@ -401,11 +401,11 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mzg2Mzk4NTAsLTg0MTk3MDQ4OCw3MD
-QxMzE0MTcsLTExMDU2NDI2MzYsNzAxMDMyNjk1LC0xNTgyMDA4
-MzAsNzU4MjMzMzUxLC0xMzc3MTA1NjE1LDIwNDU4NjM0MiwxMD
-kzMzg4NDE0LDMzNjUwMjQ2MywxODk4MzEwNTQ0LC0yMTk0NjA2
-NTQsLTIwMjM3OTI1MjEsLTExOTgwMzUyOTAsLTU4MTk4OTg0NC
-wxMTM5NjkzMDYxLDI3ODU0MzgxNCw5MjkwNjM2MTksOTkxMTEz
-MTY0XX0=
+eyJoaXN0b3J5IjpbLTEwNTAwNzE2MzIsLTE4Mzg2Mzk4NTAsLT
+g0MTk3MDQ4OCw3MDQxMzE0MTcsLTExMDU2NDI2MzYsNzAxMDMy
+Njk1LC0xNTgyMDA4MzAsNzU4MjMzMzUxLC0xMzc3MTA1NjE1LD
+IwNDU4NjM0MiwxMDkzMzg4NDE0LDMzNjUwMjQ2MywxODk4MzEw
+NTQ0LC0yMTk0NjA2NTQsLTIwMjM3OTI1MjEsLTExOTgwMzUyOT
+AsLTU4MTk4OTg0NCwxMTM5NjkzMDYxLDI3ODU0MzgxNCw5Mjkw
+NjM2MTldfQ==
 -->
