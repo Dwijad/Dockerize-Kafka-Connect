@@ -238,13 +238,31 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Default value: 8081
     Description: The worker listener and Rest server port number.
     
+    Name: SASL_JAAS_CONFIG
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+    
+    Name: PRODUCER_SASL_JAAS_CONFIG 
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+    
+    Name: CONSUMER_SASL_JAAS_CONFIG 
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+    
+    Name: SASL_MECHANISM
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+    
+    Name: PRODUCER_SASL_MECHANISM
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+    
+    Name: CONSUMER_SASL_MECHANISM
+    Default value: 8081
+    Description: The worker listener and Rest server port number.
+    
 
-    SASL_JAAS_CONFIG \
-    PRODUCER_SASL_JAAS_CONFIG \
-    CONSUMER_SASL_JAAS_CONFIG \
-    SASL_MECHANISM \
-    PRODUCER_SASL_MECHANISM \
-    CONSUMER_SASL_MECHANISM \
     SASL_USER \
     SASL_PASSWORD \
     KEY_CONVERTER_SCHEMA_REGISTRY_SSL_TRUSTSTORE_LOCATION \
@@ -287,10 +305,10 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyODAzNDY0Nyw3NTgyMzMzNTEsLTEzNz
-cxMDU2MTUsMjA0NTg2MzQyLDEwOTMzODg0MTQsMzM2NTAyNDYz
-LDE4OTgzMTA1NDQsLTIxOTQ2MDY1NCwtMjAyMzc5MjUyMSwtMT
-E5ODAzNTI5MCwtNTgxOTg5ODQ0LDExMzk2OTMwNjEsMjc4NTQz
-ODE0LDkyOTA2MzYxOSw5OTExMTMxNjQsMjAxNDEyMzc2NSwtOD
-c4NzcxMDE3LC00ODI0Mjk2NDcsNzE5MjA1MjYwXX0=
+eyJoaXN0b3J5IjpbLTE1MTQxODE3OTUsNzU4MjMzMzUxLC0xMz
+c3MTA1NjE1LDIwNDU4NjM0MiwxMDkzMzg4NDE0LDMzNjUwMjQ2
+MywxODk4MzEwNTQ0LC0yMTk0NjA2NTQsLTIwMjM3OTI1MjEsLT
+ExOTgwMzUyOTAsLTU4MTk4OTg0NCwxMTM5NjkzMDYxLDI3ODU0
+MzgxNCw5MjkwNjM2MTksOTkxMTEzMTY0LDIwMTQxMjM3NjUsLT
+g3ODc3MTAxNywtNDgyNDI5NjQ3LDcxOTIwNTI2MF19
 -->
