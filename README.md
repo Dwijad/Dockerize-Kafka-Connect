@@ -159,16 +159,16 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Description: The worker listener and Rest server port number.
  
     Name: CONSUMER_SSL_ENDPOINT_IDENTIFICATION_ALGORITHM
-    Default value: 8081
+    Default value: 
     Description: The worker listener and Rest server port number.
      
     Name: CONSUMER_REQUEST_TIMEOUT_MS
-    Default value: 8081
-    Description: The worker listener and Rest server port number.
+    Default value: 20000
+    Description: The configuration controls the maximum amount of time the consumer will wait for the response of a request.
     
     Name: CONSUMER_RETRY_BACKOFF_MS
-    Default value: 8081
-    Description: The worker listener and Rest server port number.
+    Default value: 500
+    Description: The amount of time to wait by the consumer before attempting to retry a failed fetch request to a given topic partition.
     
     Name: CONSUMER_SECURITY_PROTOCOL
     Default value: SASL_SSL
@@ -401,11 +401,11 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDEwNTc2NDgsMTM0MjExNzk5MiwtMT
-E2NzU3MDEwOSwyMzE4NDU2MTAsLTE4Mzg2Mzk4NTAsLTg0MTk3
-MDQ4OCw3MDQxMzE0MTcsLTExMDU2NDI2MzYsNzAxMDMyNjk1LC
-0xNTgyMDA4MzAsNzU4MjMzMzUxLC0xMzc3MTA1NjE1LDIwNDU4
-NjM0MiwxMDkzMzg4NDE0LDMzNjUwMjQ2MywxODk4MzEwNTQ0LC
-0yMTk0NjA2NTQsLTIwMjM3OTI1MjEsLTExOTgwMzUyOTAsLTU4
-MTk4OTg0NF19
+eyJoaXN0b3J5IjpbMTAzODE1ODIwMywxMzQyMTE3OTkyLC0xMT
+Y3NTcwMTA5LDIzMTg0NTYxMCwtMTgzODYzOTg1MCwtODQxOTcw
+NDg4LDcwNDEzMTQxNywtMTEwNTY0MjYzNiw3MDEwMzI2OTUsLT
+E1ODIwMDgzMCw3NTgyMzMzNTEsLTEzNzcxMDU2MTUsMjA0NTg2
+MzQyLDEwOTMzODg0MTQsMzM2NTAyNDYzLDE4OTgzMTA1NDQsLT
+IxOTQ2MDY1NCwtMjAyMzc5MjUyMSwtMTE5ODAzNTI5MCwtNTgx
+OTg5ODQ0XX0=
 -->
