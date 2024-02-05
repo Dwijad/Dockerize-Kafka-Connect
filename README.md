@@ -491,6 +491,12 @@ Create a table and push some records
     INSERT INTO sale(product_name, product_code, sale_time)  
     VALUES ('Product_3', 103, CURRENT_TIMESTAMP);  
 
+### Post connector
+
+Submit a query based CDC connector to worker
+
+
+
 https://github.com/1ambda/docker-kafka-connect
 https://github.com/SAP/kafka-connect-sap
 https://github.com/debezium/debezium
@@ -498,11 +504,11 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODQ4MjA1NjgsLTExMzYyNjYyNzksMT
-I4NDQxMDgwMCwxMjI0NTcwOTgxLC0zMTU5Mjk5NzMsLTEwNTEz
-NDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMzNzksLTE1MTY2OTc2Nz
-UsODkzMjY2NDA1LDE5OTM5Nzk5OCw0ODE2NzE1ODgsLTE4MTgw
-OTY5MjMsLTE4NjIxMTEzODksLTEyOTkzMTI2MzIsMTU3OTU1OD
-c1OCw4MTIwNDA4MzMsMTM0MjExNzk5MiwtMTE2NzU3MDEwOSwy
-MzE4NDU2MTBdfQ==
+eyJoaXN0b3J5IjpbMTYyNzI3MzQ1MiwtMTEzNjI2NjI3OSwxMj
+g0NDEwODAwLDEyMjQ1NzA5ODEsLTMxNTkyOTk3MywtMTA1MTM0
+MDM3MywxMjMwOTEwNTA2LDQ4MTAzMzM3OSwtMTUxNjY5NzY3NS
+w4OTMyNjY0MDUsMTk5Mzk3OTk4LDQ4MTY3MTU4OCwtMTgxODA5
+NjkyMywtMTg2MjExMTM4OSwtMTI5OTMxMjYzMiwxNTc5NTU4Nz
+U4LDgxMjA0MDgzMywxMzQyMTE3OTkyLC0xMTY3NTcwMTA5LDIz
+MTg0NTYxMF19
 -->
