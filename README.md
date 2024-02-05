@@ -499,7 +499,7 @@ Create a table and push some records
 
 ### Test
 
-#### Check loaded connectors plugins in the cluster
+#### Check loaded connectors plugins in the connect cluster
 Post a curl request through workers REST interface to view the loaded plugins:
 
     $ curl -k --location --request GET 'https://connect-worker-1:8081/connector-plugins' | jq 
@@ -623,7 +623,7 @@ https://stackoverflow.com/questions/40889743/string-operation-on-env-variables-o
 https://materialize.com/guides/mysql-cdc/ 
 https://debezium.io/documentation/reference/stable/connectors/mysql.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NDM5MDEzMSwtMTAxMTc2OTI2NCwyMz
+eyJoaXN0b3J5IjpbLTc4OTM1NDc0OSwtMTAxMTc2OTI2NCwyMz
 UwOTU5NDgsMjAwNTEyMTc2MiwtMTY0NDg5Mjk2LDExODY3MDUx
 MSwtMTgxMjU1OTQxMCw0ODE5Njk3ODIsLTQzNTk0Nzc5OCwtMT
 EzNjI2NjI3OSwxMjg0NDEwODAwLDEyMjQ1NzA5ODEsLTMxNTky
