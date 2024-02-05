@@ -2,7 +2,7 @@
 
 Build docker image for secured confluent kafka Connect worker in your local docker environment with Debzeium MySQL connector and JDBC source/sink connector. Subsequently deploy the kafka connect worker in kubernetes cluster in a distributed way. 
 
-The image is available directly from [Docker Hub](https://hub.docker.com/r/wurstmeister/kafka/)
+The image is available in the [Docker Hub](https://hub.docker.com/r/wurstmeister/kafka/)
 ### Prerequisite
  - You have a local kafka cluster running in any of the PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL mode.
  -  You have a schema registry server running with/without SSL mode.
@@ -570,11 +570,11 @@ https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNzE0Mjk2Niw0ODE5Njk3ODIsLTQzNT
-k0Nzc5OCwtMTEzNjI2NjI3OSwxMjg0NDEwODAwLDEyMjQ1NzA5
-ODEsLTMxNTkyOTk3MywtMTA1MTM0MDM3MywxMjMwOTEwNTA2LD
-Q4MTAzMzM3OSwtMTUxNjY5NzY3NSw4OTMyNjY0MDUsMTk5Mzk3
-OTk4LDQ4MTY3MTU4OCwtMTgxODA5NjkyMywtMTg2MjExMTM4OS
-wtMTI5OTMxMjYzMiwxNTc5NTU4NzU4LDgxMjA0MDgzMywxMzQy
-MTE3OTkyXX0=
+eyJoaXN0b3J5IjpbLTc1NTU1NDkyLDQ4MTk2OTc4MiwtNDM1OT
+Q3Nzk4LC0xMTM2MjY2Mjc5LDEyODQ0MTA4MDAsMTIyNDU3MDk4
+MSwtMzE1OTI5OTczLC0xMDUxMzQwMzczLDEyMzA5MTA1MDYsND
+gxMDMzMzc5LC0xNTE2Njk3Njc1LDg5MzI2NjQwNSwxOTkzOTc5
+OTgsNDgxNjcxNTg4LC0xODE4MDk2OTIzLC0xODYyMTExMzg5LC
+0xMjk5MzEyNjMyLDE1Nzk1NTg3NTgsODEyMDQwODMzLDEzNDIx
+MTc5OTJdfQ==
 -->
