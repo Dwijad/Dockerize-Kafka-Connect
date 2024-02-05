@@ -622,24 +622,12 @@ Now run kafka avro console consumer.
     $ export SCHEMA_REGISTRY_OPTS="-Djavax.net.ssl.keyStore=/u01/cnfkfk/etc/ssl/kafka-broker-0.keystore.jks -Djavax.net.ssl.trustStore=/u01/cnfkfk/etc/ssl/kafka.truststore.jks -Djavax.net.ssl.keyStorePassword=password -Djavax.net.ssl.trustStorePassword=password"
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
-
-https://github.com/1ambda/docker-kafka-connect
-https://github.com/SAP/kafka-connect-sap
-https://github.com/debezium/debezium
-https://github.com/wurstmeister/kafka-docker
-https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
-https://stackoverflow.com/questions/40889743/string-operation-on-env-variables-on-kubernetes
-
-https://materialize.com/guides/mysql-cdc/ 
-https://debezium.io/documentation/reference/stable/connectors/mysql.html 
-
-https://www.clairvoyant.ai/blog/mysql-cdc-with-apache-kafka-and-debezium
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0ODQwNTg4MCwtMzQ4ODU2NzgyLC0xMD
-YzNjc1ODYsMjY3MTIyMjU1LDE0MDg3MjE5ODIsLTEwMTE3Njky
-NjQsMjM1MDk1OTQ4LDIwMDUxMjE3NjIsLTE2NDQ4OTI5NiwxMT
-g2NzA1MTEsLTE4MTI1NTk0MTAsNDgxOTY5NzgyLC00MzU5NDc3
-OTgsLTExMzYyNjYyNzksMTI4NDQxMDgwMCwxMjI0NTcwOTgxLC
-0zMTU5Mjk5NzMsLTEwNTEzNDAzNzMsMTIzMDkxMDUwNiw0ODEw
-MzMzNzldfQ==
+eyJoaXN0b3J5IjpbLTEwNzc5NjQwNTgsMTQ0ODQwNTg4MCwtMz
+Q4ODU2NzgyLC0xMDYzNjc1ODYsMjY3MTIyMjU1LDE0MDg3MjE5
+ODIsLTEwMTE3NjkyNjQsMjM1MDk1OTQ4LDIwMDUxMjE3NjIsLT
+E2NDQ4OTI5NiwxMTg2NzA1MTEsLTE4MTI1NTk0MTAsNDgxOTY5
+NzgyLC00MzU5NDc3OTgsLTExMzYyNjYyNzksMTI4NDQxMDgwMC
+wxMjI0NTcwOTgxLC0zMTU5Mjk5NzMsLTEwNTEzNDAzNzMsMTIz
+MDkxMDUwNl19
 -->
