@@ -565,7 +565,7 @@ This connector will make use of JDBC source connector to fetch all the records f
 
 #### Submit a log based CDC source connector
 
-The Debezium MySQL connector reads the binlog, produces change events for row-level `INSERT`, `UPDATE`, and `DELETE` operations, and emits the change events to Kafka topics. Client applications read those Kafka topics.
+The Debezium MySQL connector reads the binlog, produces change events for row-level `INSERT`, `UPDATE`, and `DELETE` operations, and emits the change events to a Kafka topics. Client applications read those Kafka topics.
 
 The following connector will make use of Debezium source connector which records all changes made to the database when some insert/update/delete events  occur in the database.
 
@@ -580,11 +580,11 @@ https://stackoverflow.com/questions/40889743/string-operation-on-env-variables-o
 https://materialize.com/guides/mysql-cdc/ 
 https://debezium.io/documentation/reference/stable/connectors/mysql.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjM2ODQ2NjEsMjAwNTEyMTc2MiwtMT
-Y0NDg5Mjk2LDExODY3MDUxMSwtMTgxMjU1OTQxMCw0ODE5Njk3
-ODIsLTQzNTk0Nzc5OCwtMTEzNjI2NjI3OSwxMjg0NDEwODAwLD
-EyMjQ1NzA5ODEsLTMxNTkyOTk3MywtMTA1MTM0MDM3MywxMjMw
-OTEwNTA2LDQ4MTAzMzM3OSwtMTUxNjY5NzY3NSw4OTMyNjY0MD
-UsMTk5Mzk3OTk4LDQ4MTY3MTU4OCwtMTgxODA5NjkyMywtMTg2
-MjExMTM4OV19
+eyJoaXN0b3J5IjpbMjM1MDk1OTQ4LDIwMDUxMjE3NjIsLTE2ND
+Q4OTI5NiwxMTg2NzA1MTEsLTE4MTI1NTk0MTAsNDgxOTY5Nzgy
+LC00MzU5NDc3OTgsLTExMzYyNjYyNzksMTI4NDQxMDgwMCwxMj
+I0NTcwOTgxLC0zMTU5Mjk5NzMsLTEwNTEzNDAzNzMsMTIzMDkx
+MDUwNiw0ODEwMzMzNzksLTE1MTY2OTc2NzUsODkzMjY2NDA1LD
+E5OTM5Nzk5OCw0ODE2NzE1ODgsLTE4MTgwOTY5MjMsLTE4NjIx
+MTEzODldfQ==
 -->
