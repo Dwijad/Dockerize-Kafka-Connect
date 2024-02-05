@@ -491,10 +491,12 @@ Create a table and push some records
     INSERT INTO sale(product_name, product_code, sale_time)  
     VALUES ('Product_3', 103, CURRENT_TIMESTAMP);  
 
-### Post connector
+### Test
+
+#### View  
 
 #### Submit a query based CDC source connector
-This connector will make use of JDBC source connector 
+This connector will make use of JDBC source connector to fetch all the records from the database(bulk mode).
 
     $ curl -k -X POST -H "Content-Type: application/json" --data '{          
        "name": "sale_saleDB",
@@ -540,7 +542,7 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1MjU5MjUyNCwtMTEzNjI2NjI3OSwxMj
+eyJoaXN0b3J5IjpbLTI5MzczMzQzMywtMTEzNjI2NjI3OSwxMj
 g0NDEwODAwLDEyMjQ1NzA5ODEsLTMxNTkyOTk3MywtMTA1MTM0
 MDM3MywxMjMwOTEwNTA2LDQ4MTAzMzM3OSwtMTUxNjY5NzY3NS
 w4OTMyNjY0MDUsMTk5Mzk3OTk4LDQ4MTY3MTU4OCwtMTgxODA5
