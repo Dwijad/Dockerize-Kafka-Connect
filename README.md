@@ -424,7 +424,21 @@ Generated connect distributed properties files are [connect-distributed.properti
 
 ### Configure MySQL for log based change data capture(CDC)
 
-Configure MySQL server for log based CDC. Edit MySQL configuration file to in
+Configure MySQL server for log based CDC. Edit MySQL server configuration file to include following stanzas .
+
+    [mysql]  
+    log_bin=mysql-bin  
+    binlog_format=ROW  
+    binlog_row_image=FULL  
+    expire_logs_days=15  
+    gtid_mode=ON  
+    enforce_gtid_consistency=ON  
+    interactive_timeout=500  
+    wait_timeout=500  
+    binlog_rows_query_log_events=ON
+
+
+
 
 https://github.com/1ambda/docker-kafka-connect
 https://github.com/SAP/kafka-connect-sap
@@ -433,11 +447,11 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0MjkxNTE2NiwxMjI0NTcwOTgxLC0zMT
-U5Mjk5NzMsLTEwNTEzNDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMz
-NzksLTE1MTY2OTc2NzUsODkzMjY2NDA1LDE5OTM5Nzk5OCw0OD
-E2NzE1ODgsLTE4MTgwOTY5MjMsLTE4NjIxMTEzODksLTEyOTkz
-MTI2MzIsMTU3OTU1ODc1OCw4MTIwNDA4MzMsMTM0MjExNzk5Mi
-wtMTE2NzU3MDEwOSwyMzE4NDU2MTAsLTE4Mzg2Mzk4NTAsLTg0
-MTk3MDQ4OF19
+eyJoaXN0b3J5IjpbLTExNDU1NDcyMTAsMTIyNDU3MDk4MSwtMz
+E1OTI5OTczLC0xMDUxMzQwMzczLDEyMzA5MTA1MDYsNDgxMDMz
+Mzc5LC0xNTE2Njk3Njc1LDg5MzI2NjQwNSwxOTkzOTc5OTgsND
+gxNjcxNTg4LC0xODE4MDk2OTIzLC0xODYyMTExMzg5LC0xMjk5
+MzEyNjMyLDE1Nzk1NTg3NTgsODEyMDQwODMzLDEzNDIxMTc5OT
+IsLTExNjc1NzAxMDksMjMxODQ1NjEwLC0xODM4NjM5ODUwLC04
+NDE5NzA0ODhdfQ==
 -->
