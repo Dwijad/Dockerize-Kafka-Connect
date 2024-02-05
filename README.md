@@ -437,12 +437,12 @@ Configure MySQL server for log based CDC. Edit MySQL server configuration file t
     wait_timeout=500  
     binlog_rows_query_log_events=ON
 
-Create a new user with username "cdcuser" and password "PasswOrd", grant  necessary privileges.
+Create a new user with username "cdcuser" and password "PasswOrd@123", grant  necessary privileges.
 
-CREATE USER 'dbuser'@'%' IDENTIFIED BY 'Password1@';  
-GRANT SELECT, RELOAD, SHOW DATABASES, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'dbuser'@'%';  
-ALTER USER 'dbuser'@'%' IDENTIFIED WITH mysql_native_password BY 'Password1@';  
-FLUSH PRIVILEGES;
+    CREATE USER 'cdcuser'@'%' IDENTIFIED BY 'PasswOrd@123';  
+    GRANT SELECT, RELOAD, SHOW DATABASES, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'cdcuser'@'%';  
+    ALTER USER 'cdcuser'@'%' IDENTIFIED WITH mysql_native_password BY 'PasswOrd@123';  
+    FLUSH PRIVILEGES;
 
 
 https://github.com/1ambda/docker-kafka-connect
@@ -452,7 +452,7 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NDM0Mjc4NywxMjI0NTcwOTgxLC0zMT
+eyJoaXN0b3J5IjpbLTE0NTQwMjExMSwxMjI0NTcwOTgxLC0zMT
 U5Mjk5NzMsLTEwNTEzNDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMz
 NzksLTE1MTY2OTc2NzUsODkzMjY2NDA1LDE5OTM5Nzk5OCw0OD
 E2NzE1ODgsLTE4MTgwOTY5MjMsLTE4NjIxMTEzODksLTEyOTkz
