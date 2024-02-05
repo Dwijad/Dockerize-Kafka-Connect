@@ -424,7 +424,7 @@ Generated connect distributed properties files are [connect-distributed.properti
 
 ### Configure MySQL for log based change data capture(CDC)
 
-Configure MySQL server for log based CDC. Edit MySQL server configuration file to include following stanzas .
+Configure MySQL server for log based CDC. Edit MySQL server configuration file to include the following stanzas.
 
     [mysql]  
     log_bin=mysql-bin  
@@ -472,7 +472,7 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0OTUzMzE2NiwxMjI0NTcwOTgxLC0zMT
+eyJoaXN0b3J5IjpbLTgyMjE5NTcxMSwxMjI0NTcwOTgxLC0zMT
 U5Mjk5NzMsLTEwNTEzNDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMz
 NzksLTE1MTY2OTc2NzUsODkzMjY2NDA1LDE5OTM5Nzk5OCw0OD
 E2NzE1ODgsLTE4MTgwOTY5MjMsLTE4NjIxMTEzODksLTEyOTkz
