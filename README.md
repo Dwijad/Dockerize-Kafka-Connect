@@ -589,7 +589,20 @@ The following connector will make use of Debezium source connector which records
         }
     }' https://connect-worker-1:8081/connectors/ | jq .
 
-While the connector is loading, Run kafka-avro-console-consumer to view the change ev
+While the connector is loading, Run `kafka-avro-console-consumer` to view the change events.
+
+security.protocol=SASL_SSL
+sasl.mechanism=SCRAM-SHA-256
+sasl.jaas.config=org.apache.kafka.common.security.scram.ScramLoginModule required \
+    username="user1" \
+    password="password";
+ssl.truststore.type=JKS
+ssl.truststore.location=/u01/cnfkfk/etc/ssl/kafka.truststore.jks
+ssl.truststore.password=password
+ssl.keystore.type=JKS
+ssl.keystore.location=/u01/cnfkfk/etc/ssl/kafka-broker-0.keystore.jks
+ssl.keystore.password=password
+ssl.endpoint.identification.algorithm=
 
 https://github.com/1ambda/docker-kafka-connect
 https://github.com/SAP/kafka-connect-sap
@@ -601,11 +614,11 @@ https://stackoverflow.com/questions/40889743/string-operation-on-env-variables-o
 https://materialize.com/guides/mysql-cdc/ 
 https://debezium.io/documentation/reference/stable/connectors/mysql.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTE3NjkyNjQsMjM1MDk1OTQ4LDIwMD
-UxMjE3NjIsLTE2NDQ4OTI5NiwxMTg2NzA1MTEsLTE4MTI1NTk0
-MTAsNDgxOTY5NzgyLC00MzU5NDc3OTgsLTExMzYyNjYyNzksMT
-I4NDQxMDgwMCwxMjI0NTcwOTgxLC0zMTU5Mjk5NzMsLTEwNTEz
-NDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMzNzksLTE1MTY2OTc2Nz
-UsODkzMjY2NDA1LDE5OTM5Nzk5OCw0ODE2NzE1ODgsLTE4MTgw
-OTY5MjNdfQ==
+eyJoaXN0b3J5IjpbLTEyODMwMzQwNjIsLTEwMTE3NjkyNjQsMj
+M1MDk1OTQ4LDIwMDUxMjE3NjIsLTE2NDQ4OTI5NiwxMTg2NzA1
+MTEsLTE4MTI1NTk0MTAsNDgxOTY5NzgyLC00MzU5NDc3OTgsLT
+ExMzYyNjYyNzksMTI4NDQxMDgwMCwxMjI0NTcwOTgxLC0zMTU5
+Mjk5NzMsLTEwNTEzNDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMzNz
+ksLTE1MTY2OTc2NzUsODkzMjY2NDA1LDE5OTM5Nzk5OCw0ODE2
+NzE1ODhdfQ==
 -->
