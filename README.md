@@ -567,14 +567,14 @@ https://github.com/SAP/kafka-connect-sap
 https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
-
+https://stackoverflow.com/questions/40889743/string-operation-on-env-variables-on-kubernetes
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTI1NTk0MTAsNDgxOTY5NzgyLC00Mz
-U5NDc3OTgsLTExMzYyNjYyNzksMTI4NDQxMDgwMCwxMjI0NTcw
-OTgxLC0zMTU5Mjk5NzMsLTEwNTEzNDAzNzMsMTIzMDkxMDUwNi
-w0ODEwMzMzNzksLTE1MTY2OTc2NzUsODkzMjY2NDA1LDE5OTM5
-Nzk5OCw0ODE2NzE1ODgsLTE4MTgwOTY5MjMsLTE4NjIxMTEzOD
-ksLTEyOTkzMTI2MzIsMTU3OTU1ODc1OCw4MTIwNDA4MzMsMTM0
-MjExNzk5Ml19
+eyJoaXN0b3J5IjpbMTE4NjcwNTExLC0xODEyNTU5NDEwLDQ4MT
+k2OTc4MiwtNDM1OTQ3Nzk4LC0xMTM2MjY2Mjc5LDEyODQ0MTA4
+MDAsMTIyNDU3MDk4MSwtMzE1OTI5OTczLC0xMDUxMzQwMzczLD
+EyMzA5MTA1MDYsNDgxMDMzMzc5LC0xNTE2Njk3Njc1LDg5MzI2
+NjQwNSwxOTkzOTc5OTgsNDgxNjcxNTg4LC0xODE4MDk2OTIzLC
+0xODYyMTExMzg5LC0xMjk5MzEyNjMyLDE1Nzk1NTg3NTgsODEy
+MDQwODMzXX0=
 -->
