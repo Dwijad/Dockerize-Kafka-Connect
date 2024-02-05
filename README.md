@@ -589,7 +589,7 @@ The following connector will make use of Debezium source connector which records
         }
     }' https://connect-worker-1:8081/connectors/ | jq .
 
-
+While the connector is loading, Run kafka-avro-console-consumer to view the change ev
 
 https://github.com/1ambda/docker-kafka-connect
 https://github.com/SAP/kafka-connect-sap
@@ -601,11 +601,11 @@ https://stackoverflow.com/questions/40889743/string-operation-on-env-variables-o
 https://materialize.com/guides/mysql-cdc/ 
 https://debezium.io/documentation/reference/stable/connectors/mysql.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4MTI1ODEyNCwyMzUwOTU5NDgsMjAwNT
-EyMTc2MiwtMTY0NDg5Mjk2LDExODY3MDUxMSwtMTgxMjU1OTQx
-MCw0ODE5Njk3ODIsLTQzNTk0Nzc5OCwtMTEzNjI2NjI3OSwxMj
-g0NDEwODAwLDEyMjQ1NzA5ODEsLTMxNTkyOTk3MywtMTA1MTM0
-MDM3MywxMjMwOTEwNTA2LDQ4MTAzMzM3OSwtMTUxNjY5NzY3NS
-w4OTMyNjY0MDUsMTk5Mzk3OTk4LDQ4MTY3MTU4OCwtMTgxODA5
-NjkyM119
+eyJoaXN0b3J5IjpbLTEwMTE3NjkyNjQsMjM1MDk1OTQ4LDIwMD
+UxMjE3NjIsLTE2NDQ4OTI5NiwxMTg2NzA1MTEsLTE4MTI1NTk0
+MTAsNDgxOTY5NzgyLC00MzU5NDc3OTgsLTExMzYyNjYyNzksMT
+I4NDQxMDgwMCwxMjI0NTcwOTgxLC0zMTU5Mjk5NzMsLTEwNTEz
+NDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMzNzksLTE1MTY2OTc2Nz
+UsODkzMjY2NDA1LDE5OTM5Nzk5OCw0ODE2NzE1ODgsLTE4MTgw
+OTY5MjNdfQ==
 -->
