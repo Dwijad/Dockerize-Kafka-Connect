@@ -481,7 +481,7 @@ Create a table and push some records
     CREATE DATABASE saleDB; 
     USE saleDB;  
     
-    -- Create and push some records  
+    -- Create table and push some records  
     CREATE TABLE sale (  
     id INTEGER ZEROFILL NOT NULL AUTO_INCREMENT,  
     product_name VARCHAR(255) NOT NULL,  
@@ -635,11 +635,11 @@ https://debezium.io/documentation/reference/stable/connectors/mysql.html
 
 https://www.clairvoyant.ai/blog/mysql-cdc-with-apache-kafka-and-debezium
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODYwODczODYsLTM0ODg1Njc4MiwtMT
-A2MzY3NTg2LDI2NzEyMjI1NSwxNDA4NzIxOTgyLC0xMDExNzY5
-MjY0LDIzNTA5NTk0OCwyMDA1MTIxNzYyLC0xNjQ0ODkyOTYsMT
-E4NjcwNTExLC0xODEyNTU5NDEwLDQ4MTk2OTc4MiwtNDM1OTQ3
-Nzk4LC0xMTM2MjY2Mjc5LDEyODQ0MTA4MDAsMTIyNDU3MDk4MS
-wtMzE1OTI5OTczLC0xMDUxMzQwMzczLDEyMzA5MTA1MDYsNDgx
-MDMzMzc5XX0=
+eyJoaXN0b3J5IjpbMTQ0ODQwNTg4MCwtMzQ4ODU2NzgyLC0xMD
+YzNjc1ODYsMjY3MTIyMjU1LDE0MDg3MjE5ODIsLTEwMTE3Njky
+NjQsMjM1MDk1OTQ4LDIwMDUxMjE3NjIsLTE2NDQ4OTI5NiwxMT
+g2NzA1MTEsLTE4MTI1NTk0MTAsNDgxOTY5NzgyLC00MzU5NDc3
+OTgsLTExMzYyNjYyNzksMTI4NDQxMDgwMCwxMjI0NTcwOTgxLC
+0zMTU5Mjk5NzMsLTEwNTEzNDAzNzMsMTIzMDkxMDUwNiw0ODEw
+MzMzNzldfQ==
 -->
