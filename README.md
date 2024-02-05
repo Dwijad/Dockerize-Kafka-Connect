@@ -610,6 +610,7 @@ Firstly create `client.properties` file.
 
 Now run kafka avro console consumer.
 
+    $ export SCHEMA_REGISTRY_OPTS="-Djavax.net.ssl.keyStore=/u01/cnfkfk/etc/ssl/kafka-broker-0.keystore.jks -Djavax.net.ssl.trustStore=/u01/cnfkfk/etc/ssl/kafka.truststore.jks -Djavax.net.ssl.keyStorePassword=password -Djavax.net.ssl.trustStorePassword=password"
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 
@@ -623,11 +624,11 @@ https://stackoverflow.com/questions/40889743/string-operation-on-env-variables-o
 https://materialize.com/guides/mysql-cdc/ 
 https://debezium.io/documentation/reference/stable/connectors/mysql.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwODcyMTk4MiwtMTAxMTc2OTI2NCwyMz
-UwOTU5NDgsMjAwNTEyMTc2MiwtMTY0NDg5Mjk2LDExODY3MDUx
-MSwtMTgxMjU1OTQxMCw0ODE5Njk3ODIsLTQzNTk0Nzc5OCwtMT
-EzNjI2NjI3OSwxMjg0NDEwODAwLDEyMjQ1NzA5ODEsLTMxNTky
-OTk3MywtMTA1MTM0MDM3MywxMjMwOTEwNTA2LDQ4MTAzMzM3OS
-wtMTUxNjY5NzY3NSw4OTMyNjY0MDUsMTk5Mzk3OTk4LDQ4MTY3
-MTU4OF19
+eyJoaXN0b3J5IjpbMjY3MTIyMjU1LDE0MDg3MjE5ODIsLTEwMT
+E3NjkyNjQsMjM1MDk1OTQ4LDIwMDUxMjE3NjIsLTE2NDQ4OTI5
+NiwxMTg2NzA1MTEsLTE4MTI1NTk0MTAsNDgxOTY5NzgyLC00Mz
+U5NDc3OTgsLTExMzYyNjYyNzksMTI4NDQxMDgwMCwxMjI0NTcw
+OTgxLC0zMTU5Mjk5NzMsLTEwNTEzNDAzNzMsMTIzMDkxMDUwNi
+w0ODEwMzMzNzksLTE1MTY2OTc2NzUsODkzMjY2NDA1LDE5OTM5
+Nzk5OF19
 -->
