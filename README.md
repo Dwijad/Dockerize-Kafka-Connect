@@ -437,7 +437,7 @@ Configure MySQL server for log based CDC. Edit MySQL server configuration file t
     wait_timeout=500  
     binlog_rows_query_log_events=ON
 
-Create a new user with username "cdcuser" and password "PasswOrd@123", grant  necessary privileges.
+Create a new user with the name "cdcuser" and password "PasswOrd@123", and grant  necessary privileges.
 
     CREATE USER 'cdcuser'@'%' IDENTIFIED BY 'PasswOrd@123';  
     GRANT SELECT, RELOAD, SHOW DATABASES, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'cdcuser'@'%';  
@@ -472,7 +472,7 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMjE5NTcxMSwxMjI0NTcwOTgxLC0zMT
+eyJoaXN0b3J5IjpbMjExMjU1NTk1NiwxMjI0NTcwOTgxLC0zMT
 U5Mjk5NzMsLTEwNTEzNDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMz
 NzksLTE1MTY2OTc2NzUsODkzMjY2NDA1LDE5OTM5Nzk5OCw0OD
 E2NzE1ODgsLTE4MTgwOTY5MjMsLTE4NjIxMTEzODksLTEyOTkz
