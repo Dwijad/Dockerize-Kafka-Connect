@@ -465,14 +465,16 @@ Restart the MySQL server.
 
     sudo systemctl restart mysqld
 
-#### Create MySQL  table
+#### Create MySQL database table
+
 Create a table and push some records
 
-    -- Create the test database  
+    -- Create a test database  
     CREATE DATABASE saleDB;  
     GO  
     USE saleDB;  
-    -- Create some record  
+    
+    -- Create and push some records  
     CREATE TABLE sale (  
     id INTEGER ZEROFILL NOT NULL AUTO_INCREMENT,  
     product_name VARCHAR(255) NOT NULL,  
@@ -480,6 +482,7 @@ Create a table and push some records
     sale_time TIMESTAMP,  
     PRIMARY KEY(id)  
     );  
+    
     -- Insert test values  
     INSERT INTO sale(product_name, product_code, sale_time)  
     VALUES ('Product_1', 101, CURRENT_TIMESTAMP);  
@@ -495,11 +498,11 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMTc3NjcyNywtMTEzNjI2NjI3OSwxMj
-g0NDEwODAwLDEyMjQ1NzA5ODEsLTMxNTkyOTk3MywtMTA1MTM0
-MDM3MywxMjMwOTEwNTA2LDQ4MTAzMzM3OSwtMTUxNjY5NzY3NS
-w4OTMyNjY0MDUsMTk5Mzk3OTk4LDQ4MTY3MTU4OCwtMTgxODA5
-NjkyMywtMTg2MjExMTM4OSwtMTI5OTMxMjYzMiwxNTc5NTU4Nz
-U4LDgxMjA0MDgzMywxMzQyMTE3OTkyLC0xMTY3NTcwMTA5LDIz
-MTg0NTYxMF19
+eyJoaXN0b3J5IjpbLTE0ODQ4MjA1NjgsLTExMzYyNjYyNzksMT
+I4NDQxMDgwMCwxMjI0NTcwOTgxLC0zMTU5Mjk5NzMsLTEwNTEz
+NDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMzNzksLTE1MTY2OTc2Nz
+UsODkzMjY2NDA1LDE5OTM5Nzk5OCw0ODE2NzE1ODgsLTE4MTgw
+OTY5MjMsLTE4NjIxMTEzODksLTEyOTkzMTI2MzIsMTU3OTU1OD
+c1OCw4MTIwNDA4MzMsMTM0MjExNzk5MiwtMTE2NzU3MDEwOSwy
+MzE4NDU2MTBdfQ==
 -->
