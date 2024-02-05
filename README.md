@@ -477,14 +477,14 @@ Create a table and push some records
     id INTEGER ZEROFILL NOT NULL AUTO_INCREMENT,  
     product_name VARCHAR(255) NOT NULL,  
     product_code INTEGER NOT NULL,
-    sale_time TIMESTAMP  
+    sale_time TIMESTAMP,  
     PRIMARY KEY(id)  
     );  
     -- Insert test values  
     INSERT INTO fruit(product_1, 101)  
     VALUES ('Apple', 5);  
-    INSERT INTO fruit(fruit_name, num_sold)  
-    VALUES ('Pear', 10);  
+    INSERT INTO sale(product_name, product_code, sale_time)  
+    VALUES ('Product_1', 101, CURRENT_TIMESTAMP);  
     INSERT INTO fruit(fruit_name, num_sold)  
     VALUES ('Peach', 20);
 
@@ -495,11 +495,11 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzYyNjYyNzksMTI4NDQxMDgwMCwxMj
-I0NTcwOTgxLC0zMTU5Mjk5NzMsLTEwNTEzNDAzNzMsMTIzMDkx
-MDUwNiw0ODEwMzMzNzksLTE1MTY2OTc2NzUsODkzMjY2NDA1LD
-E5OTM5Nzk5OCw0ODE2NzE1ODgsLTE4MTgwOTY5MjMsLTE4NjIx
-MTEzODksLTEyOTkzMTI2MzIsMTU3OTU1ODc1OCw4MTIwNDA4Mz
-MsMTM0MjExNzk5MiwtMTE2NzU3MDEwOSwyMzE4NDU2MTAsLTE4
-Mzg2Mzk4NTBdfQ==
+eyJoaXN0b3J5IjpbODEwNjM2MDU2LC0xMTM2MjY2Mjc5LDEyOD
+Q0MTA4MDAsMTIyNDU3MDk4MSwtMzE1OTI5OTczLC0xMDUxMzQw
+MzczLDEyMzA5MTA1MDYsNDgxMDMzMzc5LC0xNTE2Njk3Njc1LD
+g5MzI2NjQwNSwxOTkzOTc5OTgsNDgxNjcxNTg4LC0xODE4MDk2
+OTIzLC0xODYyMTExMzg5LC0xMjk5MzEyNjMyLDE1Nzk1NTg3NT
+gsODEyMDQwODMzLDEzNDIxMTc5OTIsLTExNjc1NzAxMDksMjMx
+ODQ1NjEwXX0=
 -->
