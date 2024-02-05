@@ -469,14 +469,14 @@ Restart the MySQL server.
 Create a table and push some records
 
     -- Create the test database  
-    CREATE DATABASE ciDB;  
+    CREATE DATABASE saleDB;  
     GO  
-    USE testDB;  
-    -- Create some fruit  
-    CREATE TABLE fruit (  
+    USE saleDB;  
+    -- Create some record  
+    CREATE TABLE city (  
     id INTEGER ZEROFILL NOT NULL AUTO_INCREMENT,  
-    fruit_name VARCHAR(255) NOT NULL,  
-    num_sold INTEGER NOT NULL,  
+    product_name VARCHAR(255) NOT NULL,  
+    pin_code INTEGER NOT NULL,  
     PRIMARY KEY(id)  
     );  
     -- Insert test values  
@@ -494,7 +494,7 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk3MTY2MTE1LDEyODQ0MTA4MDAsMTIyND
+eyJoaXN0b3J5IjpbNTE4NDk2OTMyLDEyODQ0MTA4MDAsMTIyND
 U3MDk4MSwtMzE1OTI5OTczLC0xMDUxMzQwMzczLDEyMzA5MTA1
 MDYsNDgxMDMzMzc5LC0xNTE2Njk3Njc1LDg5MzI2NjQwNSwxOT
 kzOTc5OTgsNDgxNjcxNTg4LC0xODE4MDk2OTIzLC0xODYyMTEx
