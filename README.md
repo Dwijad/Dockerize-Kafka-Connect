@@ -494,10 +494,29 @@ Create a table and push some records
 ### Test
 
 #### View loaded connector plugins
-Post a curl request through workers REST interface to view loaded plugins:
+Post a curl request through workers REST interface to view the loaded plugins:
 
     $ curl -k --location --request GET 'https://connect-worker-1:8081/connector-plugins' | jq 
+    [
+      {
+        "class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+        "type": "sink",
+        "version": "10.7.4"
+      },
+      {
+        "class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+        "type": "source",
+        "version": "10.7.4"
+      },
+      {
+        "class": "io.debezium.connector.mysql.MySqlConnector",
+        "type": "source",
+        "version": "2.4.2.Final"
+      },
+      ...
+      ...
 
+  
 #### Submit a query based CDC source connector
 This connector will make use of JDBC source connector to fetch all the records from the database(bulk mode).
 
@@ -546,11 +565,11 @@ https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NTk0NjcyMCwtMTEzNjI2NjI3OSwxMj
-g0NDEwODAwLDEyMjQ1NzA5ODEsLTMxNTkyOTk3MywtMTA1MTM0
-MDM3MywxMjMwOTEwNTA2LDQ4MTAzMzM3OSwtMTUxNjY5NzY3NS
-w4OTMyNjY0MDUsMTk5Mzk3OTk4LDQ4MTY3MTU4OCwtMTgxODA5
-NjkyMywtMTg2MjExMTM4OSwtMTI5OTMxMjYzMiwxNTc5NTU4Nz
-U4LDgxMjA0MDgzMywxMzQyMTE3OTkyLC0xMTY3NTcwMTA5LDIz
-MTg0NTYxMF19
+eyJoaXN0b3J5IjpbLTExNDkzMDIyOTgsLTExMzYyNjYyNzksMT
+I4NDQxMDgwMCwxMjI0NTcwOTgxLC0zMTU5Mjk5NzMsLTEwNTEz
+NDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMzNzksLTE1MTY2OTc2Nz
+UsODkzMjY2NDA1LDE5OTM5Nzk5OCw0ODE2NzE1ODgsLTE4MTgw
+OTY5MjMsLTE4NjIxMTEzODksLTEyOTkzMTI2MzIsMTU3OTU1OD
+c1OCw4MTIwNDA4MzMsMTM0MjExNzk5MiwtMTE2NzU3MDEwOSwy
+MzE4NDU2MTBdfQ==
 -->
