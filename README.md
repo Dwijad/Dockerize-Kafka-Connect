@@ -493,7 +493,9 @@ Create a table and push some records
 
 ### Test
 
-#### View  
+#### View loaded connector plugins
+
+    curl -k --location --request GET 'https://connect-worker-1:8081/connector-plugins' | jq 
 
 #### Submit a query based CDC source connector
 This connector will make use of JDBC source connector to fetch all the records from the database(bulk mode).
@@ -541,8 +543,9 @@ https://github.com/debezium/debezium
 https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MzczMzQzMywtMTEzNjI2NjI3OSwxMj
+eyJoaXN0b3J5IjpbMjA2ODM3ODcyNiwtMTEzNjI2NjI3OSwxMj
 g0NDEwODAwLDEyMjQ1NzA5ODEsLTMxNTkyOTk3MywtMTA1MTM0
 MDM3MywxMjMwOTEwNTA2LDQ4MTAzMzM3OSwtMTUxNjY5NzY3NS
 w4OTMyNjY0MDUsMTk5Mzk3OTk4LDQ4MTY3MTU4OCwtMTgxODA5
