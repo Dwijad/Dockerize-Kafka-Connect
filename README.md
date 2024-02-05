@@ -456,6 +456,14 @@ Check if the following table shows a value of '0'
 
     SHOW STATUS LIKE 'ONGOING_ANONYMOUS_TRANSACTION_COUNT';
 
+Again change the GTID Mode to “ON” and then exit the MySQL shell.
+
+    SET @@GLOBAL.GTID_MODE = ON;
+    exit
+
+Restart the MySQL server.
+
+    sudo systemctl restart mysqld
 
 https://github.com/1ambda/docker-kafka-connect
 https://github.com/SAP/kafka-connect-sap
@@ -464,7 +472,7 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwODc0Mzk1MSwxMjI0NTcwOTgxLC0zMT
+eyJoaXN0b3J5IjpbMTg0OTUzMzE2NiwxMjI0NTcwOTgxLC0zMT
 U5Mjk5NzMsLTEwNTEzNDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMz
 NzksLTE1MTY2OTc2NzUsODkzMjY2NDA1LDE5OTM5Nzk5OCw0OD
 E2NzE1ODgsLTE4MTgwOTY5MjMsLTE4NjIxMTEzODksLTEyOTkz
