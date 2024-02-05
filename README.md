@@ -493,9 +493,9 @@ Create a table and push some records
 
 ### Post connector
 
-#### Submit a query based CDC connector to worker
+#### Submit a query based CDC connector
 
-    $ curl -X POST -H "Content-Type: application/json" --data '{          
+    $ curl -k -X POST -H "Content-Type: application/json" --data '{          
        "name": "sale_saleDB",
        "config": {
                     "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
@@ -505,14 +505,15 @@ Create a table and push some records
                     "connection.url": "jdbc:mysql://ec2-13-214-23-223.ap-southeast-1.compute.amazonaws.com:3306/saleDB",
                     "query": "select * from sale",
                     "key.converter": "io.confluent.connect.avro.AvroConverter",
-              "key.converter.schema.registry.url": "https://sr-service-https.default.svc:8082",
-           "value.converter": "io.confluent.connect.avro.AvroConverter",
-           "value.converter.schema.registry.url": "https://sr-service-https.default.svc:8082",
-           "mode": "bulk",
-           "topic.prefix": "fruit"
+                    "key.converter.schema.registry.url": "https://sr-service-https.default.svc:8082",
+                    "value.converter": "io.confluent.connect.avro.AvroConverter",
+                    "value.converter.schema.registry.url": "https://sr-service-https.default.svc:8082",
+                    "mode": "bulk",
+                    "topic.prefix": "fruit"
        }
-    }' http://connect-worker-1:8081/connectors/ | jq .
+    }' https://connect-worker-1:8081/connectors/ | jq .
 
+Check the status
 
 https://github.com/1ambda/docker-kafka-connect
 https://github.com/SAP/kafka-connect-sap
@@ -521,7 +522,7 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxODk4NjgyOSwtMTEzNjI2NjI3OSwxMj
+eyJoaXN0b3J5IjpbLTc4NDExNDk1MiwtMTEzNjI2NjI3OSwxMj
 g0NDEwODAwLDEyMjQ1NzA5ODEsLTMxNTkyOTk3MywtMTA1MTM0
 MDM3MywxMjMwOTEwNTA2LDQ4MTAzMzM3OSwtMTUxNjY5NzY3NS
 w4OTMyNjY0MDUsMTk5Mzk3OTk4LDQ4MTY3MTU4OCwtMTgxODA5
