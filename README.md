@@ -493,7 +493,7 @@ Create a table and push some records
 
 ### Post connector
 
-#### Submit a query based CDC connector
+#### Submit a query based CDC source connector
 
     $ curl -k -X POST -H "Content-Type: application/json" --data '{          
        "name": "sale_saleDB",
@@ -513,7 +513,24 @@ Create a table and push some records
        }
     }' https://connect-worker-1:8081/connectors/ | jq .
 
-Check the status
+#### Check connector status
+
+    $ curl -k -s https://connect-worker-1:8081/connectors/sale_saleDB/status | jq
+    {
+      "name": "sale_saleDB",
+      "connector": {
+        "state": "RUNNING",
+        "worker_id": "connect-worker-1:8081"
+      },
+      "tasks": [
+        {
+          "id": 0,
+          "state": "RUNNING",
+          "worker_id": "connect-worker-1:8081"
+        }
+      ],
+      "type": "source"
+    }
 
 https://github.com/1ambda/docker-kafka-connect
 https://github.com/SAP/kafka-connect-sap
@@ -522,11 +539,11 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NDExNDk1MiwtMTEzNjI2NjI3OSwxMj
-g0NDEwODAwLDEyMjQ1NzA5ODEsLTMxNTkyOTk3MywtMTA1MTM0
-MDM3MywxMjMwOTEwNTA2LDQ4MTAzMzM3OSwtMTUxNjY5NzY3NS
-w4OTMyNjY0MDUsMTk5Mzk3OTk4LDQ4MTY3MTU4OCwtMTgxODA5
-NjkyMywtMTg2MjExMTM4OSwtMTI5OTMxMjYzMiwxNTc5NTU4Nz
-U4LDgxMjA0MDgzMywxMzQyMTE3OTkyLC0xMTY3NTcwMTA5LDIz
-MTg0NTYxMF19
+eyJoaXN0b3J5IjpbLTE2NzgzNDcxMjgsLTExMzYyNjYyNzksMT
+I4NDQxMDgwMCwxMjI0NTcwOTgxLC0zMTU5Mjk5NzMsLTEwNTEz
+NDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMzNzksLTE1MTY2OTc2Nz
+UsODkzMjY2NDA1LDE5OTM5Nzk5OCw0ODE2NzE1ODgsLTE4MTgw
+OTY5MjMsLTE4NjIxMTEzODksLTEyOTkzMTI2MzIsMTU3OTU1OD
+c1OCw4MTIwNDA4MzMsMTM0MjExNzk5MiwtMTE2NzU3MDEwOSwy
+MzE4NDU2MTBdfQ==
 -->
