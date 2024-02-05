@@ -69,7 +69,7 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
     Schema registry is running in https
     $ docker run -d --name=connect-worker-1 -e BOOTSTRAP_SERVERS="kafka:9092" -e SECURITY_PROTOCOL="SASL_PLAINTEXT" -e REST_HOST_NAME="connect-worker-1"  -e LISTENER_PORT="8081" -e REST_ADVERTISED_HOST_NAME="connect-worker-1"  -e REST_ADVERTISED_LISTENER="http" -e SCHEMA_REGISTRY_MODE="HTTPS" -e BROKER_LISTENER_MODE="SASL_PLAINTEXT"  -e KAFKA_JMX_HOSTNAME="connect-worker-1" -e KAFKA_JMX_PORT="8080" -e SCHEMA_REGISTRY_URL="https://sr-service-https.default.svc:8082" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=connect-worker-1 -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml" -e SASL_USER=user1 -e SASL_PASSWORD=password -e KEY_CONVERTER_SCHEMA_REGISTRY_URL="https://sr-service-https.default.svc:8082" -e VALUE_CONVERTER_SCHEMA_REGISTRY_URL="https://sr-service-https.default.svc:8082" dwijad/kafka-connect:latest
 
-Generated connect distributed properties files are connect-distributed.properties.sasl_plaintext.with.sr.http  and connect-distributed.properties.sasl_plaintext.with.sr.https
+Generated connect distributed properties files are [connect-distributed.properties.sasl_plaintext.with.sr.http](https://gist.github.com/Dwijad/647aa86f9313bfbac922e9f5bc5254ec)  and [connect-distributed.properties.sasl_plaintext.with.sr.https](https://gist.github.com/Dwijad/931b351accadb66b8ff12ad89cab043f)
 
 ### Using docker compose
 
@@ -430,11 +430,11 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxNTkyOTk3MywtMTA1MTM0MDM3MywxMj
-MwOTEwNTA2LDQ4MTAzMzM3OSwtMTUxNjY5NzY3NSw4OTMyNjY0
-MDUsMTk5Mzk3OTk4LDQ4MTY3MTU4OCwtMTgxODA5NjkyMywtMT
-g2MjExMTM4OSwtMTI5OTMxMjYzMiwxNTc5NTU4NzU4LDgxMjA0
-MDgzMywxMzQyMTE3OTkyLC0xMTY3NTcwMTA5LDIzMTg0NTYxMC
-wtMTgzODYzOTg1MCwtODQxOTcwNDg4LDcwNDEzMTQxNywtMTEw
-NTY0MjYzNl19
+eyJoaXN0b3J5IjpbMTIyNDU3MDk4MSwtMzE1OTI5OTczLC0xMD
+UxMzQwMzczLDEyMzA5MTA1MDYsNDgxMDMzMzc5LC0xNTE2Njk3
+Njc1LDg5MzI2NjQwNSwxOTkzOTc5OTgsNDgxNjcxNTg4LC0xOD
+E4MDk2OTIzLC0xODYyMTExMzg5LC0xMjk5MzEyNjMyLDE1Nzk1
+NTg3NTgsODEyMDQwODMzLDEzNDIxMTc5OTIsLTExNjc1NzAxMD
+ksMjMxODQ1NjEwLC0xODM4NjM5ODUwLC04NDE5NzA0ODgsNzA0
+MTMxNDE3XX0=
 -->
