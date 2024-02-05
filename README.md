@@ -494,6 +494,7 @@ Create a table and push some records
 ### Post connector
 
 #### Submit a query based CDC source connector
+This connector will make use of JDBC source connector 
 
     $ curl -k -X POST -H "Content-Type: application/json" --data '{          
        "name": "sale_saleDB",
@@ -539,11 +540,11 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzgzNDcxMjgsLTExMzYyNjYyNzksMT
-I4NDQxMDgwMCwxMjI0NTcwOTgxLC0zMTU5Mjk5NzMsLTEwNTEz
-NDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMzNzksLTE1MTY2OTc2Nz
-UsODkzMjY2NDA1LDE5OTM5Nzk5OCw0ODE2NzE1ODgsLTE4MTgw
-OTY5MjMsLTE4NjIxMTEzODksLTEyOTkzMTI2MzIsMTU3OTU1OD
-c1OCw4MTIwNDA4MzMsMTM0MjExNzk5MiwtMTE2NzU3MDEwOSwy
-MzE4NDU2MTBdfQ==
+eyJoaXN0b3J5IjpbMTY1MjU5MjUyNCwtMTEzNjI2NjI3OSwxMj
+g0NDEwODAwLDEyMjQ1NzA5ODEsLTMxNTkyOTk3MywtMTA1MTM0
+MDM3MywxMjMwOTEwNTA2LDQ4MTAzMzM3OSwtMTUxNjY5NzY3NS
+w4OTMyNjY0MDUsMTk5Mzk3OTk4LDQ4MTY3MTU4OCwtMTgxODA5
+NjkyMywtMTg2MjExMTM4OSwtMTI5OTMxMjYzMiwxNTc5NTU4Nz
+U4LDgxMjA0MDgzMywxMzQyMTE3OTkyLC0xMTY3NTcwMTA5LDIz
+MTg0NTYxMF19
 -->
