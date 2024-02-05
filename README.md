@@ -631,12 +631,14 @@ https://stackoverflow.com/questions/40889743/string-operation-on-env-variables-o
 
 https://materialize.com/guides/mysql-cdc/ 
 https://debezium.io/documentation/reference/stable/connectors/mysql.html 
+
+https://www.clairvoyant.ai/blog/mysql-cdc-with-apache-kafka-and-debezium
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjM2NzU4NiwyNjcxMjIyNTUsMTQwOD
-cyMTk4MiwtMTAxMTc2OTI2NCwyMzUwOTU5NDgsMjAwNTEyMTc2
-MiwtMTY0NDg5Mjk2LDExODY3MDUxMSwtMTgxMjU1OTQxMCw0OD
-E5Njk3ODIsLTQzNTk0Nzc5OCwtMTEzNjI2NjI3OSwxMjg0NDEw
-ODAwLDEyMjQ1NzA5ODEsLTMxNTkyOTk3MywtMTA1MTM0MDM3My
-wxMjMwOTEwNTA2LDQ4MTAzMzM3OSwtMTUxNjY5NzY3NSw4OTMy
-NjY0MDVdfQ==
+eyJoaXN0b3J5IjpbLTM0ODg1Njc4MiwtMTA2MzY3NTg2LDI2Nz
+EyMjI1NSwxNDA4NzIxOTgyLC0xMDExNzY5MjY0LDIzNTA5NTk0
+OCwyMDA1MTIxNzYyLC0xNjQ0ODkyOTYsMTE4NjcwNTExLC0xOD
+EyNTU5NDEwLDQ4MTk2OTc4MiwtNDM1OTQ3Nzk4LC0xMTM2MjY2
+Mjc5LDEyODQ0MTA4MDAsMTIyNDU3MDk4MSwtMzE1OTI5OTczLC
+0xMDUxMzQwMzczLDEyMzA5MTA1MDYsNDgxMDMzMzc5LC0xNTE2
+Njk3Njc1XX0=
 -->
