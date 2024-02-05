@@ -569,6 +569,27 @@ The Debezium MySQL connector reads the binlog, produces change events for row-le
 
 The following connector will make use of Debezium source connector which records all changes made to the database when some insert/update/delete events  occur in the database.
 
+    curl -k -X POST -H "Content-Type: application/json" --data '{
+        "name": "sales-connector",
+        "config": {
+                   "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+                   "database.hostname": "host.minikube.internal",
+                   "database.port": "3306",
+                   "database.user": "cdcuser",
+                   "database.password": "PasswOrd@123",
+                   "database.server.id": "184054",
+                   "topic.prefix": "sales_service",
+                   "database.include.list": "saleDB",
+                   "schema.history.internal.kafka.bootstrap.servers": "test-kafka.default.svc.cluster.local:9092",
+                   "schema.history.internal.kafka.topic": "schema-changes.sales",
+                   "key.converter": "io.confluent.connect.avro.AvroConverter",
+                   "value.converter": "io.confluent.connect.avro.AvroConverter",
+                   "key.converter.schema.registry.url": "https://sr-service-https.default.svc:8082",
+                   "value.converter.schema.registry.url": "https://sr-service-https.default.svc:8082"
+        }
+    }' https://connect-worker-1:8081/connectors/ | jq .
+
+
 
 https://github.com/1ambda/docker-kafka-connect
 https://github.com/SAP/kafka-connect-sap
@@ -580,11 +601,11 @@ https://stackoverflow.com/questions/40889743/string-operation-on-env-variables-o
 https://materialize.com/guides/mysql-cdc/ 
 https://debezium.io/documentation/reference/stable/connectors/mysql.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM1MDk1OTQ4LDIwMDUxMjE3NjIsLTE2ND
-Q4OTI5NiwxMTg2NzA1MTEsLTE4MTI1NTk0MTAsNDgxOTY5Nzgy
-LC00MzU5NDc3OTgsLTExMzYyNjYyNzksMTI4NDQxMDgwMCwxMj
-I0NTcwOTgxLC0zMTU5Mjk5NzMsLTEwNTEzNDAzNzMsMTIzMDkx
-MDUwNiw0ODEwMzMzNzksLTE1MTY2OTc2NzUsODkzMjY2NDA1LD
-E5OTM5Nzk5OCw0ODE2NzE1ODgsLTE4MTgwOTY5MjMsLTE4NjIx
-MTEzODldfQ==
+eyJoaXN0b3J5IjpbMTU4MTI1ODEyNCwyMzUwOTU5NDgsMjAwNT
+EyMTc2MiwtMTY0NDg5Mjk2LDExODY3MDUxMSwtMTgxMjU1OTQx
+MCw0ODE5Njk3ODIsLTQzNTk0Nzc5OCwtMTEzNjI2NjI3OSwxMj
+g0NDEwODAwLDEyMjQ1NzA5ODEsLTMxNTkyOTk3MywtMTA1MTM0
+MDM3MywxMjMwOTEwNTA2LDQ4MTAzMzM3OSwtMTUxNjY5NzY3NS
+w4OTMyNjY0MDUsMTk5Mzk3OTk4LDQ4MTY3MTU4OCwtMTgxODA5
+NjkyM119
 -->
