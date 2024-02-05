@@ -559,7 +559,8 @@ This connector will make use of JDBC source connector to fetch all the records f
 
 #### Submit a log based CDC source connector
 
-The following connector will make use of Debezium source connector to capture records when some insert/update/delete events  occured in the database with incrementing+timestamp mode.
+The following connector will make use of Debezium source connector which records all changes made to the database when some insert/update/delete events  occured in the database with incrementing+timestamp mode.
+
 
 https://github.com/1ambda/docker-kafka-connect
 https://github.com/SAP/kafka-connect-sap
@@ -569,11 +570,11 @@ https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzNTk0Nzc5OCwtMTEzNjI2NjI3OSwxMj
-g0NDEwODAwLDEyMjQ1NzA5ODEsLTMxNTkyOTk3MywtMTA1MTM0
-MDM3MywxMjMwOTEwNTA2LDQ4MTAzMzM3OSwtMTUxNjY5NzY3NS
-w4OTMyNjY0MDUsMTk5Mzk3OTk4LDQ4MTY3MTU4OCwtMTgxODA5
-NjkyMywtMTg2MjExMTM4OSwtMTI5OTMxMjYzMiwxNTc5NTU4Nz
-U4LDgxMjA0MDgzMywxMzQyMTE3OTkyLC0xMTY3NTcwMTA5LDIz
-MTg0NTYxMF19
+eyJoaXN0b3J5IjpbNDgxOTY5NzgyLC00MzU5NDc3OTgsLTExMz
+YyNjYyNzksMTI4NDQxMDgwMCwxMjI0NTcwOTgxLC0zMTU5Mjk5
+NzMsLTEwNTEzNDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMzNzksLT
+E1MTY2OTc2NzUsODkzMjY2NDA1LDE5OTM5Nzk5OCw0ODE2NzE1
+ODgsLTE4MTgwOTY5MjMsLTE4NjIxMTEzODksLTEyOTkzMTI2Mz
+IsMTU3OTU1ODc1OCw4MTIwNDA4MzMsMTM0MjExNzk5MiwtMTE2
+NzU3MDEwOV19
 -->
