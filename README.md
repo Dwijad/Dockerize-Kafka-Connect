@@ -496,16 +496,16 @@ Create a table and push some records
 #### Submit a query based CDC connector to worker
 
     $ curl -X POST -H "Content-Type: application/json" --data '{          
-       "name": "SALE_testDB",
+       "name": "sale_saleDB",
        "config": {
-           "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
-           "tasks.max": "1",
-           "connection.user": "dbuser",
-           "connection.password": "Password1@",
-           "connection.url": "jdbc:mysql://ec2-13-214-23-223.ap-southeast-1.compute.amazonaws.com:3306/testDB",
-           "query": "select * from fruit",
-           "key.converter": "io.confluent.connect.avro.AvroConverter",
-           "key.converter.schema.registry.url": "https://sr-service-https.default.svc:8082",
+                    "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+                    "tasks.max": "1",
+                    "connection.user": "cdcuser",
+                    "connection.password": "PasswOrd@123",
+                    "connection.url": "jdbc:mysql://ec2-13-214-23-223.ap-southeast-1.compute.amazonaws.com:3306/saleDB",
+                    "query": "select * from sale",
+                    "key.converter": "io.confluent.connect.avro.AvroConverter",
+              "key.converter.schema.registry.url": "https://sr-service-https.default.svc:8082",
            "value.converter": "io.confluent.connect.avro.AvroConverter",
            "value.converter.schema.registry.url": "https://sr-service-https.default.svc:8082",
            "mode": "bulk",
@@ -521,11 +521,11 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYxNjUwMDc3LC0xMTM2MjY2Mjc5LDEyOD
-Q0MTA4MDAsMTIyNDU3MDk4MSwtMzE1OTI5OTczLC0xMDUxMzQw
-MzczLDEyMzA5MTA1MDYsNDgxMDMzMzc5LC0xNTE2Njk3Njc1LD
-g5MzI2NjQwNSwxOTkzOTc5OTgsNDgxNjcxNTg4LC0xODE4MDk2
-OTIzLC0xODYyMTExMzg5LC0xMjk5MzEyNjMyLDE1Nzk1NTg3NT
-gsODEyMDQwODMzLDEzNDIxMTc5OTIsLTExNjc1NzAxMDksMjMx
-ODQ1NjEwXX0=
+eyJoaXN0b3J5IjpbLTYxODk4NjgyOSwtMTEzNjI2NjI3OSwxMj
+g0NDEwODAwLDEyMjQ1NzA5ODEsLTMxNTkyOTk3MywtMTA1MTM0
+MDM3MywxMjMwOTEwNTA2LDQ4MTAzMzM3OSwtMTUxNjY5NzY3NS
+w4OTMyNjY0MDUsMTk5Mzk3OTk4LDQ4MTY3MTU4OCwtMTgxODA5
+NjkyMywtMTg2MjExMTM4OSwtMTI5OTMxMjYzMiwxNTc5NTU4Nz
+U4LDgxMjA0MDgzMywxMzQyMTE3OTkyLC0xMTY3NTcwMTA5LDIz
+MTg0NTYxMF19
 -->
