@@ -493,7 +493,7 @@ Create a table and push some records
 
 ### Test
 
-#### View loaded connector plugins
+#### Check loaded connectors plugins
 Post a curl request through workers REST interface to view the loaded plugins:
 
     $ curl -k --location --request GET 'https://connect-worker-1:8081/connector-plugins' | jq 
@@ -565,7 +565,7 @@ https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDkzMDIyOTgsLTExMzYyNjYyNzksMT
+eyJoaXN0b3J5IjpbLTEyODI3MjgwNjIsLTExMzYyNjYyNzksMT
 I4NDQxMDgwMCwxMjI0NTcwOTgxLC0zMTU5Mjk5NzMsLTEwNTEz
 NDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMzNzksLTE1MTY2OTc2Nz
 UsODkzMjY2NDA1LDE5OTM5Nzk5OCw0ODE2NzE1ODgsLTE4MTgw
