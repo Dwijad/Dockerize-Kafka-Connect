@@ -473,15 +473,15 @@ Create a table and push some records
     GO  
     USE saleDB;  
     -- Create some record  
-    CREATE TABLE city (  
+    CREATE TABLE sale (  
     id INTEGER ZEROFILL NOT NULL AUTO_INCREMENT,  
     product_name VARCHAR(255) NOT NULL,  
     product_code INTEGER NOT NULL,
-    TIMESTAMP  
+    sale_time TIMESTAMP  
     PRIMARY KEY(id)  
     );  
     -- Insert test values  
-    INSERT INTO fruit(fruit_name, num_sold)  
+    INSERT INTO fruit(product_1, 101)  
     VALUES ('Apple', 5);  
     INSERT INTO fruit(fruit_name, num_sold)  
     VALUES ('Pear', 10);  
@@ -495,7 +495,7 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzYyMzU5MDQsMTI4NDQxMDgwMCwxMj
+eyJoaXN0b3J5IjpbLTExMzYyNjYyNzksMTI4NDQxMDgwMCwxMj
 I0NTcwOTgxLC0zMTU5Mjk5NzMsLTEwNTEzNDAzNzMsMTIzMDkx
 MDUwNiw0ODEwMzMzNzksLTE1MTY2OTc2NzUsODkzMjY2NDA1LD
 E5OTM5Nzk5OCw0ODE2NzE1ODgsLTE4MTgwOTY5MjMsLTE4NjIx
