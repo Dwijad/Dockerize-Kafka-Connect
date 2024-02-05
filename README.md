@@ -518,7 +518,7 @@ Post a curl request through workers REST interface to view the loaded plugins:
 
   
 #### Submit a query based CDC source connector
-This connector will make use of JDBC source connector to fetch all the records from the database(bulk mode).
+This connector will make use of JDBC source connector to fetch all the records from the database(bulk mode) to a kafka topic.
 
     $ curl -k -X POST -H "Content-Type: application/json" --data '{          
        "name": "sale_saleDB",
@@ -534,7 +534,7 @@ This connector will make use of JDBC source connector to fetch all the records f
                     "value.converter": "io.confluent.connect.avro.AvroConverter",
                     "value.converter.schema.registry.url": "https://sr-service-https.default.svc:8082",
                     "mode": "bulk",
-                    "topic.prefix": "fruit"
+                    "topic.prefix": "sale"
        }
     }' https://connect-worker-1:8081/connectors/ | jq .
 
@@ -570,11 +570,11 @@ https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgxOTY5NzgyLC00MzU5NDc3OTgsLTExMz
-YyNjYyNzksMTI4NDQxMDgwMCwxMjI0NTcwOTgxLC0zMTU5Mjk5
-NzMsLTEwNTEzNDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMzNzksLT
-E1MTY2OTc2NzUsODkzMjY2NDA1LDE5OTM5Nzk5OCw0ODE2NzE1
-ODgsLTE4MTgwOTY5MjMsLTE4NjIxMTEzODksLTEyOTkzMTI2Mz
-IsMTU3OTU1ODc1OCw4MTIwNDA4MzMsMTM0MjExNzk5MiwtMTE2
-NzU3MDEwOV19
+eyJoaXN0b3J5IjpbMTIzNzE0Mjk2Niw0ODE5Njk3ODIsLTQzNT
+k0Nzc5OCwtMTEzNjI2NjI3OSwxMjg0NDEwODAwLDEyMjQ1NzA5
+ODEsLTMxNTkyOTk3MywtMTA1MTM0MDM3MywxMjMwOTEwNTA2LD
+Q4MTAzMzM3OSwtMTUxNjY5NzY3NSw4OTMyNjY0MDUsMTk5Mzk3
+OTk4LDQ4MTY3MTU4OCwtMTgxODA5NjkyMywtMTg2MjExMTM4OS
+wtMTI5OTMxMjYzMiwxNTc5NTU4NzU4LDgxMjA0MDgzMywxMzQy
+MTE3OTkyXX0=
 -->
