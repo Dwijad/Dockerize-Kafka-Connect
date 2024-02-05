@@ -426,7 +426,8 @@ Generated connect distributed properties files are [connect-distributed.properti
 
 Configure MySQL server for log based CDC. Edit MySQL server configuration file to include the following stanzas.
 
-    [mysql]  
+    [mysql]
+    server-id=184054  
     binlog_format=ROW  
     binlog_row_image=FULL  
     log_bin=mysql-bin      
@@ -634,11 +635,11 @@ https://debezium.io/documentation/reference/stable/connectors/mysql.html
 
 https://www.clairvoyant.ai/blog/mysql-cdc-with-apache-kafka-and-debezium
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0ODg1Njc4MiwtMTA2MzY3NTg2LDI2Nz
-EyMjI1NSwxNDA4NzIxOTgyLC0xMDExNzY5MjY0LDIzNTA5NTk0
-OCwyMDA1MTIxNzYyLC0xNjQ0ODkyOTYsMTE4NjcwNTExLC0xOD
-EyNTU5NDEwLDQ4MTk2OTc4MiwtNDM1OTQ3Nzk4LC0xMTM2MjY2
-Mjc5LDEyODQ0MTA4MDAsMTIyNDU3MDk4MSwtMzE1OTI5OTczLC
-0xMDUxMzQwMzczLDEyMzA5MTA1MDYsNDgxMDMzMzc5LC0xNTE2
-Njk3Njc1XX0=
+eyJoaXN0b3J5IjpbLTE4ODYwODczODYsLTM0ODg1Njc4MiwtMT
+A2MzY3NTg2LDI2NzEyMjI1NSwxNDA4NzIxOTgyLC0xMDExNzY5
+MjY0LDIzNTA5NTk0OCwyMDA1MTIxNzYyLC0xNjQ0ODkyOTYsMT
+E4NjcwNTExLC0xODEyNTU5NDEwLDQ4MTk2OTc4MiwtNDM1OTQ3
+Nzk4LC0xMTM2MjY2Mjc5LDEyODQ0MTA4MDAsMTIyNDU3MDk4MS
+wtMzE1OTI5OTczLC0xMDUxMzQwMzczLDEyMzA5MTA1MDYsNDgx
+MDMzMzc5XX0=
 -->
