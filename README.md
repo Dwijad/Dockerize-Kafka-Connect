@@ -562,6 +562,14 @@ This connector will make use of JDBC source connector to fetch all the records f
       ],
       "type": "source"
     }
+Run kafka avro console consumer
+
+    $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic schema-changes.sales --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
+    {"id":1,"product_name":"Product_1","product_code":101,"sale_time":{"long":1707146905000}}
+    {"id":2,"product_name":"Product_2","product_code":102,"sale_time":{"long":1707146905000}}
+    {"id":3,"product_name":"Product_3","product_code":103,"sale_time":{"long":1707146906000}}
+    ...
+    ...
 
 #### Submit a log based CDC source connector
 
@@ -624,11 +632,11 @@ https://stackoverflow.com/questions/40889743/string-operation-on-env-variables-o
 https://materialize.com/guides/mysql-cdc/ 
 https://debezium.io/documentation/reference/stable/connectors/mysql.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY3MTIyMjU1LDE0MDg3MjE5ODIsLTEwMT
-E3NjkyNjQsMjM1MDk1OTQ4LDIwMDUxMjE3NjIsLTE2NDQ4OTI5
-NiwxMTg2NzA1MTEsLTE4MTI1NTk0MTAsNDgxOTY5NzgyLC00Mz
-U5NDc3OTgsLTExMzYyNjYyNzksMTI4NDQxMDgwMCwxMjI0NTcw
-OTgxLC0zMTU5Mjk5NzMsLTEwNTEzNDAzNzMsMTIzMDkxMDUwNi
-w0ODEwMzMzNzksLTE1MTY2OTc2NzUsODkzMjY2NDA1LDE5OTM5
-Nzk5OF19
+eyJoaXN0b3J5IjpbLTEwNjM2NzU4NiwyNjcxMjIyNTUsMTQwOD
+cyMTk4MiwtMTAxMTc2OTI2NCwyMzUwOTU5NDgsMjAwNTEyMTc2
+MiwtMTY0NDg5Mjk2LDExODY3MDUxMSwtMTgxMjU1OTQxMCw0OD
+E5Njk3ODIsLTQzNTk0Nzc5OCwtMTEzNjI2NjI3OSwxMjg0NDEw
+ODAwLDEyMjQ1NzA5ODEsLTMxNTkyOTk3MywtMTA1MTM0MDM3My
+wxMjMwOTEwNTA2LDQ4MTAzMzM3OSwtMTUxNjY5NzY3NSw4OTMy
+NjY0MDVdfQ==
 -->
