@@ -422,7 +422,8 @@ Generated connect distributed properties files are [connect-distributed.properti
     Default value: NULL
     Description: Kafka connect connection protocol to schema registry server. Values can be either HTTP or HTTPS
 
-Configure MySQL for 
+### Configure MySQL for log based change data capture(CDC)
+
 https://github.com/1ambda/docker-kafka-connect
 https://github.com/SAP/kafka-connect-sap
 https://github.com/debezium/debezium
@@ -430,11 +431,11 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3OTQ2NzE5MCwxMjI0NTcwOTgxLC0zMT
-U5Mjk5NzMsLTEwNTEzNDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMz
-NzksLTE1MTY2OTc2NzUsODkzMjY2NDA1LDE5OTM5Nzk5OCw0OD
-E2NzE1ODgsLTE4MTgwOTY5MjMsLTE4NjIxMTEzODksLTEyOTkz
-MTI2MzIsMTU3OTU1ODc1OCw4MTIwNDA4MzMsMTM0MjExNzk5Mi
-wtMTE2NzU3MDEwOSwyMzE4NDU2MTAsLTE4Mzg2Mzk4NTAsLTg0
-MTk3MDQ4OF19
+eyJoaXN0b3J5IjpbODY2ODY1MzU5LDEyMjQ1NzA5ODEsLTMxNT
+kyOTk3MywtMTA1MTM0MDM3MywxMjMwOTEwNTA2LDQ4MTAzMzM3
+OSwtMTUxNjY5NzY3NSw4OTMyNjY0MDUsMTk5Mzk3OTk4LDQ4MT
+Y3MTU4OCwtMTgxODA5NjkyMywtMTg2MjExMTM4OSwtMTI5OTMx
+MjYzMiwxNTc5NTU4NzU4LDgxMjA0MDgzMywxMzQyMTE3OTkyLC
+0xMTY3NTcwMTA5LDIzMTg0NTYxMCwtMTgzODYzOTg1MCwtODQx
+OTcwNDg4XX0=
 -->
