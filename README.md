@@ -36,7 +36,7 @@ Run Kafka connect worker with Kafka broker listener configured in PLAINTEXT mode
     Schema registry is running in https
     $ docker run -d --name=connect-worker-1 -e BOOTSTRAP_SERVERS="kafka:9092" -e SECURITY_PROTOCOL="PLAINTEXT" -e REST_HOST_NAME="connect-worker-1"  -e LISTENER_PORT="8081" -e REST_ADVERTISED_HOST_NAME="connect-worker-1"  -e REST_ADVERTISED_LISTENER="http" -e SCHEMA_REGISTRY_MODE="HTTP" -e BROKER_LISTENER_MODE="PLAINTEXT"  -e KAFKA_JMX_HOSTNAME="connect-worker-1" -e KAFKA_JMX_PORT="8080" -e SCHEMA_REGISTRY_URL="http://sr-service-http.default.svc:8081" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=connect-worker-1 -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml" dwijad/kafka-connect:latest
 
-Generated connect distributed properties files are [connect-distributed.properties.with.sr.http](https://gist.github.com/Dwijad/4731a41a694eeb23fc3d9d5a389c6120) and connect-distributed.properties.with.sr.https
+Generated connect distributed properties files are [connect-distributed.properties.with.sr.http](https://gist.github.com/Dwijad/4731a41a694eeb23fc3d9d5a389c6120) and [connect-distributed.properties.with.sr.https](https://gist.github.com/Dwijad/e02e4d92e159fa83b77f7acf746a11b2)
 
 #### Use case - II
 Run Kafka connect worker with Kafka broker listener configured in SSL mode. The schema registry is running in either secured or non-secured mode.
@@ -424,11 +424,11 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgxMDMzMzc5LC0xNTE2Njk3Njc1LDg5Mz
-I2NjQwNSwxOTkzOTc5OTgsNDgxNjcxNTg4LC0xODE4MDk2OTIz
-LC0xODYyMTExMzg5LC0xMjk5MzEyNjMyLDE1Nzk1NTg3NTgsOD
-EyMDQwODMzLDEzNDIxMTc5OTIsLTExNjc1NzAxMDksMjMxODQ1
-NjEwLC0xODM4NjM5ODUwLC04NDE5NzA0ODgsNzA0MTMxNDE3LC
-0xMTA1NjQyNjM2LDcwMTAzMjY5NSwtMTU4MjAwODMwLDc1ODIz
-MzM1MV19
+eyJoaXN0b3J5IjpbLTE3NDA5MTM0NTksNDgxMDMzMzc5LC0xNT
+E2Njk3Njc1LDg5MzI2NjQwNSwxOTkzOTc5OTgsNDgxNjcxNTg4
+LC0xODE4MDk2OTIzLC0xODYyMTExMzg5LC0xMjk5MzEyNjMyLD
+E1Nzk1NTg3NTgsODEyMDQwODMzLDEzNDIxMTc5OTIsLTExNjc1
+NzAxMDksMjMxODQ1NjEwLC0xODM4NjM5ODUwLC04NDE5NzA0OD
+gsNzA0MTMxNDE3LC0xMTA1NjQyNjM2LDcwMTAzMjY5NSwtMTU4
+MjAwODMwXX0=
 -->
