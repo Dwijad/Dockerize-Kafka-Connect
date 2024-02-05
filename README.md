@@ -567,7 +567,7 @@ This connector will make use of JDBC source connector to fetch all the records f
 
 The Debezium MySQL connector reads the binlog, produces change events for row-level `INSERT`, `UPDATE`, and `DELETE` operations, and emits the change events to a Kafka topics. Client applications read those Kafka topics.
 
-The following connector will make use of Debezium source connector which records all changes made to the database when some insert/update/delete events  occur in the database.
+The following connector will make use of Debezium source connector which records all changes made to the database when some insert/update/delete event  occur in the database.
 
     curl -k -X POST -H "Content-Type: application/json" --data '{
         "name": "sales-connector",
@@ -623,7 +623,7 @@ https://stackoverflow.com/questions/40889743/string-operation-on-env-variables-o
 https://materialize.com/guides/mysql-cdc/ 
 https://debezium.io/documentation/reference/stable/connectors/mysql.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4OTM1NDc0OSwtMTAxMTc2OTI2NCwyMz
+eyJoaXN0b3J5IjpbMTQwODcyMTk4MiwtMTAxMTc2OTI2NCwyMz
 UwOTU5NDgsMjAwNTEyMTc2MiwtMTY0NDg5Mjk2LDExODY3MDUx
 MSwtMTgxMjU1OTQxMCw0ODE5Njk3ODIsLTQzNTk0Nzc5OCwtMT
 EzNjI2NjI3OSwxMjg0NDEwODAwLDEyMjQ1NzA5ODEsLTMxNTky
