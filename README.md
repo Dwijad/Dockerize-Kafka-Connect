@@ -476,7 +476,8 @@ Create a table and push some records
     CREATE TABLE city (  
     id INTEGER ZEROFILL NOT NULL AUTO_INCREMENT,  
     product_name VARCHAR(255) NOT NULL,  
-    pin_code INTEGER NOT NULL,  
+    product_code INTEGER NOT NULL,
+    TIMESTAMP  
     PRIMARY KEY(id)  
     );  
     -- Insert test values  
@@ -494,11 +495,11 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE4NDk2OTMyLDEyODQ0MTA4MDAsMTIyND
-U3MDk4MSwtMzE1OTI5OTczLC0xMDUxMzQwMzczLDEyMzA5MTA1
-MDYsNDgxMDMzMzc5LC0xNTE2Njk3Njc1LDg5MzI2NjQwNSwxOT
-kzOTc5OTgsNDgxNjcxNTg4LC0xODE4MDk2OTIzLC0xODYyMTEx
-Mzg5LC0xMjk5MzEyNjMyLDE1Nzk1NTg3NTgsODEyMDQwODMzLD
-EzNDIxMTc5OTIsLTExNjc1NzAxMDksMjMxODQ1NjEwLC0xODM4
-NjM5ODUwXX0=
+eyJoaXN0b3J5IjpbLTE4MzYyMzU5MDQsMTI4NDQxMDgwMCwxMj
+I0NTcwOTgxLC0zMTU5Mjk5NzMsLTEwNTEzNDAzNzMsMTIzMDkx
+MDUwNiw0ODEwMzMzNzksLTE1MTY2OTc2NzUsODkzMjY2NDA1LD
+E5OTM5Nzk5OCw0ODE2NzE1ODgsLTE4MTgwOTY5MjMsLTE4NjIx
+MTEzODksLTEyOTkzMTI2MzIsMTU3OTU1ODc1OCw4MTIwNDA4Mz
+MsMTM0MjExNzk5MiwtMTE2NzU3MDEwOSwyMzE4NDU2MTAsLTE4
+Mzg2Mzk4NTBdfQ==
 -->
