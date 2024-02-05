@@ -454,7 +454,14 @@ Set the GTID Mode/GTID Consistency
 
 Check if the following table shows a value of '0'
 
-    SHOW STATUS LIKE 'ONGOING_ANONYMOUS_TRANSACTION_COUNT';
+    mysql> SHOW STATUS LIKE 'ONGOING_ANONYMOUS_TRANSACTION_COUNT';
+    +-------------------------------------+-------+
+    | Variable_name                       | Value |
+    +-------------------------------------+-------+
+    | Ongoing_anonymous_transaction_count | 0     |
+    +-------------------------------------+-------+
+    1 row in set (0.01 sec)
+
 
 Again change the GTID Mode to “ON” and then exit the MySQL shell.
 
@@ -470,8 +477,7 @@ Restart the MySQL server.
 Create a table and push some records
 
     -- Create a test database  
-    CREATE DATABASE saleDB;  
-    GO  
+    CREATE DATABASE saleDB; 
     USE saleDB;  
     
     -- Create and push some records  
@@ -570,11 +576,11 @@ https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector
 https://stackoverflow.com/questions/40889743/string-operation-on-env-variables-on-kubernetes
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NjcwNTExLC0xODEyNTU5NDEwLDQ4MT
-k2OTc4MiwtNDM1OTQ3Nzk4LC0xMTM2MjY2Mjc5LDEyODQ0MTA4
-MDAsMTIyNDU3MDk4MSwtMzE1OTI5OTczLC0xMDUxMzQwMzczLD
-EyMzA5MTA1MDYsNDgxMDMzMzc5LC0xNTE2Njk3Njc1LDg5MzI2
-NjQwNSwxOTkzOTc5OTgsNDgxNjcxNTg4LC0xODE4MDk2OTIzLC
-0xODYyMTExMzg5LC0xMjk5MzEyNjMyLDE1Nzk1NTg3NTgsODEy
-MDQwODMzXX0=
+eyJoaXN0b3J5IjpbLTE2NDQ4OTI5NiwxMTg2NzA1MTEsLTE4MT
+I1NTk0MTAsNDgxOTY5NzgyLC00MzU5NDc3OTgsLTExMzYyNjYy
+NzksMTI4NDQxMDgwMCwxMjI0NTcwOTgxLC0zMTU5Mjk5NzMsLT
+EwNTEzNDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMzNzksLTE1MTY2
+OTc2NzUsODkzMjY2NDA1LDE5OTM5Nzk5OCw0ODE2NzE1ODgsLT
+E4MTgwOTY5MjMsLTE4NjIxMTEzODksLTEyOTkzMTI2MzIsMTU3
+OTU1ODc1OF19
 -->
