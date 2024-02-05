@@ -591,6 +591,7 @@ The following connector will make use of Debezium source connector which records
 
 While the connector is loading, Run `kafka-avro-console-consumer` to view the change events.
 
+Create `client.properties` file.
 
     cat << EOF > /u01/cnfkfk/etc/ssl/client.properties
     security.protocol=SASL_SSL
@@ -617,11 +618,11 @@ https://stackoverflow.com/questions/40889743/string-operation-on-env-variables-o
 https://materialize.com/guides/mysql-cdc/ 
 https://debezium.io/documentation/reference/stable/connectors/mysql.html 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyMTg0ODM2MiwtMTAxMTc2OTI2NCwyMz
-UwOTU5NDgsMjAwNTEyMTc2MiwtMTY0NDg5Mjk2LDExODY3MDUx
-MSwtMTgxMjU1OTQxMCw0ODE5Njk3ODIsLTQzNTk0Nzc5OCwtMT
-EzNjI2NjI3OSwxMjg0NDEwODAwLDEyMjQ1NzA5ODEsLTMxNTky
-OTk3MywtMTA1MTM0MDM3MywxMjMwOTEwNTA2LDQ4MTAzMzM3OS
-wtMTUxNjY5NzY3NSw4OTMyNjY0MDUsMTk5Mzk3OTk4LDQ4MTY3
-MTU4OF19
+eyJoaXN0b3J5IjpbOTg5MjI2NzUyLC0xMDExNzY5MjY0LDIzNT
+A5NTk0OCwyMDA1MTIxNzYyLC0xNjQ0ODkyOTYsMTE4NjcwNTEx
+LC0xODEyNTU5NDEwLDQ4MTk2OTc4MiwtNDM1OTQ3Nzk4LC0xMT
+M2MjY2Mjc5LDEyODQ0MTA4MDAsMTIyNDU3MDk4MSwtMzE1OTI5
+OTczLC0xMDUxMzQwMzczLDEyMzA5MTA1MDYsNDgxMDMzMzc5LC
+0xNTE2Njk3Njc1LDg5MzI2NjQwNSwxOTkzOTc5OTgsNDgxNjcx
+NTg4XX0=
 -->
