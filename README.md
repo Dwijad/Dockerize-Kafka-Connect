@@ -465,6 +465,28 @@ Restart the MySQL server.
 
     sudo systemctl restart mysqld
 
+#### Create database table
+Create a table and push some records
+
+    -- Create the test database  
+    CREATE DATABASE ciDB;  
+    GO  
+    USE testDB;  
+    -- Create some fruit  
+    CREATE TABLE fruit (  
+    id INTEGER ZEROFILL NOT NULL AUTO_INCREMENT,  
+    fruit_name VARCHAR(255) NOT NULL,  
+    num_sold INTEGER NOT NULL,  
+    PRIMARY KEY(id)  
+    );  
+    -- Insert test values  
+    INSERT INTO fruit(fruit_name, num_sold)  
+    VALUES ('Apple', 5);  
+    INSERT INTO fruit(fruit_name, num_sold)  
+    VALUES ('Pear', 10);  
+    INSERT INTO fruit(fruit_name, num_sold)  
+    VALUES ('Peach', 20);
+
 https://github.com/1ambda/docker-kafka-connect
 https://github.com/SAP/kafka-connect-sap
 https://github.com/debezium/debezium
@@ -472,11 +494,11 @@ https://github.com/wurstmeister/kafka-docker
 https://joelforjava.com/blog/2019/10/27/adding-ssl-encryption-to-kafka-connector.html 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NDQxMDgwMCwxMjI0NTcwOTgxLC0zMT
-U5Mjk5NzMsLTEwNTEzNDAzNzMsMTIzMDkxMDUwNiw0ODEwMzMz
-NzksLTE1MTY2OTc2NzUsODkzMjY2NDA1LDE5OTM5Nzk5OCw0OD
-E2NzE1ODgsLTE4MTgwOTY5MjMsLTE4NjIxMTEzODksLTEyOTkz
-MTI2MzIsMTU3OTU1ODc1OCw4MTIwNDA4MzMsMTM0MjExNzk5Mi
-wtMTE2NzU3MDEwOSwyMzE4NDU2MTAsLTE4Mzg2Mzk4NTAsLTg0
-MTk3MDQ4OF19
+eyJoaXN0b3J5IjpbNDk3MTY2MTE1LDEyODQ0MTA4MDAsMTIyND
+U3MDk4MSwtMzE1OTI5OTczLC0xMDUxMzQwMzczLDEyMzA5MTA1
+MDYsNDgxMDMzMzc5LC0xNTE2Njk3Njc1LDg5MzI2NjQwNSwxOT
+kzOTc5OTgsNDgxNjcxNTg4LC0xODE4MDk2OTIzLC0xODYyMTEx
+Mzg5LC0xMjk5MzEyNjMyLDE1Nzk1NTg3NTgsODEyMDQwODMzLD
+EzNDIxMTc5OTIsLTExNjc1NzAxMDksMjMxODQ1NjEwLC0xODM4
+NjM5ODUwXX0=
 -->
