@@ -16,10 +16,11 @@ The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka
  -  You want to convert data for Kafka Connect to and from in Avro format.
  -  For testing query/log based CDC connector a MySQL DB server is configured .
 
-### AVRO converter
+### About AVRO converter
 Converters change the format of data from one format to another. The default converter format for kafka connect is JSON converter. AVRO format is considered to be the stable and recommended format for data conversion.
-In case of source connector, AVRO converter takes input from JDBC driver and convert it to AVRO format before sending
-at the Source Connector, a Converter can take input from JDBC and convert it to AVRO and send it to Kafka Topic. 
+In case of source connector, AVRO converter takes input from JDBC driver and convert it to AVRO format before sending it to kafka topic.
+
+
 
 ### Usage
 You can run the docker image if the kafka broker you want to make use of is running on PLAINTEXT or SASL_PLAINTEXT mode as described below(Use case - I and Use case - IV)
@@ -634,11 +635,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4OTU4MTYxNCw4NzI1OTQ1MDMsLTE0OT
-gwMTc1NTYsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOSwxOTg5NzYz
-NzAxLC0xMDc3OTY0MDU4LDE0NDg0MDU4ODAsLTM0ODg1Njc4Mi
-wtMTA2MzY3NTg2LDI2NzEyMjI1NSwxNDA4NzIxOTgyLC0xMDEx
-NzY5MjY0LDIzNTA5NTk0OCwyMDA1MTIxNzYyLC0xNjQ0ODkyOT
-YsMTE4NjcwNTExLC0xODEyNTU5NDEwLDQ4MTk2OTc4MiwtNDM1
-OTQ3Nzk4XX0=
+eyJoaXN0b3J5IjpbODU2NjA1NjU5LDg3MjU5NDUwMywtMTQ5OD
+AxNzU1NiwtMjA2NjYyNTUwMCwxMzk2NjA3MTM5LDE5ODk3NjM3
+MDEsLTEwNzc5NjQwNTgsMTQ0ODQwNTg4MCwtMzQ4ODU2NzgyLC
+0xMDYzNjc1ODYsMjY3MTIyMjU1LDE0MDg3MjE5ODIsLTEwMTE3
+NjkyNjQsMjM1MDk1OTQ4LDIwMDUxMjE3NjIsLTE2NDQ4OTI5Ni
+wxMTg2NzA1MTEsLTE4MTI1NTk0MTAsNDgxOTY5NzgyLC00MzU5
+NDc3OThdfQ==
 -->
