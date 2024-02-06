@@ -18,8 +18,7 @@ The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka
 
 ### About AVRO converter
 
-Converters change the format of data from one format to another. The default converter format for kafka connect is JSON converter. AVRO format is considered to be the stable and recommended format for data conversion.
-In case of source connector, AVRO converter takes input from JDBC driver and convert it to AVRO format before sending it to kafka topic.
+Converters change the format of data from one format to another. The default converter format for kafka connect is JSON converter. AVRO format is considered to be the stable and the recommended format for data conversion. In case of source connector, AVRO converter takes input from JDBC driver and convert it to AVRO format before sending it to kafka topic.
 
 ![kc](https://github.com/Dwijad/Dockerize-Kafka-Connect-Worker/assets/12824049/cab48827-6174-4e14-b27f-ca5023d41985)
 
@@ -637,7 +636,7 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMzc5NDM2MSwyMDc3ODY2MDk0LC0xMz
+eyJoaXN0b3J5IjpbMTc0MjU1MDYwOCwyMDc3ODY2MDk0LC0xMz
 czMTY4MTksODcyNTk0NTAzLC0xNDk4MDE3NTU2LC0yMDY2NjI1
 NTAwLDEzOTY2MDcxMzksMTk4OTc2MzcwMSwtMTA3Nzk2NDA1OC
 wxNDQ4NDA1ODgwLC0zNDg4NTY3ODIsLTEwNjM2NzU4NiwyNjcx
