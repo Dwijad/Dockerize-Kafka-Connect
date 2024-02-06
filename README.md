@@ -47,7 +47,7 @@ Or rebuild the existing image using a `Dockerfile` like:
 
 Create container from the docker image if the kafka broker's listener mode is configured on `PLAINTEXT` or `SASL_PLAINTEXT`  as described below (Use case - I and Use case - IV)
 
-If the kafka broker is running on `SASL_SSL` or `SSL` mode then rebuild the docker image as described above by incorporating the truststore/keystore file and public CA cert of your  kafka broker.
+If the kafka broker is running on `SASL_SSL` or `SSL` mode then rebuild the docker image as described above by incorporating the truststore/keystore file and public CA cert of your  kafka broker. Use case II and 
 
 Now, run the kafka connect docker image when the broker is using either of the `SASL_SSL` or `SSL` mode by using the use case - II or use case - IV.
 
@@ -647,11 +647,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjY3NzQyNjcsMTc0MjU1MDYwOCwyMD
-c3ODY2MDk0LC0xMzczMTY4MTksODcyNTk0NTAzLC0xNDk4MDE3
-NTU2LC0yMDY2NjI1NTAwLDEzOTY2MDcxMzksMTk4OTc2MzcwMS
-wtMTA3Nzk2NDA1OCwxNDQ4NDA1ODgwLC0zNDg4NTY3ODIsLTEw
-NjM2NzU4NiwyNjcxMjIyNTUsMTQwODcyMTk4MiwtMTAxMTc2OT
-I2NCwyMzUwOTU5NDgsMjAwNTEyMTc2MiwtMTY0NDg5Mjk2LDEx
-ODY3MDUxMV19
+eyJoaXN0b3J5IjpbLTk5ODIwNTc4MSwtMTg2Njc3NDI2NywxNz
+QyNTUwNjA4LDIwNzc4NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1
+MDMsLTE0OTgwMTc1NTYsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOS
+wxOTg5NzYzNzAxLC0xMDc3OTY0MDU4LDE0NDg0MDU4ODAsLTM0
+ODg1Njc4MiwtMTA2MzY3NTg2LDI2NzEyMjI1NSwxNDA4NzIxOT
+gyLC0xMDExNzY5MjY0LDIzNTA5NTk0OCwyMDA1MTIxNzYyLC0x
+NjQ0ODkyOTZdfQ==
 -->
