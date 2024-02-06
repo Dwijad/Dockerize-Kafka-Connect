@@ -11,20 +11,20 @@ The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka
  
  #### To run the docker image
  - You have  kafka cluster configured in any of the `PLAINTEXT`, `SSL`, `SASL_PLAINTEXT`, `SASL_SSL` mode.
- -  A schema registry server running with/without SSL mode.
+ -  A schema registry server running with/without `SSL` mode.
  -  You want to convert data for Kafka Connect to and from in Avro format.
- -  For testing query/log based CDC connector a MySQL DB server is configured .
- -  You want AVRO format to convert data to and from kafka.
+ -  For testing query/log based CDC connector a `MySQL` DB server is configured .
+ -  You want `AVRO` format to convert data to and from kafka.
 
 ### About AVRO converter
 
-Converters change the format of data from one format to another. The default converter format for kafka connect is JSON converter. AVRO format is considered to be the stable and the recommended format for data conversion. In case of source connector, AVRO converter takes input from JDBC driver and convert it to AVRO format before sending it to kafka topic.
+Converters change the format of data from one format to another. The default converter format for kafka connect is `JSON` converter. `AVRO` format is considered to be the stable and the recommended format for data conversion. In case of source connector, `AVRO` converter takes input from `JDBC` driver and convert it to `AVRO` format before sending it to kafka topic.
 
 ![kc](https://github.com/Dwijad/Dockerize-Kafka-Connect-Worker/assets/12824049/cab48827-6174-4e14-b27f-ca5023d41985)
 
 ### Build
 
-Clone the repo and copy kafka keystore and truststore certificates and public certificate authority (CA) file of kafka broker to `script/ca` folder.
+To build from scratch, clone the repo and copy kafka keystore and truststore certificates and public certificate authority (CA) file of kafka broker to `script/ca` folder.
 
     $ git clone https://github.com/Dwijad/Dockerize-Kafka-Connect.git
     $ copy {ca-cert, kafka.truststore.jks, kafka.keystore.jks} to ~/cloned-repo/script/ca 
@@ -644,7 +644,7 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMzE3NTY1MywxNzQyNTUwNjA4LDIwNz
+eyJoaXN0b3J5IjpbMjAzMTQ1ODcwOCwxNzQyNTUwNjA4LDIwNz
 c4NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1MDMsLTE0OTgwMTc1
 NTYsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOSwxOTg5NzYzNzAxLC
 0xMDc3OTY0MDU4LDE0NDg0MDU4ODAsLTM0ODg1Njc4MiwtMTA2
