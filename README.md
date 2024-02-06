@@ -666,13 +666,13 @@ Run kafka avro console consumer to view the change events.
 ### References:
 
  - https://docs.confluent.io/platform/current/connect/index.html
-
+https://kow3ns.github.io/kubernetes-kafka/manifests/kafka_micro.yaml
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NTM0ODc4MCwtMTA4MjI0NTMzOCwxMz
-M2NzgzOTIsLTE3MzYyMTQwNTMsLTE3MjI1Njk3OCwtMTg2Njc3
-NDI2NywxNzQyNTUwNjA4LDIwNzc4NjYwOTQsLTEzNzMxNjgxOS
-w4NzI1OTQ1MDMsLTE0OTgwMTc1NTYsLTIwNjY2MjU1MDAsMTM5
-NjYwNzEzOSwxOTg5NzYzNzAxLC0xMDc3OTY0MDU4LDE0NDg0MD
-U4ODAsLTM0ODg1Njc4MiwtMTA2MzY3NTg2LDI2NzEyMjI1NSwx
-NDA4NzIxOTgyXX0=
+eyJoaXN0b3J5IjpbODA5NzAwNDg3LC05NjUzNDg3ODAsLTEwOD
+IyNDUzMzgsMTMzNjc4MzkyLC0xNzM2MjE0MDUzLC0xNzIyNTY5
+NzgsLTE4NjY3NzQyNjcsMTc0MjU1MDYwOCwyMDc3ODY2MDk0LC
+0xMzczMTY4MTksODcyNTk0NTAzLC0xNDk4MDE3NTU2LC0yMDY2
+NjI1NTAwLDEzOTY2MDcxMzksMTk4OTc2MzcwMSwtMTA3Nzk2ND
+A1OCwxNDQ4NDA1ODgwLC0zNDg4NTY3ODIsLTEwNjM2NzU4Niwy
+NjcxMjIyNTVdfQ==
 -->
