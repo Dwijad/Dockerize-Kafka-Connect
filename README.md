@@ -5,8 +5,7 @@ Build and run docker image for secured confluent kafka Connect worker in your lo
 The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka-connect)
 
 ### Prerequisite
-#### To build the docker image
- 
+#### To build the docker image 
 
  - Install docker with buildx plugin as described [here](https://docs.docker.com/engine/install/ubuntu/)
  
@@ -24,7 +23,7 @@ In case of source connector, AVRO converter takes input from JDBC driver and con
 
 ![kc](https://github.com/Dwijad/Dockerize-Kafka-Connect-Worker/assets/12824049/cab48827-6174-4e14-b27f-ca5023d41985)
 
-### Usage
+### Build
 
 You can run the docker image if the kafka broker you want to make use of is running on PLAINTEXT or SASL_PLAINTEXT mode as described below(Use case - I and Use case - IV)
 
@@ -638,11 +637,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3Nzg2NjA5NCwtMTM3MzE2ODE5LDg3Mj
-U5NDUwMywtMTQ5ODAxNzU1NiwtMjA2NjYyNTUwMCwxMzk2NjA3
-MTM5LDE5ODk3NjM3MDEsLTEwNzc5NjQwNTgsMTQ0ODQwNTg4MC
-wtMzQ4ODU2NzgyLC0xMDYzNjc1ODYsMjY3MTIyMjU1LDE0MDg3
-MjE5ODIsLTEwMTE3NjkyNjQsMjM1MDk1OTQ4LDIwMDUxMjE3Nj
-IsLTE2NDQ4OTI5NiwxMTg2NzA1MTEsLTE4MTI1NTk0MTAsNDgx
-OTY5NzgyXX0=
+eyJoaXN0b3J5IjpbMTgzMzc5NDM2MSwyMDc3ODY2MDk0LC0xMz
+czMTY4MTksODcyNTk0NTAzLC0xNDk4MDE3NTU2LC0yMDY2NjI1
+NTAwLDEzOTY2MDcxMzksMTk4OTc2MzcwMSwtMTA3Nzk2NDA1OC
+wxNDQ4NDA1ODgwLC0zNDg4NTY3ODIsLTEwNjM2NzU4NiwyNjcx
+MjIyNTUsMTQwODcyMTk4MiwtMTAxMTc2OTI2NCwyMzUwOTU5ND
+gsMjAwNTEyMTc2MiwtMTY0NDg5Mjk2LDExODY3MDUxMSwtMTgx
+MjU1OTQxMF19
 -->
