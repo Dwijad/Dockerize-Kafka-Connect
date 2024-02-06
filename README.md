@@ -10,7 +10,7 @@ The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka
  - Install docker with buildx plugin as described [here](https://docs.docker.com/engine/install/ubuntu/)
  
  #### To run the docker image
- - You have  kafka cluster configured in any of the PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL mode.
+ - You have  kafka cluster configured in any of the `PLAINTEXT`, `SSL`, `SASL_PLAINTEXT`, `SASL_SSL` mode.
  -  A schema registry server running with/without SSL mode.
  -  You want to convert data for Kafka Connect to and from in Avro format.
  -  For testing query/log based CDC connector a MySQL DB server is configured .
@@ -30,7 +30,9 @@ Clone the repo and copy kafka keystore and truststore certificates and public ce
     $ copy {ca-cert, kafka.truststore.jks, kafka.keystore.jks} to ~/cloned-repo/script/ca 
     $ DOCKER_BUILDKIT=1 docker buildx build -t dwijad/kafka-connect:latest --no-cache --progress=plain .
 
-Create container from the docker image if the kafka broker's listener mode is configured on PLAINTEXT or SASL_PLAINTEXT mode as described below(Use case - I and Use case - IV)
+### Run
+
+Create container from the docker image if the kafka broker's listener mode is configured on `PLAINTEXT` or `SASL_PLAINTEXT`  as described below(Use case - I and Use case - IV)
 
 If your kafka broker is running on SASL_SSL or SSL mode then you have to rebuild the docker image by incorporating the truststore/keystore file and public CA cert of your  kafka broker.
 
@@ -642,11 +644,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDA5MDgwMjYsMTc0MjU1MDYwOCwyMD
-c3ODY2MDk0LC0xMzczMTY4MTksODcyNTk0NTAzLC0xNDk4MDE3
-NTU2LC0yMDY2NjI1NTAwLDEzOTY2MDcxMzksMTk4OTc2MzcwMS
-wtMTA3Nzk2NDA1OCwxNDQ4NDA1ODgwLC0zNDg4NTY3ODIsLTEw
-NjM2NzU4NiwyNjcxMjIyNTUsMTQwODcyMTk4MiwtMTAxMTc2OT
-I2NCwyMzUwOTU5NDgsMjAwNTEyMTc2MiwtMTY0NDg5Mjk2LDEx
-ODY3MDUxMV19
+eyJoaXN0b3J5IjpbMTgxMzE3NTY1MywxNzQyNTUwNjA4LDIwNz
+c4NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1MDMsLTE0OTgwMTc1
+NTYsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOSwxOTg5NzYzNzAxLC
+0xMDc3OTY0MDU4LDE0NDg0MDU4ODAsLTM0ODg1Njc4MiwtMTA2
+MzY3NTg2LDI2NzEyMjI1NSwxNDA4NzIxOTgyLC0xMDExNzY5Mj
+Y0LDIzNTA5NTk0OCwyMDA1MTIxNzYyLC0xNjQ0ODkyOTYsMTE4
+NjcwNTExXX0=
 -->
