@@ -1,4 +1,4 @@
-# Dockerize Confluent Kafka Connect Worker
+# Dockerize Confluent Kafka Connect
 
 Build and run docker image for secured confluent kafka Connect worker in your local docker environment with Debzeium MySQL connector and JDBC source/sink connector. Run the docker image using docker CLI or use a kubernetes manifest to create kafka connect cluster in a distributed way. 
 
