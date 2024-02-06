@@ -17,6 +17,7 @@ The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka
  -  For testing query/log based CDC connector a MySQL DB server is configured .
 
 ### AVRO converter
+Converters change the format of data from one format to another. 
 
 ### Usage
 You can run the docker image if the kafka broker you want to make use of is running on PLAINTEXT or SASL_PLAINTEXT mode as described below(Use case - I and Use case - IV)
@@ -631,11 +632,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyNDc5NDc5Niw4NzI1OTQ1MDMsLTE0OT
-gwMTc1NTYsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOSwxOTg5NzYz
-NzAxLC0xMDc3OTY0MDU4LDE0NDg0MDU4ODAsLTM0ODg1Njc4Mi
-wtMTA2MzY3NTg2LDI2NzEyMjI1NSwxNDA4NzIxOTgyLC0xMDEx
-NzY5MjY0LDIzNTA5NTk0OCwyMDA1MTIxNzYyLC0xNjQ0ODkyOT
-YsMTE4NjcwNTExLC0xODEyNTU5NDEwLDQ4MTk2OTc4MiwtNDM1
-OTQ3Nzk4XX0=
+eyJoaXN0b3J5IjpbLTE5NTI1ODQ4NjcsODcyNTk0NTAzLC0xND
+k4MDE3NTU2LC0yMDY2NjI1NTAwLDEzOTY2MDcxMzksMTk4OTc2
+MzcwMSwtMTA3Nzk2NDA1OCwxNDQ4NDA1ODgwLC0zNDg4NTY3OD
+IsLTEwNjM2NzU4NiwyNjcxMjIyNTUsMTQwODcyMTk4MiwtMTAx
+MTc2OTI2NCwyMzUwOTU5NDgsMjAwNTEyMTc2MiwtMTY0NDg5Mj
+k2LDExODY3MDUxMSwtMTgxMjU1OTQxMCw0ODE5Njk3ODIsLTQz
+NTk0Nzc5OF19
 -->
