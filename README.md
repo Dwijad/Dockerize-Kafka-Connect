@@ -77,6 +77,7 @@ To enable JMX, use the environmental variable `KAFKA_JMX_PORT` and `KAFKA_JMX_OP
     docker run -d --name=connect-worker-1 -e KAFKA_JMX_PORT="8080" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=$(KAFKA_JMX_HOSTNAME) -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml"
 
 Location for prometheus java agent: `/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar`
+
 Location for JMX configuration for Kafka connect metrics: `/u01/cnfkfk/etc/kafka/kafka-connect.yml`
 
 
@@ -622,7 +623,7 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDM3ODcwNTQsMTM5NjYwNzEzOSwxOT
+eyJoaXN0b3J5IjpbLTIwNjY2MjU1MDAsMTM5NjYwNzEzOSwxOT
 g5NzYzNzAxLC0xMDc3OTY0MDU4LDE0NDg0MDU4ODAsLTM0ODg1
 Njc4MiwtMTA2MzY3NTg2LDI2NzEyMjI1NSwxNDA4NzIxOTgyLC
 0xMDExNzY5MjY0LDIzNTA5NTk0OCwyMDA1MTIxNzYyLC0xNjQ0
