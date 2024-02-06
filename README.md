@@ -54,10 +54,10 @@ If the kafka broker is running on `SASL_SSL` or `SSL` mode then rebuild the dock
 Run the Kafka connect docker image when Kafka broker listener is configured in PLAINTEXT mode. The schema registry is running in either secured or non-secured mode.
 
     Schema registry is running in http
-    $ docker run -d --name=connect-worker-1 -e BOOTSTRAP_SERVERS="kafka:9092" -e SECURITY_PROTOCOL="PLAINTEXT" -e LISTENER_PORT="8081"   -e REST_ADVERTISED_LISTENER="http" -e SCHEMA_REGISTRY_MODE="HTTP" -e BROKER_LISTENER_MODE="PLAINTEXT" -e KAFKA_JMX_PORT="8080" -e SCHEMA_REGISTRY_URL="http://sr-service-http.default.svc:8081" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=$(KAFKA_JMX_HOSTNAME) -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml" dwijad/kafka-connect:latest 
+    $ docker run -d --name=connect-worker-1 -e BOOTSTRAP_SERVERS="kafka:9092" -e SECURITY_PROTOCOL="PLAINTEXT" -e LISTENER_PORT="8081" -e REST_ADVERTISED_LISTENER="http" -e SCHEMA_REGISTRY_MODE="HTTP" -e BROKER_LISTENER_MODE="PLAINTEXT" -e KAFKA_JMX_PORT="8080" -e SCHEMA_REGISTRY_URL="http://sr-service-http.default.svc:8081" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=$(KAFKA_JMX_HOSTNAME) -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml" dwijad/kafka-connect:latest 
     
     Schema registry is running in https
-    $ docker run -d --name=connect-worker-1 -e BOOTSTRAP_SERVERS="kafka:9092" -e SECURITY_PROTOCOL="PLAINTEXT" -e LISTENER_PORT="8081"  -e REST_ADVERTISED_LISTENER="http" -e SCHEMA_REGISTRY_MODE="HTTP" -e BROKER_LISTENER_MODE="PLAINTEXT" -e KAFKA_JMX_PORT="8080" -e SCHEMA_REGISTRY_URL="http://sr-service-http.default.svc:8081" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=$(KAFKA_JMX_HOSTNAME) -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml" dwijad/kafka-connect:latest
+    $ docker run -d --name=connect-worker-1 -e BOOTSTRAP_SERVERS="kafka:9092" -e SECURITY_PROTOCOL="PLAINTEXT" -e LISTENER_PORT="8081" -e REST_ADVERTISED_LISTENER="http" -e SCHEMA_REGISTRY_MODE="HTTP" -e BROKER_LISTENER_MODE="PLAINTEXT" -e KAFKA_JMX_PORT="8080" -e SCHEMA_REGISTRY_URL="http://sr-service-http.default.svc:8081" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=$(KAFKA_JMX_HOSTNAME) -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml" dwijad/kafka-connect:latest
 
 Generated connect distributed properties files are [connect-distributed.properties.plaintext.with.sr.http](https://gist.github.com/Dwijad/4731a41a694eeb23fc3d9d5a389c6120) and [connect-distributed.properties.plaintext.with.sr.https](https://gist.github.com/Dwijad/e02e4d92e159fa83b77f7acf746a11b2)
 
@@ -646,11 +646,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjA5NjU0MDYsLTE4NjY3NzQyNjcsMT
-c0MjU1MDYwOCwyMDc3ODY2MDk0LC0xMzczMTY4MTksODcyNTk0
-NTAzLC0xNDk4MDE3NTU2LC0yMDY2NjI1NTAwLDEzOTY2MDcxMz
-ksMTk4OTc2MzcwMSwtMTA3Nzk2NDA1OCwxNDQ4NDA1ODgwLC0z
-NDg4NTY3ODIsLTEwNjM2NzU4NiwyNjcxMjIyNTUsMTQwODcyMT
-k4MiwtMTAxMTc2OTI2NCwyMzUwOTU5NDgsMjAwNTEyMTc2Miwt
-MTY0NDg5Mjk2XX0=
+eyJoaXN0b3J5IjpbLTE3MjI1Njk3OCwtMTg2Njc3NDI2NywxNz
+QyNTUwNjA4LDIwNzc4NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1
+MDMsLTE0OTgwMTc1NTYsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOS
+wxOTg5NzYzNzAxLC0xMDc3OTY0MDU4LDE0NDg0MDU4ODAsLTM0
+ODg1Njc4MiwtMTA2MzY3NTg2LDI2NzEyMjI1NSwxNDA4NzIxOT
+gyLC0xMDExNzY5MjY0LDIzNTA5NTk0OCwyMDA1MTIxNzYyLC0x
+NjQ0ODkyOTZdfQ==
 -->
