@@ -526,7 +526,10 @@ Create a databse/table and push some records
     $ netstat -pltn | grep 8081
     $ netstat -pltn | grep 8080
 
-#### Check loaded connectors plugins in the connect cluster
+#### Check logs
+$  
+
+#### View loaded connectors plugins in the connect cluster
 
 Post a curl request through workers REST interface to view the loaded plugins:
 
@@ -650,11 +653,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0OTk4NzQ1NiwtMTczNjIxNDA1MywtMT
-cyMjU2OTc4LC0xODY2Nzc0MjY3LDE3NDI1NTA2MDgsMjA3Nzg2
-NjA5NCwtMTM3MzE2ODE5LDg3MjU5NDUwMywtMTQ5ODAxNzU1Ni
-wtMjA2NjYyNTUwMCwxMzk2NjA3MTM5LDE5ODk3NjM3MDEsLTEw
-Nzc5NjQwNTgsMTQ0ODQwNTg4MCwtMzQ4ODU2NzgyLC0xMDYzNj
-c1ODYsMjY3MTIyMjU1LDE0MDg3MjE5ODIsLTEwMTE3NjkyNjQs
-MjM1MDk1OTQ4XX0=
+eyJoaXN0b3J5IjpbMTMzNjc4MzkyLC0xNzM2MjE0MDUzLC0xNz
+IyNTY5NzgsLTE4NjY3NzQyNjcsMTc0MjU1MDYwOCwyMDc3ODY2
+MDk0LC0xMzczMTY4MTksODcyNTk0NTAzLC0xNDk4MDE3NTU2LC
+0yMDY2NjI1NTAwLDEzOTY2MDcxMzksMTk4OTc2MzcwMSwtMTA3
+Nzk2NDA1OCwxNDQ4NDA1ODgwLC0zNDg4NTY3ODIsLTEwNjM2Nz
+U4NiwyNjcxMjIyNTUsMTQwODcyMTk4MiwtMTAxMTc2OTI2NCwy
+MzUwOTU5NDhdfQ==
 -->
