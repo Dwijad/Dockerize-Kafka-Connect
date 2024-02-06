@@ -521,7 +521,7 @@ Create a databse/table and push some records
     VALUES ('Product_3', 103, CURRENT_TIMESTAMP);  
 
 ### Test
-#### 
+#### Check Kafka connect and JMX open port
 
 #### Check loaded connectors plugins in the connect cluster
 
@@ -647,7 +647,7 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjY4OTIxMywtMTczNjIxNDA1MywtMT
+eyJoaXN0b3J5IjpbMTEyNzExMjc3OCwtMTczNjIxNDA1MywtMT
 cyMjU2OTc4LC0xODY2Nzc0MjY3LDE3NDI1NTA2MDgsMjA3Nzg2
 NjA5NCwtMTM3MzE2ODE5LDg3MjU5NDUwMywtMTQ5ODAxNzU1Ni
 wtMjA2NjYyNTUwMCwxMzk2NjA3MTM5LDE5ODk3NjM3MDEsLTEw
