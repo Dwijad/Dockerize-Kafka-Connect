@@ -523,11 +523,20 @@ Create a databse/table and push some records
 ### Test
 #### Verify Kafka connect and JMX open port
 
-    $ netstat -pltn | grep 8081
-    $ netstat -pltn | grep 8080
+    $ netstat -pltn
+    Active Internet connections (only servers)
+    Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+    tcp        0      0 10.244.5.31:8081        0.0.0.0:*               LISTEN      237/java            
+    tcp        0      0 0.0.0.0:38421           0.0.0.0:*               LISTEN      237/java            
+    tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      237/java
 
 #### Check logs
-$  
+
+    $ tail -f logs/connect-worker-trace.log 
+    [2024-02-06 15:41:23,868] TRACE [Consumer clientId=connect-cluster--configs, groupId=connect-cluster] Polling for fetches with timeout 2147475609 (org.apache.kafka.clients.consumer.KafkaConsumer)
+    [2024-02-06 15:41:23,868] DEBUG [Consumer clientId=connect-cluster--offsets, groupId=connect-cluster] Sending READ_UNCOMMITTED IncrementalFetchRequest(toSend=(), toForget=(), toReplace=(), implied=(connect-offsets-0), canUseTopicIds=True) to broker test-kafka-broker-1.test-kafka-broker-headless.default.svc.cluster.local:9092 (id: 101 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractFetch)
+    [2024-02-06 15:41:23,868] DEBUG [Consumer clientId=connect-cluster--offsets, groupId=connect-cluster] Adding pending request for node test-kafka-broker-1.test-kafka-broker-headless.default.svc.cluster.local:9092 (id: 101 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractFetch)
+    [2024-02-06 15:41:23,868] TRACE [Consumer clientId=connect-cluster--offsets, groupId=connect-cluster] Polling for fetches with timeout 2147476777 (org.apache.kafka.clients.consumer.KafkaConsumer)
 
 #### View loaded connectors plugins in the connect cluster
 
@@ -653,11 +662,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzNjc4MzkyLC0xNzM2MjE0MDUzLC0xNz
-IyNTY5NzgsLTE4NjY3NzQyNjcsMTc0MjU1MDYwOCwyMDc3ODY2
-MDk0LC0xMzczMTY4MTksODcyNTk0NTAzLC0xNDk4MDE3NTU2LC
-0yMDY2NjI1NTAwLDEzOTY2MDcxMzksMTk4OTc2MzcwMSwtMTA3
-Nzk2NDA1OCwxNDQ4NDA1ODgwLC0zNDg4NTY3ODIsLTEwNjM2Nz
-U4NiwyNjcxMjIyNTUsMTQwODcyMTk4MiwtMTAxMTc2OTI2NCwy
-MzUwOTU5NDhdfQ==
+eyJoaXN0b3J5IjpbLTgyNDE4MDg4MCwxMzM2NzgzOTIsLTE3Mz
+YyMTQwNTMsLTE3MjI1Njk3OCwtMTg2Njc3NDI2NywxNzQyNTUw
+NjA4LDIwNzc4NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1MDMsLT
+E0OTgwMTc1NTYsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOSwxOTg5
+NzYzNzAxLC0xMDc3OTY0MDU4LDE0NDg0MDU4ODAsLTM0ODg1Nj
+c4MiwtMTA2MzY3NTg2LDI2NzEyMjI1NSwxNDA4NzIxOTgyLC0x
+MDExNzY5MjY0XX0=
 -->
