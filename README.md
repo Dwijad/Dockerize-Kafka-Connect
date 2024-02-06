@@ -17,7 +17,9 @@ The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka
  -  For testing query/log based CDC connector a MySQL DB server is configured .
 
 ### AVRO converter
-Converters change the format of data from one format to another. The default converter format for kafka connect is JSON converter. AVRO format is considered to be the stable and recommended format for  
+Converters change the format of data from one format to another. The default converter format for kafka connect is JSON converter. AVRO format is considered to be the stable and recommended format for data conversion.
+In case of source connector, AVRO converter takes input from JDBC driver and convert it to AVRO format before sending
+at the Source Connector, a Converter can take input from JDBC and convert it to AVRO and send it to Kafka Topic. 
 
 ### Usage
 You can run the docker image if the kafka broker you want to make use of is running on PLAINTEXT or SASL_PLAINTEXT mode as described below(Use case - I and Use case - IV)
@@ -632,11 +634,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjcwMDY1NTgsODcyNTk0NTAzLC0xNDk4MD
-E3NTU2LC0yMDY2NjI1NTAwLDEzOTY2MDcxMzksMTk4OTc2Mzcw
-MSwtMTA3Nzk2NDA1OCwxNDQ4NDA1ODgwLC0zNDg4NTY3ODIsLT
-EwNjM2NzU4NiwyNjcxMjIyNTUsMTQwODcyMTk4MiwtMTAxMTc2
-OTI2NCwyMzUwOTU5NDgsMjAwNTEyMTc2MiwtMTY0NDg5Mjk2LD
-ExODY3MDUxMSwtMTgxMjU1OTQxMCw0ODE5Njk3ODIsLTQzNTk0
-Nzc5OF19
+eyJoaXN0b3J5IjpbMTc4OTU4MTYxNCw4NzI1OTQ1MDMsLTE0OT
+gwMTc1NTYsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOSwxOTg5NzYz
+NzAxLC0xMDc3OTY0MDU4LDE0NDg0MDU4ODAsLTM0ODg1Njc4Mi
+wtMTA2MzY3NTg2LDI2NzEyMjI1NSwxNDA4NzIxOTgyLC0xMDEx
+NzY5MjY0LDIzNTA5NTk0OCwyMDA1MTIxNzYyLC0xNjQ0ODkyOT
+YsMTE4NjcwNTExLC0xODEyNTU5NDEwLDQ4MTk2OTc4MiwtNDM1
+OTQ3Nzk4XX0=
 -->
