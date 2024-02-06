@@ -663,12 +663,16 @@ Now run kafka avro console consumer.
     $ export SCHEMA_REGISTRY_OPTS="-Djavax.net.ssl.keyStore=/u01/cnfkfk/etc/ssl/kafka-broker-0.keystore.jks -Djavax.net.ssl.trustStore=/u01/cnfkfk/etc/ssl/kafka.truststore.jks -Djavax.net.ssl.keyStorePassword=password -Djavax.net.ssl.trustStorePassword=password"
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
+### References:
+
+ - https://docs.confluent.io/platform/current/connect/index.html
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODIyNDUzMzgsMTMzNjc4MzkyLC0xNz
-M2MjE0MDUzLC0xNzIyNTY5NzgsLTE4NjY3NzQyNjcsMTc0MjU1
-MDYwOCwyMDc3ODY2MDk0LC0xMzczMTY4MTksODcyNTk0NTAzLC
-0xNDk4MDE3NTU2LC0yMDY2NjI1NTAwLDEzOTY2MDcxMzksMTk4
-OTc2MzcwMSwtMTA3Nzk2NDA1OCwxNDQ4NDA1ODgwLC0zNDg4NT
-Y3ODIsLTEwNjM2NzU4NiwyNjcxMjIyNTUsMTQwODcyMTk4Miwt
-MTAxMTc2OTI2NF19
+eyJoaXN0b3J5IjpbLTE2NDExMDQwMDEsLTEwODIyNDUzMzgsMT
+MzNjc4MzkyLC0xNzM2MjE0MDUzLC0xNzIyNTY5NzgsLTE4NjY3
+NzQyNjcsMTc0MjU1MDYwOCwyMDc3ODY2MDk0LC0xMzczMTY4MT
+ksODcyNTk0NTAzLC0xNDk4MDE3NTU2LC0yMDY2NjI1NTAwLDEz
+OTY2MDcxMzksMTk4OTc2MzcwMSwtMTA3Nzk2NDA1OCwxNDQ4ND
+A1ODgwLC0zNDg4NTY3ODIsLTEwNjM2NzU4NiwyNjcxMjIyNTUs
+MTQwODcyMTk4Ml19
 -->
