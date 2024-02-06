@@ -9,14 +9,12 @@ The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka
  
 
  - Install docker with buildx plugin as described [here](https://docs.docker.com/engine/install/ubuntu/)
-
-
  
  #### To run the docker image
- - You have a local kafka cluster running in any of the PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL mode.
- -  You have a schema registry server running with/without SSL mode.
+ - You have a  kafka broker cluster configured in any of the PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL mode.
+ -  A schema registry server running with/without SSL mode.
  -  You want to convert data for Kafka Connect to and from in Avro format.
- -  For testing query based CDC connector a MySQL DB server is configured and running.
+ -  For testing query/log based CDC connector a MySQL DB server is configured and running.
  -  For rebuilding Docker image,
 
 ### Usage
@@ -632,11 +630,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwOTMwNTk3MiwtMTQ5ODAxNzU1NiwtMj
-A2NjYyNTUwMCwxMzk2NjA3MTM5LDE5ODk3NjM3MDEsLTEwNzc5
-NjQwNTgsMTQ0ODQwNTg4MCwtMzQ4ODU2NzgyLC0xMDYzNjc1OD
-YsMjY3MTIyMjU1LDE0MDg3MjE5ODIsLTEwMTE3NjkyNjQsMjM1
-MDk1OTQ4LDIwMDUxMjE3NjIsLTE2NDQ4OTI5NiwxMTg2NzA1MT
-EsLTE4MTI1NTk0MTAsNDgxOTY5NzgyLC00MzU5NDc3OTgsLTEx
-MzYyNjYyNzldfQ==
+eyJoaXN0b3J5IjpbNjMyMTAxMDQxLC0xNDk4MDE3NTU2LC0yMD
+Y2NjI1NTAwLDEzOTY2MDcxMzksMTk4OTc2MzcwMSwtMTA3Nzk2
+NDA1OCwxNDQ4NDA1ODgwLC0zNDg4NTY3ODIsLTEwNjM2NzU4Ni
+wyNjcxMjIyNTUsMTQwODcyMTk4MiwtMTAxMTc2OTI2NCwyMzUw
+OTU5NDgsMjAwNTEyMTc2MiwtMTY0NDg5Mjk2LDExODY3MDUxMS
+wtMTgxMjU1OTQxMCw0ODE5Njk3ODIsLTQzNTk0Nzc5OCwtMTEz
+NjI2NjI3OV19
 -->
