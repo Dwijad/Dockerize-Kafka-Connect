@@ -11,11 +11,11 @@ spec:
     name: kafka-connect-1
     env:
     - name: BOOTSTRAP_SERVERS
-      value: "release-kafka.default.svc.cluster.local:9092"
+      value: "test-kafka.default.svc.cluster.local:9092"
     - name: SASL_USER
       value: "user1"
     - name: SECURITY_PROTOCOL
-      value: "SASL_PLAINTEXT"
+      value: "SASL_SSL"
     - name: SASL_PASSWORD
       value: "password"
     - name: REST_HOST_NAME
@@ -25,13 +25,13 @@ spec:
     - name: REST_ADVERTISED_HOST_NAME
       value: "connect-worker-1"
     - name: REST_ADVERTISED_LISTENER
-      value: "http"
+      value: "https"
     - name: SCHEMA_REGISTRY_URL
-      value: "http://sr-service-http.default.svc:8081"
+      value: "https://sr-service-https.default.svc:8082"
     - name: KEY_CONVERTER_SCHEMA_REGISTRY_URL
-      value: "http://sr-service-http.default.svc:8081"
+      value: "https://sr-service-https.default.svc:8082"
     - name: VALUE_CONVERTER_SCHEMA_REGISTRY_URL
-      value: "http://sr-service-http.default.svc:8081"
+      value: "https://sr-service-https.default.svc:8082"
     - name: KAFKA_JMX_PORT
       value: "8080"
     - name: KAFKA_JMX_OPTS
@@ -39,9 +39,9 @@ spec:
     - name: KAFKA_JMX_HOSTNAME
       value: "connect-worker-1"
     - name: BROKER_LISTENER_MODE
-      value: "SASL_PLAINTEXT"
+      value: "SASL_SSL"
     - name: SCHEMA_REGISTRY_MODE
-      value: "HTTP"
+      value: "HTTPS"
     resources: {}
   imagePullSecrets:
     - name: regcred
