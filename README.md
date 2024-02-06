@@ -72,7 +72,7 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
 Generated connect distributed properties files are [connect-distributed.properties.sasl_plaintext.with.sr.http](https://gist.github.com/Dwijad/647aa86f9313bfbac922e9f5bc5254ec)  and [connect-distributed.properties.sasl_plaintext.with.sr.https](https://gist.github.com/Dwijad/931b351accadb66b8ff12ad89cab043f)
 
 ### JMX
-To enable JMX, 
+To enable JMX, use the environmental variable `KAFKA_JMX_PORT` and `KAFKA_JMX_OPTS`
 
 ### Docker environment variable
     Name: UID
@@ -616,11 +616,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwMjYxMzcxLC0xMDc3OTY0MDU4LDE0ND
-g0MDU4ODAsLTM0ODg1Njc4MiwtMTA2MzY3NTg2LDI2NzEyMjI1
-NSwxNDA4NzIxOTgyLC0xMDExNzY5MjY0LDIzNTA5NTk0OCwyMD
-A1MTIxNzYyLC0xNjQ0ODkyOTYsMTE4NjcwNTExLC0xODEyNTU5
-NDEwLDQ4MTk2OTc4MiwtNDM1OTQ3Nzk4LC0xMTM2MjY2Mjc5LD
-EyODQ0MTA4MDAsMTIyNDU3MDk4MSwtMzE1OTI5OTczLC0xMDUx
-MzQwMzczXX0=
+eyJoaXN0b3J5IjpbMTk4OTc2MzcwMSwtMTA3Nzk2NDA1OCwxND
+Q4NDA1ODgwLC0zNDg4NTY3ODIsLTEwNjM2NzU4NiwyNjcxMjIy
+NTUsMTQwODcyMTk4MiwtMTAxMTc2OTI2NCwyMzUwOTU5NDgsMj
+AwNTEyMTc2MiwtMTY0NDg5Mjk2LDExODY3MDUxMSwtMTgxMjU1
+OTQxMCw0ODE5Njk3ODIsLTQzNTk0Nzc5OCwtMTEzNjI2NjI3OS
+wxMjg0NDEwODAwLDEyMjQ1NzA5ODEsLTMxNTkyOTk3MywtMTA1
+MTM0MDM3M119
 -->
