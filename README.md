@@ -26,7 +26,8 @@ Converters change the format of data from one format to another. The default con
 
 Clone the repo and copy kafkastore and truststore certificates and public certificate authority (CA) file of kafka broker to `script/ca` folder.
 
-$ 
+$ git clone https://github.com/Dwijad/Dockerize-Kafka-Connect.git
+$ cp {ca-cert, ka}
  
 You can run the docker image if the kafka broker you want to make use of is running on PLAINTEXT or SASL_PLAINTEXT mode as described below(Use case - I and Use case - IV)
 
@@ -640,11 +641,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODgxMDU3NDkzLDE3NDI1NTA2MDgsMjA3Nz
-g2NjA5NCwtMTM3MzE2ODE5LDg3MjU5NDUwMywtMTQ5ODAxNzU1
-NiwtMjA2NjYyNTUwMCwxMzk2NjA3MTM5LDE5ODk3NjM3MDEsLT
-EwNzc5NjQwNTgsMTQ0ODQwNTg4MCwtMzQ4ODU2NzgyLC0xMDYz
-Njc1ODYsMjY3MTIyMjU1LDE0MDg3MjE5ODIsLTEwMTE3NjkyNj
-QsMjM1MDk1OTQ4LDIwMDUxMjE3NjIsLTE2NDQ4OTI5NiwxMTg2
-NzA1MTFdfQ==
+eyJoaXN0b3J5IjpbMTE2MzU0OTEzNCwxNzQyNTUwNjA4LDIwNz
+c4NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1MDMsLTE0OTgwMTc1
+NTYsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOSwxOTg5NzYzNzAxLC
+0xMDc3OTY0MDU4LDE0NDg0MDU4ODAsLTM0ODg1Njc4MiwtMTA2
+MzY3NTg2LDI2NzEyMjI1NSwxNDA4NzIxOTgyLC0xMDExNzY5Mj
+Y0LDIzNTA5NTk0OCwyMDA1MTIxNzYyLC0xNjQ0ODkyOTYsMTE4
+NjcwNTExXX0=
 -->
