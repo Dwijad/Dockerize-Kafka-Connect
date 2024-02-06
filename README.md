@@ -5,11 +5,13 @@ Build and run docker image for secured confluent kafka Connect worker in your lo
 The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka-connect)
 
 ### Prerequisite
+#### To build
+ install docker with buildx plugin as described [here](https://docs.docker.com/engine/install/ubuntu/).
  - You have a local kafka cluster running in any of the PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL mode.
  -  You have a schema registry server running with/without SSL mode.
  -  You want to convert data for Kafka Connect to and from in Avro format.
  -  For testing query based CDC connector a MySQL DB server is configured and running.
- -  For rebuilding Docker image, install docker with buildx plugin as described [here](https://docs.docker.com/engine/install/ubuntu/).
+ -  For rebuilding Docker image,
 
 ### Usage
 You can run the docker image if the kafka broker you want to make use of is running on PLAINTEXT or SASL_PLAINTEXT mode as described below(Use case - I and Use case - IV)
@@ -624,7 +626,7 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2OTIxNDU3OCwtMTQ5ODAxNzU1NiwtMj
+eyJoaXN0b3J5IjpbMTE1NjI3NTEyMSwtMTQ5ODAxNzU1NiwtMj
 A2NjYyNTUwMCwxMzk2NjA3MTM5LDE5ODk3NjM3MDEsLTEwNzc5
 NjQwNTgsMTQ0ODQwNTg4MCwtMzQ4ODU2NzgyLC0xMDYzNjc1OD
 YsMjY3MTIyMjU1LDE0MDg3MjE5ODIsLTEwMTE3NjkyNjQsMjM1
