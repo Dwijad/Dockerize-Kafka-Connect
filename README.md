@@ -30,7 +30,7 @@ To build from scratch, clone the repo and copy kafka keystore and truststore cer
     $ copy {ca-cert, kafka.truststore.jks, kafka.keystore.jks} to ~/cloned-repo/script/ca 
     $ DOCKER_BUILDKIT=1 docker buildx build -t dwijad/kafka-connect:latest --no-cache --progress=plain .
 
-Or rebuild the existing image
+Or rebuild the existing image using a `Dockerfile` like:
     
     FROM dwijad/kafka-connect:latest
     RUN echo "===> Updating  keystore and truststore files===" \ 
@@ -47,9 +47,9 @@ Or rebuild the existing image
 
 Create container from the docker image if the kafka broker's listener mode is configured on `PLAINTEXT` or `SASL_PLAINTEXT`  as described below (Use case - I and Use case - IV)
 
-If the kafka broker is running on SASL_SSL or SSL mode then rebuild the docker image as described above by incorporating the truststore/keystore file and public CA cert of your  kafka broker.
+If the kafka broker is running on `SASL_SSL` or `SSL` mode then rebuild the docker image as described above by incorporating the truststore/keystore file and public CA cert of your  kafka broker.
 
-Now, run the kafka connect docker image when the broker is using either of the SASL_SSL or SSL mode by using the use case - II or use case - IV.
+Now, run the kafka connect docker image when the broker is using either of the `SASL_SSL` or `SSL` mode by using the use case - II or use case - IV.
 
 #### Use case - I
 Run Kafka connect worker with Kafka broker listener configured in PLAINTEXT mode. The schema registry is running in either secured or non-secured mode.
@@ -647,11 +647,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM1MDg2NDkxLDE3NDI1NTA2MDgsMjA3Nz
-g2NjA5NCwtMTM3MzE2ODE5LDg3MjU5NDUwMywtMTQ5ODAxNzU1
-NiwtMjA2NjYyNTUwMCwxMzk2NjA3MTM5LDE5ODk3NjM3MDEsLT
-EwNzc5NjQwNTgsMTQ0ODQwNTg4MCwtMzQ4ODU2NzgyLC0xMDYz
-Njc1ODYsMjY3MTIyMjU1LDE0MDg3MjE5ODIsLTEwMTE3NjkyNj
-QsMjM1MDk1OTQ4LDIwMDUxMjE3NjIsLTE2NDQ4OTI5NiwxMTg2
-NzA1MTFdfQ==
+eyJoaXN0b3J5IjpbMjEwNzE3Nzc4MywxNzQyNTUwNjA4LDIwNz
+c4NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1MDMsLTE0OTgwMTc1
+NTYsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOSwxOTg5NzYzNzAxLC
+0xMDc3OTY0MDU4LDE0NDg0MDU4ODAsLTM0ODg1Njc4MiwtMTA2
+MzY3NTg2LDI2NzEyMjI1NSwxNDA4NzIxOTgyLC0xMDExNzY5Mj
+Y0LDIzNTA5NTk0OCwyMDA1MTIxNzYyLC0xNjQ0ODkyOTYsMTE4
+NjcwNTExXX0=
 -->
