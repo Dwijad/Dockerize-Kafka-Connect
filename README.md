@@ -15,6 +15,7 @@ The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka
  -  A schema registry server running with/without SSL mode.
  -  You want to convert data for Kafka Connect to and from in Avro format.
  -  For testing query/log based CDC connector a MySQL DB server is configured .
+ -  You want AVRO format to convert data to and from k
 
 ### About AVRO converter
 
@@ -638,11 +639,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzMxNjgxOSw4NzI1OTQ1MDMsLTE0OT
-gwMTc1NTYsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOSwxOTg5NzYz
-NzAxLC0xMDc3OTY0MDU4LDE0NDg0MDU4ODAsLTM0ODg1Njc4Mi
-wtMTA2MzY3NTg2LDI2NzEyMjI1NSwxNDA4NzIxOTgyLC0xMDEx
-NzY5MjY0LDIzNTA5NTk0OCwyMDA1MTIxNzYyLC0xNjQ0ODkyOT
-YsMTE4NjcwNTExLC0xODEyNTU5NDEwLDQ4MTk2OTc4MiwtNDM1
-OTQ3Nzk4XX0=
+eyJoaXN0b3J5IjpbLTI0MDE0ODQ4MSwtMTM3MzE2ODE5LDg3Mj
+U5NDUwMywtMTQ5ODAxNzU1NiwtMjA2NjYyNTUwMCwxMzk2NjA3
+MTM5LDE5ODk3NjM3MDEsLTEwNzc5NjQwNTgsMTQ0ODQwNTg4MC
+wtMzQ4ODU2NzgyLC0xMDYzNjc1ODYsMjY3MTIyMjU1LDE0MDg3
+MjE5ODIsLTEwMTE3NjkyNjQsMjM1MDk1OTQ4LDIwMDUxMjE3Nj
+IsLTE2NDQ4OTI5NiwxMTg2NzA1MTEsLTE4MTI1NTk0MTAsNDgx
+OTY5NzgyXX0=
 -->
