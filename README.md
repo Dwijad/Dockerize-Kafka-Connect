@@ -12,7 +12,7 @@ The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka
  #### To run the docker image
  - You have  kafka cluster configured in any of the `PLAINTEXT`, `SSL`, `SASL_PLAINTEXT`, `SASL_SSL` mode.
  -  A schema registry server running with/without `SSL` mode.
- -  You want to convert data for Kafka Connect to and from in Avro format.
+ -  You want to convert data for Kafka Connect to and from in `AVRO` format.
  -  For testing query/log based CDC connector a `MySQL` DB server is configured .
 
 ### About AVRO converter
@@ -668,11 +668,11 @@ Run kafka avro console consumer to view the change events.
  - https://docs.confluent.io/platform/current/connect/index.html
 https://kow3ns.github.io/kubernetes-kafka/manifests/kafka_micro.yaml
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA5NzAwNDg3LC05NjUzNDg3ODAsLTEwOD
-IyNDUzMzgsMTMzNjc4MzkyLC0xNzM2MjE0MDUzLC0xNzIyNTY5
-NzgsLTE4NjY3NzQyNjcsMTc0MjU1MDYwOCwyMDc3ODY2MDk0LC
-0xMzczMTY4MTksODcyNTk0NTAzLC0xNDk4MDE3NTU2LC0yMDY2
-NjI1NTAwLDEzOTY2MDcxMzksMTk4OTc2MzcwMSwtMTA3Nzk2ND
-A1OCwxNDQ4NDA1ODgwLC0zNDg4NTY3ODIsLTEwNjM2NzU4Niwy
-NjcxMjIyNTVdfQ==
+eyJoaXN0b3J5IjpbLTM2NTc3MTkwMSw4MDk3MDA0ODcsLTk2NT
+M0ODc4MCwtMTA4MjI0NTMzOCwxMzM2NzgzOTIsLTE3MzYyMTQw
+NTMsLTE3MjI1Njk3OCwtMTg2Njc3NDI2NywxNzQyNTUwNjA4LD
+IwNzc4NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1MDMsLTE0OTgw
+MTc1NTYsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOSwxOTg5NzYzNz
+AxLC0xMDc3OTY0MDU4LDE0NDg0MDU4ODAsLTM0ODg1Njc4Miwt
+MTA2MzY3NTg2XX0=
 -->
