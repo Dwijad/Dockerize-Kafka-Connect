@@ -538,7 +538,7 @@ Create a databse/table and push some records
     [2024-02-06 15:41:23,868] DEBUG [Consumer clientId=connect-cluster--offsets, groupId=connect-cluster] Adding pending request for node test-kafka-broker-1.test-kafka-broker-headless.default.svc.cluster.local:9092 (id: 101 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractFetch)
     [2024-02-06 15:41:23,868] TRACE [Consumer clientId=connect-cluster--offsets, groupId=connect-cluster] Polling for fetches with timeout 2147476777 (org.apache.kafka.clients.consumer.KafkaConsumer)
 
-`TRACE` debug log  consumes considerable amount of space. So for sufficiently moderate number of connectors, create a cron job to remove the old zipped log fi
+`TRACE` debug log  consumes considerable amount of space. So for sufficiently moderate number of connectors, create a cron job to remove the old zipped log files.
 
 #### View loaded connectors plugins in the connect cluster
 
@@ -664,11 +664,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3MjI5MTU5MCwxMzM2NzgzOTIsLTE3Mz
-YyMTQwNTMsLTE3MjI1Njk3OCwtMTg2Njc3NDI2NywxNzQyNTUw
-NjA4LDIwNzc4NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1MDMsLT
-E0OTgwMTc1NTYsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOSwxOTg5
-NzYzNzAxLC0xMDc3OTY0MDU4LDE0NDg0MDU4ODAsLTM0ODg1Nj
-c4MiwtMTA2MzY3NTg2LDI2NzEyMjI1NSwxNDA4NzIxOTgyLC0x
-MDExNzY5MjY0XX0=
+eyJoaXN0b3J5IjpbLTEwODIyNDUzMzgsMTMzNjc4MzkyLC0xNz
+M2MjE0MDUzLC0xNzIyNTY5NzgsLTE4NjY3NzQyNjcsMTc0MjU1
+MDYwOCwyMDc3ODY2MDk0LC0xMzczMTY4MTksODcyNTk0NTAzLC
+0xNDk4MDE3NTU2LC0yMDY2NjI1NTAwLDEzOTY2MDcxMzksMTk4
+OTc2MzcwMSwtMTA3Nzk2NDA1OCwxNDQ4NDA1ODgwLC0zNDg4NT
+Y3ODIsLTEwNjM2NzU4NiwyNjcxMjIyNTUsMTQwODcyMTk4Miwt
+MTAxMTc2OTI2NF19
 -->
