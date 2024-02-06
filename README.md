@@ -521,6 +521,7 @@ Create a databse/table and push some records
     VALUES ('Product_3', 103, CURRENT_TIMESTAMP);  
 
 ### Test
+#### 
 
 #### Check loaded connectors plugins in the connect cluster
 
@@ -646,11 +647,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDk3MTUxMzksLTE3MzYyMTQwNTMsLT
-E3MjI1Njk3OCwtMTg2Njc3NDI2NywxNzQyNTUwNjA4LDIwNzc4
-NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1MDMsLTE0OTgwMTc1NT
-YsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOSwxOTg5NzYzNzAxLC0x
-MDc3OTY0MDU4LDE0NDg0MDU4ODAsLTM0ODg1Njc4MiwtMTA2Mz
-Y3NTg2LDI2NzEyMjI1NSwxNDA4NzIxOTgyLC0xMDExNzY5MjY0
-LDIzNTA5NTk0OF19
+eyJoaXN0b3J5IjpbLTE2NjY4OTIxMywtMTczNjIxNDA1MywtMT
+cyMjU2OTc4LC0xODY2Nzc0MjY3LDE3NDI1NTA2MDgsMjA3Nzg2
+NjA5NCwtMTM3MzE2ODE5LDg3MjU5NDUwMywtMTQ5ODAxNzU1Ni
+wtMjA2NjYyNTUwMCwxMzk2NjA3MTM5LDE5ODk3NjM3MDEsLTEw
+Nzc5NjQwNTgsMTQ0ODQwNTg4MCwtMzQ4ODU2NzgyLC0xMDYzNj
+c1ODYsMjY3MTIyMjU1LDE0MDg3MjE5ODIsLTEwMTE3NjkyNjQs
+MjM1MDk1OTQ4XX0=
 -->
