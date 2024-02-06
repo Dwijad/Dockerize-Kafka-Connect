@@ -495,9 +495,9 @@ Restart the MySQL server.
 
     sudo systemctl restart mysqld
 
-#### Create MySQL database table
+#### Create MySQL database/table
 
-Create a table and push some records
+Create a databse/table and push some records
 
     -- Create a test database  
     CREATE DATABASE saleDB; 
@@ -645,11 +645,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzYyMTQwNTMsLTE3MjI1Njk3OCwtMT
-g2Njc3NDI2NywxNzQyNTUwNjA4LDIwNzc4NjYwOTQsLTEzNzMx
-NjgxOSw4NzI1OTQ1MDMsLTE0OTgwMTc1NTYsLTIwNjY2MjU1MD
-AsMTM5NjYwNzEzOSwxOTg5NzYzNzAxLC0xMDc3OTY0MDU4LDE0
-NDg0MDU4ODAsLTM0ODg1Njc4MiwtMTA2MzY3NTg2LDI2NzEyMj
-I1NSwxNDA4NzIxOTgyLC0xMDExNzY5MjY0LDIzNTA5NTk0OCwy
-MDA1MTIxNzYyXX0=
+eyJoaXN0b3J5IjpbLTExMTM0NTQ3NjksLTE3MzYyMTQwNTMsLT
+E3MjI1Njk3OCwtMTg2Njc3NDI2NywxNzQyNTUwNjA4LDIwNzc4
+NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1MDMsLTE0OTgwMTc1NT
+YsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOSwxOTg5NzYzNzAxLC0x
+MDc3OTY0MDU4LDE0NDg0MDU4ODAsLTM0ODg1Njc4MiwtMTA2Mz
+Y3NTg2LDI2NzEyMjI1NSwxNDA4NzIxOTgyLC0xMDExNzY5MjY0
+LDIzNTA5NTk0OF19
 -->
