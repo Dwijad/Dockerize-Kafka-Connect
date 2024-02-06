@@ -1,6 +1,6 @@
 # Dockerize Confluent Kafka Connect Worker
 
-Build docker image for secured confluent kafka Connect worker in your local docker environment with Debzeium MySQL connector and JDBC source/sink connector. Use the docker image from connect worker in kubernetes cluster in a distributed way. 
+Build docker image for secured confluent kafka Connect worker in your local docker environment with Debzeium MySQL connector and JDBC source/sink connector. Run the docker image using docker CLI or use a kubernetes cluster in a distributed way. 
 
 The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka-connect)
 
@@ -624,11 +624,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI1OTMyMDgyLC0yMDY2NjI1NTAwLDEzOT
-Y2MDcxMzksMTk4OTc2MzcwMSwtMTA3Nzk2NDA1OCwxNDQ4NDA1
-ODgwLC0zNDg4NTY3ODIsLTEwNjM2NzU4NiwyNjcxMjIyNTUsMT
-QwODcyMTk4MiwtMTAxMTc2OTI2NCwyMzUwOTU5NDgsMjAwNTEy
-MTc2MiwtMTY0NDg5Mjk2LDExODY3MDUxMSwtMTgxMjU1OTQxMC
-w0ODE5Njk3ODIsLTQzNTk0Nzc5OCwtMTEzNjI2NjI3OSwxMjg0
-NDEwODAwXX0=
+eyJoaXN0b3J5IjpbLTIyODE5MDUwOCwtMjA2NjYyNTUwMCwxMz
+k2NjA3MTM5LDE5ODk3NjM3MDEsLTEwNzc5NjQwNTgsMTQ0ODQw
+NTg4MCwtMzQ4ODU2NzgyLC0xMDYzNjc1ODYsMjY3MTIyMjU1LD
+E0MDg3MjE5ODIsLTEwMTE3NjkyNjQsMjM1MDk1OTQ4LDIwMDUx
+MjE3NjIsLTE2NDQ4OTI5NiwxMTg2NzA1MTEsLTE4MTI1NTk0MT
+AsNDgxOTY5NzgyLC00MzU5NDc3OTgsLTExMzYyNjYyNzksMTI4
+NDQxMDgwMF19
 -->
