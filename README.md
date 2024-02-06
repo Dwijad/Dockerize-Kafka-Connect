@@ -538,6 +538,8 @@ Create a databse/table and push some records
     [2024-02-06 15:41:23,868] DEBUG [Consumer clientId=connect-cluster--offsets, groupId=connect-cluster] Adding pending request for node test-kafka-broker-1.test-kafka-broker-headless.default.svc.cluster.local:9092 (id: 101 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractFetch)
     [2024-02-06 15:41:23,868] TRACE [Consumer clientId=connect-cluster--offsets, groupId=connect-cluster] Polling for fetches with timeout 2147476777 (org.apache.kafka.clients.consumer.KafkaConsumer)
 
+`TRACE` debug log  consumes considerable amount of space if 
+
 #### View loaded connectors plugins in the connect cluster
 
 Post a curl request through workers REST interface to view the loaded plugins:
@@ -662,7 +664,7 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyNDE4MDg4MCwxMzM2NzgzOTIsLTE3Mz
+eyJoaXN0b3J5IjpbMTYyNDY0OTk0NiwxMzM2NzgzOTIsLTE3Mz
 YyMTQwNTMsLTE3MjI1Njk3OCwtMTg2Njc3NDI2NywxNzQyNTUw
 NjA4LDIwNzc4NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1MDMsLT
 E0OTgwMTc1NTYsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOSwxOTg5
