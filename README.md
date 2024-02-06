@@ -523,6 +523,7 @@ Create a databse/table and push some records
 ### Test
 
 #### Check loaded connectors plugins in the connect cluster
+
 Post a curl request through workers REST interface to view the loaded plugins:
 
     $ curl -k --location --request GET 'https://connect-worker-1:8081/connector-plugins' | jq 
@@ -645,7 +646,7 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTM0NTQ3NjksLTE3MzYyMTQwNTMsLT
+eyJoaXN0b3J5IjpbLTE2NDk3MTUxMzksLTE3MzYyMTQwNTMsLT
 E3MjI1Njk3OCwtMTg2Njc3NDI2NywxNzQyNTUwNjA4LDIwNzc4
 NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1MDMsLTE0OTgwMTc1NT
 YsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOSwxOTg5NzYzNzAxLC0x
