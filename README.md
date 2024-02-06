@@ -641,7 +641,7 @@ The following connector will make use of Debezium source connector which records
 
 While the connector is loading, Run `kafka-avro-console-consumer` to view the change events.
 
-Firstly create `client.properties` file.
+Create `client.properties` file.
 
     cat << EOF > /u01/cnfkfk/etc/ssl/client.properties
     security.protocol=SASL_SSL
@@ -658,7 +658,7 @@ Firstly create `client.properties` file.
     ssl.endpoint.identification.algorithm=
     EOF
 
-Now run kafka avro console consumer.
+Run kafka avro console consumer to view the change events.
 
     $ export SCHEMA_REGISTRY_OPTS="-Djavax.net.ssl.keyStore=/u01/cnfkfk/etc/ssl/kafka-broker-0.keystore.jks -Djavax.net.ssl.trustStore=/u01/cnfkfk/etc/ssl/kafka.truststore.jks -Djavax.net.ssl.keyStorePassword=password -Djavax.net.ssl.trustStorePassword=password"
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
@@ -668,11 +668,11 @@ Now run kafka avro console consumer.
  - https://docs.confluent.io/platform/current/connect/index.html
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDExMDQwMDEsLTEwODIyNDUzMzgsMT
-MzNjc4MzkyLC0xNzM2MjE0MDUzLC0xNzIyNTY5NzgsLTE4NjY3
-NzQyNjcsMTc0MjU1MDYwOCwyMDc3ODY2MDk0LC0xMzczMTY4MT
-ksODcyNTk0NTAzLC0xNDk4MDE3NTU2LC0yMDY2NjI1NTAwLDEz
-OTY2MDcxMzksMTk4OTc2MzcwMSwtMTA3Nzk2NDA1OCwxNDQ4ND
-A1ODgwLC0zNDg4NTY3ODIsLTEwNjM2NzU4NiwyNjcxMjIyNTUs
-MTQwODcyMTk4Ml19
+eyJoaXN0b3J5IjpbLTk2NTM0ODc4MCwtMTA4MjI0NTMzOCwxMz
+M2NzgzOTIsLTE3MzYyMTQwNTMsLTE3MjI1Njk3OCwtMTg2Njc3
+NDI2NywxNzQyNTUwNjA4LDIwNzc4NjYwOTQsLTEzNzMxNjgxOS
+w4NzI1OTQ1MDMsLTE0OTgwMTc1NTYsLTIwNjY2MjU1MDAsMTM5
+NjYwNzEzOSwxOTg5NzYzNzAxLC0xMDc3OTY0MDU4LDE0NDg0MD
+U4ODAsLTM0ODg1Njc4MiwtMTA2MzY3NTg2LDI2NzEyMjI1NSwx
+NDA4NzIxOTgyXX0=
 -->
