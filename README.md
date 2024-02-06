@@ -74,6 +74,7 @@ Generated connect distributed properties files are [connect-distributed.properti
 ### JMX
 To enable JMX, use the environmental variable `KAFKA_JMX_PORT` and `KAFKA_JMX_OPTS`
 
+
 ### Docker environment variable
     Name: UID
     Default value: 1000
@@ -616,11 +617,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4OTc2MzcwMSwtMTA3Nzk2NDA1OCwxND
-Q4NDA1ODgwLC0zNDg4NTY3ODIsLTEwNjM2NzU4NiwyNjcxMjIy
-NTUsMTQwODcyMTk4MiwtMTAxMTc2OTI2NCwyMzUwOTU5NDgsMj
-AwNTEyMTc2MiwtMTY0NDg5Mjk2LDExODY3MDUxMSwtMTgxMjU1
-OTQxMCw0ODE5Njk3ODIsLTQzNTk0Nzc5OCwtMTEzNjI2NjI3OS
-wxMjg0NDEwODAwLDEyMjQ1NzA5ODEsLTMxNTkyOTk3MywtMTA1
-MTM0MDM3M119
+eyJoaXN0b3J5IjpbMTM5NjYwNzEzOSwxOTg5NzYzNzAxLC0xMD
+c3OTY0MDU4LDE0NDg0MDU4ODAsLTM0ODg1Njc4MiwtMTA2MzY3
+NTg2LDI2NzEyMjI1NSwxNDA4NzIxOTgyLC0xMDExNzY5MjY0LD
+IzNTA5NTk0OCwyMDA1MTIxNzYyLC0xNjQ0ODkyOTYsMTE4Njcw
+NTExLC0xODEyNTU5NDEwLDQ4MTk2OTc4MiwtNDM1OTQ3Nzk4LC
+0xMTM2MjY2Mjc5LDEyODQ0MTA4MDAsMTIyNDU3MDk4MSwtMzE1
+OTI5OTczXX0=
 -->
