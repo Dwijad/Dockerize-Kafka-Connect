@@ -30,8 +30,8 @@ To build from scratch, clone the repo and copy kafka keystore and truststore cer
     $ copy {ca-cert, kafka.truststore.jks, kafka.keystore.jks} to ~/cloned-repo/script/ca 
     $ DOCKER_BUILDKIT=1 docker buildx build -t dwijad/kafka-connect:latest --no-cache --progress=plain .
 
-Or rebuild the image
-
+Or rebuild the existing image
+    
     FROM dwijad/kafka-connect:latest
     RUN echo "===> Updating  keystore and truststore files===" \ 
     &&  ADD  --chown=kafka:kafka  --chmod=755  your-local-folder/kafka-broker-0.keystore.jks $KAFKA_HOME/script/ca \
@@ -647,7 +647,7 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDAwMjQ2MzI2LDE3NDI1NTA2MDgsMjA3Nz
+eyJoaXN0b3J5IjpbNjM1MDg2NDkxLDE3NDI1NTA2MDgsMjA3Nz
 g2NjA5NCwtMTM3MzE2ODE5LDg3MjU5NDUwMywtMTQ5ODAxNzU1
 NiwtMjA2NjYyNTUwMCwxMzk2NjA3MTM5LDE5ODk3NjM3MDEsLT
 EwNzc5NjQwNTgsMTQ0ODQwNTg4MCwtMzQ4ODU2NzgyLC0xMDYz
