@@ -72,7 +72,7 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
 Generated connect distributed properties files are [connect-distributed.properties.sasl_plaintext.with.sr.http](https://gist.github.com/Dwijad/647aa86f9313bfbac922e9f5bc5254ec)  and [connect-distributed.properties.sasl_plaintext.with.sr.https](https://gist.github.com/Dwijad/931b351accadb66b8ff12ad89cab043f)
 
 ### JMX
-To enable JMX, use the environmental variable `KAFKA_JMX_PORT` and `KAFKA_JMX_OPTS` The value for the environmental variable 
+To enable JMX, use the environmental variable `KAFKA_JMX_PORT` and `KAFKA_JMX_OPTS` The value for the environmental variable `KAFKA_JMX_HOSTNAME` will be picked up from container.
 
     docker run -d --name=connect-worker-1 -e KAFKA_JMX_PORT="8080" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=$(KAFKA_JMX_HOSTNAME) -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml"
 
@@ -620,7 +620,7 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNDc2Njc4MiwxMzk2NjA3MTM5LDE5OD
+eyJoaXN0b3J5IjpbMTYzMDAxNDEwNywxMzk2NjA3MTM5LDE5OD
 k3NjM3MDEsLTEwNzc5NjQwNTgsMTQ0ODQwNTg4MCwtMzQ4ODU2
 NzgyLC0xMDYzNjc1ODYsMjY3MTIyMjU1LDE0MDg3MjE5ODIsLT
 EwMTE3NjkyNjQsMjM1MDk1OTQ4LDIwMDUxMjE3NjIsLTE2NDQ4
