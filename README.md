@@ -11,11 +11,11 @@ The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka
  - Install docker with buildx plugin as described [here](https://docs.docker.com/engine/install/ubuntu/)
  
  #### To run the docker image
- - You have a  kafka broker cluster configured in any of the PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL mode.
+ - You have  kafka cluster configured in any of the PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL mode.
  -  A schema registry server running with/without SSL mode.
  -  You want to convert data for Kafka Connect to and from in Avro format.
  -  For testing query/log based CDC connector a MySQL DB server is configured .
- -  You want AVRO format to convert data to and from k
+ -  You want AVRO format to convert data to and from kafka.
 
 ### About AVRO converter
 
@@ -24,9 +24,8 @@ In case of source connector, AVRO converter takes input from JDBC driver and con
 
 ![kc](https://github.com/Dwijad/Dockerize-Kafka-Connect-Worker/assets/12824049/cab48827-6174-4e14-b27f-ca5023d41985)
 
-
-
 ### Usage
+
 You can run the docker image if the kafka broker you want to make use of is running on PLAINTEXT or SASL_PLAINTEXT mode as described below(Use case - I and Use case - IV)
 
 If your kafka broker is running on SASL_SSL or SSL mode then you have to rebuild the docker image by incorporating the truststore/keystore file and public CA cert of your  kafka broker.
@@ -639,7 +638,7 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0MDE0ODQ4MSwtMTM3MzE2ODE5LDg3Mj
+eyJoaXN0b3J5IjpbMjA3Nzg2NjA5NCwtMTM3MzE2ODE5LDg3Mj
 U5NDUwMywtMTQ5ODAxNzU1NiwtMjA2NjYyNTUwMCwxMzk2NjA3
 MTM5LDE5ODk3NjM3MDEsLTEwNzc5NjQwNTgsMTQ0ODQwNTg4MC
 wtMzQ4ODU2NzgyLC0xMDYzNjc1ODYsMjY3MTIyMjU1LDE0MDg3
