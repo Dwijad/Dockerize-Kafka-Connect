@@ -71,7 +71,7 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT
 
 Generated connect distributed properties files are [connect-distributed.properties.sasl_plaintext.with.sr.http](https://gist.github.com/Dwijad/647aa86f9313bfbac922e9f5bc5254ec)  and [connect-distributed.properties.sasl_plaintext.with.sr.https](https://gist.github.com/Dwijad/931b351accadb66b8ff12ad89cab043f)
 
-### Using docker compose
+### JMX
 
 ### Docker environment variable
     Name: UID
@@ -122,18 +122,10 @@ Generated connect distributed properties files are [connect-distributed.properti
     Default value: connect-status
     Description: The name of the topic where connector and task configuration status updates are stored.
     
-    Name: REST_HOST_NAME
-    Default value: Hostname of the container
-    Description: The host name for REST server.
-    
     Name: LISTENER_PORT
     Default value: 8081
     Description: The port number used by the worker listener and Rest server.
-   
-    Name: REST_ADVERTISED_HOST_NAME
-    Default value: connect-worker-1
-    Description: The host name advertised by the REST server. 
-    
+        
     Name: PLUGIN_PATH
     Default value: file
     Description: The locations for connectors and their specific dependent JARs
@@ -623,11 +615,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzc5NjQwNTgsMTQ0ODQwNTg4MCwtMz
-Q4ODU2NzgyLC0xMDYzNjc1ODYsMjY3MTIyMjU1LDE0MDg3MjE5
-ODIsLTEwMTE3NjkyNjQsMjM1MDk1OTQ4LDIwMDUxMjE3NjIsLT
-E2NDQ4OTI5NiwxMTg2NzA1MTEsLTE4MTI1NTk0MTAsNDgxOTY5
-NzgyLC00MzU5NDc3OTgsLTExMzYyNjYyNzksMTI4NDQxMDgwMC
-wxMjI0NTcwOTgxLC0zMTU5Mjk5NzMsLTEwNTEzNDAzNzMsMTIz
-MDkxMDUwNl19
+eyJoaXN0b3J5IjpbMzE4MDc2NjE0LC0xMDc3OTY0MDU4LDE0ND
+g0MDU4ODAsLTM0ODg1Njc4MiwtMTA2MzY3NTg2LDI2NzEyMjI1
+NSwxNDA4NzIxOTgyLC0xMDExNzY5MjY0LDIzNTA5NTk0OCwyMD
+A1MTIxNzYyLC0xNjQ0ODkyOTYsMTE4NjcwNTExLC0xODEyNTU5
+NDEwLDQ4MTk2OTc4MiwtNDM1OTQ3Nzk4LC0xMTM2MjY2Mjc5LD
+EyODQ0MTA4MDAsMTIyNDU3MDk4MSwtMzE1OTI5OTczLC0xMDUx
+MzQwMzczXX0=
 -->
