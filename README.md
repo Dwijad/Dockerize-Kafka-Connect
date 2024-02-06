@@ -14,7 +14,6 @@ The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka
  -  A schema registry server running with/without `SSL` mode.
  -  You want to convert data for Kafka Connect to and from in Avro format.
  -  For testing query/log based CDC connector a `MySQL` DB server is configured .
- -  You want `AVRO` format to convert data to and from kafka.
 
 ### About AVRO converter
 
@@ -65,7 +64,7 @@ Generated connect distributed properties files are [connect-distributed.properti
 Run Kafka connect worker with Kafka broker listener configured in SSL mode. The schema registry is running in either secured or non-secured mode.
 
     Schema registry is running in http
-    $ docker run -d --name=connect-worker-1 -e BOOTSTRAP_SERVERS="kafka:9092" -e SECURITY_PROTOCOL="SSL" -e REST_HOST_NAME="connect-worker-1"  -e LISTENER_PORT="8081" -e REST_ADVERTISED_HOST_NAME="connect-worker-1"  -e REST_ADVERTISED_LISTENER="https" -e SCHEMA_REGISTRY_MODE="HTTP" -e BROKER_LISTENER_MODE="SSL"  -e KAFKA_JMX_HOSTNAME="connect-worker-1" -e KAFKA_JMX_PORT="8080" -e SCHEMA_REGISTRY_URL="http://sr-service-http.default.svc:8081" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=connect-worker-1 -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml" dwijad/kafka-connect:latest         
+    $ docker run -d --name=connect-worker-1 -e BOOTSTRAP_SERVERS="kafka:9092" -e SECURITY_PROTOCOL="SSL" -e REST_HOST_NAME="connect-worker-1"  -e LISTENER_PORT="8081" -e REST_ADVERTISED_LISTENER="https" -e SCHEMA_REGISTRY_MODE="HTTP" -e BROKER_LISTENER_MODE="SSL"  -e KAFKA_JMX_HOSTNAME="connect-worker-1" -e KAFKA_JMX_PORT="8080" -e SCHEMA_REGISTRY_URL="http://sr-service-http.default.svc:8081" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=connect-worker-1 -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml" dwijad/kafka-connect:latest         
 
     Schema registry is running in https
     $ docker run -d --name=connect-worker-1 -e BOOTSTRAP_SERVERS="kafka:9092" -e SECURITY_PROTOCOL="SSL" -e REST_HOST_NAME="connect-worker-1"  -e LISTENER_PORT="8081" -e REST_ADVERTISED_HOST_NAME="connect-worker-1"  -e REST_ADVERTISED_LISTENER="https" -e SCHEMA_REGISTRY_MODE="HTTPS" -e BROKER_LISTENER_MODE="SSL"  -e KAFKA_JMX_HOSTNAME="connect-worker-1" -e KAFKA_JMX_PORT="8080" -e SCHEMA_REGISTRY_URL="https://sr-service-https.default.svc:8082" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=connect-worker-1 -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml" dwijad/kafka-connect:latest
@@ -646,11 +645,11 @@ Now run kafka avro console consumer.
     $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjI1Njk3OCwtMTg2Njc3NDI2NywxNz
-QyNTUwNjA4LDIwNzc4NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1
-MDMsLTE0OTgwMTc1NTYsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOS
-wxOTg5NzYzNzAxLC0xMDc3OTY0MDU4LDE0NDg0MDU4ODAsLTM0
-ODg1Njc4MiwtMTA2MzY3NTg2LDI2NzEyMjI1NSwxNDA4NzIxOT
-gyLC0xMDExNzY5MjY0LDIzNTA5NTk0OCwyMDA1MTIxNzYyLC0x
-NjQ0ODkyOTZdfQ==
+eyJoaXN0b3J5IjpbLTIwNzQ0OTQ1MzQsLTE3MjI1Njk3OCwtMT
+g2Njc3NDI2NywxNzQyNTUwNjA4LDIwNzc4NjYwOTQsLTEzNzMx
+NjgxOSw4NzI1OTQ1MDMsLTE0OTgwMTc1NTYsLTIwNjY2MjU1MD
+AsMTM5NjYwNzEzOSwxOTg5NzYzNzAxLC0xMDc3OTY0MDU4LDE0
+NDg0MDU4ODAsLTM0ODg1Njc4MiwtMTA2MzY3NTg2LDI2NzEyMj
+I1NSwxNDA4NzIxOTgyLC0xMDExNzY5MjY0LDIzNTA5NTk0OCwy
+MDA1MTIxNzYyXX0=
 -->
