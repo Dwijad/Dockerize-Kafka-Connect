@@ -538,9 +538,8 @@ Create a databse/table and push some records
     KAFKA_VERSION=3.5.0
     KAFKA_JMX_HOSTNAME=connect-worker-1
 
- 
 
-#### Verify Kafka connect and JMX open port
+#### Verify Kafka Connect and JMX Port
 
     $ netstat -pltn
     Active Internet connections (only servers)
@@ -549,7 +548,7 @@ Create a databse/table and push some records
     tcp        0      0 0.0.0.0:38421           0.0.0.0:*               LISTEN      237/java            
     tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      237/java
 
-#### Check logs
+#### Check kafka connect logs
 
     $ tail -f logs/connect-worker-trace.log 
     [2024-02-06 15:41:23,868] TRACE [Consumer clientId=connect-cluster--configs, groupId=connect-cluster] Polling for fetches with timeout 2147475609 (org.apache.kafka.clients.consumer.KafkaConsumer)
@@ -694,11 +693,11 @@ Run kafka avro console consumer to view the change events.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1ODQzNDc2OCwxODIzNzE4MTA3LDE3NT
-c4NTk1NDMsMTEwNTg0OTgyNywtNzEzNTg5MTc3LC0yMDEwNTQx
-OTc2LDEzNDIyNTEyNzgsLTM2NTc3MTkwMSw4MDk3MDA0ODcsLT
-k2NTM0ODc4MCwtMTA4MjI0NTMzOCwxMzM2NzgzOTIsLTE3MzYy
-MTQwNTMsLTE3MjI1Njk3OCwtMTg2Njc3NDI2NywxNzQyNTUwNj
-A4LDIwNzc4NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1MDMsLTE0
-OTgwMTc1NTZdfQ==
+eyJoaXN0b3J5IjpbLTI2MjM1MjEzOCwxMzU4NDM0NzY4LDE4Mj
+M3MTgxMDcsMTc1Nzg1OTU0MywxMTA1ODQ5ODI3LC03MTM1ODkx
+NzcsLTIwMTA1NDE5NzYsMTM0MjI1MTI3OCwtMzY1NzcxOTAxLD
+gwOTcwMDQ4NywtOTY1MzQ4NzgwLC0xMDgyMjQ1MzM4LDEzMzY3
+ODM5MiwtMTczNjIxNDA1MywtMTcyMjU2OTc4LC0xODY2Nzc0Mj
+Y3LDE3NDI1NTA2MDgsMjA3Nzg2NjA5NCwtMTM3MzE2ODE5LDg3
+MjU5NDUwM119
 -->
