@@ -1,6 +1,6 @@
 # Dockerize Confluent Kafka Connect
 
-Build and run docker image for secured Confluent kafka Connect worker with Debzeium `MySQL` connector and `JDBC` source/sink connector. Run the docker image using docker CLI or use a kubernetes manifest to create kafka connect cluster in a distributed way.  Further, Kafka connect will be configured convert data for Kafka Connect to and from in `AVRO` format.
+Build and run docker image for secured Confluent kafka Connect worker with Debzeium `MySQL` connector and `JDBC` source/sink connector. Run the docker image using docker CLI or use a kubernetes manifest to create kafka connect cluster in a distributed way.  Further, Kafka connect will be configured for converting data to and from in `AVRO` format.
 
 The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka-connect)
 
@@ -698,7 +698,7 @@ Run kafka avro console consumer to view the change events.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU0MjA4OTY0LC05NzA5NDkyMzIsLTg2MT
+eyJoaXN0b3J5IjpbMTY2Mjg1MTkwLC05NzA5NDkyMzIsLTg2MT
 E2NzA4NCw1NDI5NDY4MzAsLTI2MjM1MjEzOCwxMzU4NDM0NzY4
 LDE4MjM3MTgxMDcsMTc1Nzg1OTU0MywxMTA1ODQ5ODI3LC03MT
 M1ODkxNzcsLTIwMTA1NDE5NzYsMTM0MjI1MTI3OCwtMzY1Nzcx
