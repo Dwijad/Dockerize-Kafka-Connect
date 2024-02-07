@@ -446,7 +446,7 @@ Location for JMX configuration for Kafka connect metrics: `/u01/cnfkfk/etc/kafka
     
     Name: KAFKA_OPTS
     Default value: -Dlogging.level=TRACE
-    Description: Kafka connect connection protocol to schema registry server. Values can be either HTTP or HTTPS  
+    Description: Environment variable for kafka connect server settings  
     
     Name: KAFKA_HEAP_OPTS
     Default value: -Xmx512M -Xms512M
@@ -677,11 +677,11 @@ Run kafka avro console consumer to view the change events.
  - https://docs.confluent.io/platform/current/connect/index.html
 https://kow3ns.github.io/kubernetes-kafka/manifests/kafka_micro.yaml
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgyMzQxNzcyLC0zNjU3NzE5MDEsODA5Nz
-AwNDg3LC05NjUzNDg3ODAsLTEwODIyNDUzMzgsMTMzNjc4Mzky
-LC0xNzM2MjE0MDUzLC0xNzIyNTY5NzgsLTE4NjY3NzQyNjcsMT
-c0MjU1MDYwOCwyMDc3ODY2MDk0LC0xMzczMTY4MTksODcyNTk0
-NTAzLC0xNDk4MDE3NTU2LC0yMDY2NjI1NTAwLDEzOTY2MDcxMz
-ksMTk4OTc2MzcwMSwtMTA3Nzk2NDA1OCwxNDQ4NDA1ODgwLC0z
-NDg4NTY3ODJdfQ==
+eyJoaXN0b3J5IjpbLTE3NDQwMDkxNzQsLTM2NTc3MTkwMSw4MD
+k3MDA0ODcsLTk2NTM0ODc4MCwtMTA4MjI0NTMzOCwxMzM2Nzgz
+OTIsLTE3MzYyMTQwNTMsLTE3MjI1Njk3OCwtMTg2Njc3NDI2Ny
+wxNzQyNTUwNjA4LDIwNzc4NjYwOTQsLTEzNzMxNjgxOSw4NzI1
+OTQ1MDMsLTE0OTgwMTc1NTYsLTIwNjY2MjU1MDAsMTM5NjYwNz
+EzOSwxOTg5NzYzNzAxLC0xMDc3OTY0MDU4LDE0NDg0MDU4ODAs
+LTM0ODg1Njc4Ml19
 -->
