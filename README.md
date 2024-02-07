@@ -690,23 +690,15 @@ Run kafka avro console consumer to view the change events.
     ...
 
 ### References:
-
  - https://docs.confluent.io/platform/current/connect/index.html
-mysql> update sale set product_code=106 where product_name='Product_3';
 
-{"before":{"sales_service.saleDB.sale.Value":{"id":3,"product_name":"Product_3","product_code":109,"sale_time":{"string":"2024-02-07T09:18:23Z"}}},"after":{"sales_service.saleDB.sale.Value":{"id":3,"product_name":"Product_3","product_code":106,"sale_time":{"string":"2024-02-07T09:18:23Z"}}},"source":{"version":"2.4.2.Final","connector":"mysql","name":"sales_service","ts_ms":1707311828000,"snapshot":{"string":"false"},"db":"saleDB","sequence":null,"table":{"string":"sale"},"server_id":184054,"gtid":{"string":"937de382-c598-11ee-8fc9-060947aa73f3:16"},"file":"mysql-bin.000005","pos":3092,"row":0,"thread":{"long":58},"query":null},"op":"u","ts_ms":{"long":1707311828997},"transaction":null}
-
-
-sales_service
-sales_service.saleDB.sale
-schema-changes.sales
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTc2Njc2ODYsMTgyMzcxODEwNywxNz
-U3ODU5NTQzLDExMDU4NDk4MjcsLTcxMzU4OTE3NywtMjAxMDU0
-MTk3NiwxMzQyMjUxMjc4LC0zNjU3NzE5MDEsODA5NzAwNDg3LC
-05NjUzNDg3ODAsLTEwODIyNDUzMzgsMTMzNjc4MzkyLC0xNzM2
-MjE0MDUzLC0xNzIyNTY5NzgsLTE4NjY3NzQyNjcsMTc0MjU1MD
-YwOCwyMDc3ODY2MDk0LC0xMzczMTY4MTksODcyNTk0NTAzLC0x
-NDk4MDE3NTU2XX0=
+eyJoaXN0b3J5IjpbMTM1ODQzNDc2OCwxODIzNzE4MTA3LDE3NT
+c4NTk1NDMsMTEwNTg0OTgyNywtNzEzNTg5MTc3LC0yMDEwNTQx
+OTc2LDEzNDIyNTEyNzgsLTM2NTc3MTkwMSw4MDk3MDA0ODcsLT
+k2NTM0ODc4MCwtMTA4MjI0NTMzOCwxMzM2NzgzOTIsLTE3MzYy
+MTQwNTMsLTE3MjI1Njk3OCwtMTg2Njc3NDI2NywxNzQyNTUwNj
+A4LDIwNzc4NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1MDMsLTE0
+OTgwMTc1NTZdfQ==
 -->
