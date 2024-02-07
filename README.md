@@ -96,7 +96,7 @@ Generated connect distributed properties files are [connect-distributed.properti
 ### JMX
 To enable JMX, use the environmental variable `KAFKA_JMX_PORT` and `KAFKA_JMX_OPTS` The value for the environmental variable `KAFKA_JMX_HOSTNAME` will be picked up from container.
 
-    docker run -d --name=connect-worker-1 -e KAFKA_JMX_PORT="8080" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=$(KAFKA_JMX_HOSTNAME) -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml"
+    $ docker run -d --name=connect-worker-1 -e KAFKA_JMX_PORT="8080" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=$(KAFKA_JMX_HOSTNAME) -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml"
 
 Location for prometheus java agent: `/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar`
 
@@ -699,11 +699,11 @@ Run kafka avro console consumer to view the change events.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2MTE2NzA4NCw1NDI5NDY4MzAsLTI2Mj
-M1MjEzOCwxMzU4NDM0NzY4LDE4MjM3MTgxMDcsMTc1Nzg1OTU0
-MywxMTA1ODQ5ODI3LC03MTM1ODkxNzcsLTIwMTA1NDE5NzYsMT
-M0MjI1MTI3OCwtMzY1NzcxOTAxLDgwOTcwMDQ4NywtOTY1MzQ4
-NzgwLC0xMDgyMjQ1MzM4LDEzMzY3ODM5MiwtMTczNjIxNDA1My
-wtMTcyMjU2OTc4LC0xODY2Nzc0MjY3LDE3NDI1NTA2MDgsMjA3
-Nzg2NjA5NF19
+eyJoaXN0b3J5IjpbLTk3MDk0OTIzMiwtODYxMTY3MDg0LDU0Mj
+k0NjgzMCwtMjYyMzUyMTM4LDEzNTg0MzQ3NjgsMTgyMzcxODEw
+NywxNzU3ODU5NTQzLDExMDU4NDk4MjcsLTcxMzU4OTE3NywtMj
+AxMDU0MTk3NiwxMzQyMjUxMjc4LC0zNjU3NzE5MDEsODA5NzAw
+NDg3LC05NjUzNDg3ODAsLTEwODIyNDUzMzgsMTMzNjc4MzkyLC
+0xNzM2MjE0MDUzLC0xNzIyNTY5NzgsLTE4NjY3NzQyNjcsMTc0
+MjU1MDYwOF19
 -->
