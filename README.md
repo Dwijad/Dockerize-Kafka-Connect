@@ -443,6 +443,15 @@ Location for JMX configuration for Kafka connect metrics: `/u01/cnfkfk/etc/kafka
     Name: SCHEMA_REGISTRY_MODE
     Default value: NULL
     Description: Kafka connect connection protocol to schema registry server. Values can be either HTTP or HTTPS
+    
+    Name: KAFKA_OPTS
+    Default value: -Dlogging.level=TRACE
+    Description: Kafka connect connection protocol to schema registry server. Values can be either HTTP or HTTPS  
+    
+    Name: KAFKA_OPTS
+    Default value: -Dlogging.level=TRACE
+    Description: Kafka connect connection protocol to schema registry server. Values can be either HTTP or HTTPS
+    
 
 ### Configure MySQL for log based change data capture(CDC)
 
@@ -668,11 +677,11 @@ Run kafka avro console consumer to view the change events.
  - https://docs.confluent.io/platform/current/connect/index.html
 https://kow3ns.github.io/kubernetes-kafka/manifests/kafka_micro.yaml
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2NTc3MTkwMSw4MDk3MDA0ODcsLTk2NT
-M0ODc4MCwtMTA4MjI0NTMzOCwxMzM2NzgzOTIsLTE3MzYyMTQw
-NTMsLTE3MjI1Njk3OCwtMTg2Njc3NDI2NywxNzQyNTUwNjA4LD
-IwNzc4NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1MDMsLTE0OTgw
-MTc1NTYsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOSwxOTg5NzYzNz
-AxLC0xMDc3OTY0MDU4LDE0NDg0MDU4ODAsLTM0ODg1Njc4Miwt
-MTA2MzY3NTg2XX0=
+eyJoaXN0b3J5IjpbLTc2NzU1MjUyNywtMzY1NzcxOTAxLDgwOT
+cwMDQ4NywtOTY1MzQ4NzgwLC0xMDgyMjQ1MzM4LDEzMzY3ODM5
+MiwtMTczNjIxNDA1MywtMTcyMjU2OTc4LC0xODY2Nzc0MjY3LD
+E3NDI1NTA2MDgsMjA3Nzg2NjA5NCwtMTM3MzE2ODE5LDg3MjU5
+NDUwMywtMTQ5ODAxNzU1NiwtMjA2NjYyNTUwMCwxMzk2NjA3MT
+M5LDE5ODk3NjM3MDEsLTEwNzc5NjQwNTgsMTQ0ODQwNTg4MCwt
+MzQ4ODU2NzgyXX0=
 -->
