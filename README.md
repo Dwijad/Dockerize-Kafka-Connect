@@ -695,14 +695,15 @@ Run kafka avro console consumer to view the change events.
 
 ### References:
  - https://docs.confluent.io/platform/current/connect/index.html
+ - https://debezium.io/documentation/reference/stable/connectors/mysql.html
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIyOTkyMTc5LDU0Mjk0NjgzMCwtMjYyMz
-UyMTM4LDEzNTg0MzQ3NjgsMTgyMzcxODEwNywxNzU3ODU5NTQz
-LDExMDU4NDk4MjcsLTcxMzU4OTE3NywtMjAxMDU0MTk3NiwxMz
-QyMjUxMjc4LC0zNjU3NzE5MDEsODA5NzAwNDg3LC05NjUzNDg3
-ODAsLTEwODIyNDUzMzgsMTMzNjc4MzkyLC0xNzM2MjE0MDUzLC
-0xNzIyNTY5NzgsLTE4NjY3NzQyNjcsMTc0MjU1MDYwOCwyMDc3
-ODY2MDk0XX0=
+eyJoaXN0b3J5IjpbMTI0ODQ1MzQzOCw1NDI5NDY4MzAsLTI2Mj
+M1MjEzOCwxMzU4NDM0NzY4LDE4MjM3MTgxMDcsMTc1Nzg1OTU0
+MywxMTA1ODQ5ODI3LC03MTM1ODkxNzcsLTIwMTA1NDE5NzYsMT
+M0MjI1MTI3OCwtMzY1NzcxOTAxLDgwOTcwMDQ4NywtOTY1MzQ4
+NzgwLC0xMDgyMjQ1MzM4LDEzMzY3ODM5MiwtMTczNjIxNDA1My
+wtMTcyMjU2OTc4LC0xODY2Nzc0MjY3LDE3NDI1NTA2MDgsMjA3
+Nzg2NjA5NF19
 -->
