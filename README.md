@@ -684,7 +684,10 @@ In case, broker is configured with `SASL_SSL`, `SSL` or `SASL_PLAINTEXT`, a kafk
 Run kafka avro console consumer to view the change events.
 
     $ export SCHEMA_REGISTRY_OPTS="-Djavax.net.ssl.keyStore=/u01/cnfkfk/etc/ssl/kafka-broker-0.keystore.jks -Djavax.net.ssl.trustStore=/u01/cnfkfk/etc/ssl/kafka.truststore.jks -Djavax.net.ssl.keyStorePassword=password -Djavax.net.ssl.trustStorePassword=password"
-    $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
+    $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic sales_service.saleDB.sale --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
+    {"before":{"sales_service.saleDB.sale.Value":{"id":3,"product_name":"Product_3","product_code":109,"sale_time":{"string":"2024-02-07T09:18:23Z"}}},"after":{"sales_service.saleDB.sale.Value":{"id":3,"product_name":"Product_3","product_code":106,"sale_time":{"string":"2024-02-07T09:18:23Z"}}},"source":{"version":"2.4.2.Final","connector":"mysql","name":"sales_service","ts_ms":1707311828000,"snapshot":{"string":"false"},"db":"saleDB","sequence":null,"table":{"string":"sale"},"server_id":184054,"gtid":{"string":"937de382-c598-11ee-8fc9-060947aa73f3:16"},"file":"mysql-bin.000005","pos":3092,"row":0,"thread":{"long":58},"query":null},"op":"u","ts_ms":{"long":1707311828997},"transaction":null}
+    ...
+    ...
 
 ### References:
 
@@ -699,7 +702,7 @@ sales_service.saleDB.sale
 schema-changes.sales
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTM4ODM3MDUsMTgyMzcxODEwNywxNz
+eyJoaXN0b3J5IjpbLTIwOTc2Njc2ODYsMTgyMzcxODEwNywxNz
 U3ODU5NTQzLDExMDU4NDk4MjcsLTcxMzU4OTE3NywtMjAxMDU0
 MTk3NiwxMzQyMjUxMjc4LC0zNjU3NzE5MDEsODA5NzAwNDg3LC
 05NjUzNDg3ODAsLTEwODIyNDUzMzgsMTMzNjc4MzkyLC0xNzM2
