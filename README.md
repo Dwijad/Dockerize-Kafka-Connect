@@ -685,14 +685,12 @@ Run kafka avro console consumer to view the change events.
 ### References:
 
  - https://docs.confluent.io/platform/current/connect/index.html
-$ java --version
-java 17.0.10 2024-01-16 LTS
-Java(TM) SE Runtime Environment (build 17.0.10+11-LTS-240)
-Java HotSpot(TM) 64-Bit Server VM (build 17.0.10+11-LTS-240, mixed mode, sharing)
+mysql> update sale set product_code=106 where product_name='Product_3';
 
+{"before":{"sales_service.saleDB.sale.Value":{"id":3,"product_name":"Product_3","product_code":109,"sale_time":{"string":"2024-02-07T09:18:23Z"}}},"after":{"sales_service.saleDB.sale.Value":{"id":3,"product_name":"Product_3","product_code":106,"sale_time":{"string":"2024-02-07T09:18:23Z"}}},"source":{"version":"2.4.2.Final","connector":"mysql","name":"sales_service","ts_ms":1707311828000,"snapshot":{"string":"false"},"db":"saleDB","sequence":null,"table":{"string":"sale"},"server_id":184054,"gtid":{"string":"937de382-c598-11ee-8fc9-060947aa73f3:16"},"file":"mysql-bin.000005","pos":3092,"row":0,"thread":{"long":58},"query":null},"op":"u","ts_ms":{"long":1707311828997},"transaction":null}
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3Mzg2NzU3MSwxNzU3ODU5NTQzLDExMD
+eyJoaXN0b3J5IjpbMjAwMzQzMjEzNiwxNzU3ODU5NTQzLDExMD
 U4NDk4MjcsLTcxMzU4OTE3NywtMjAxMDU0MTk3NiwxMzQyMjUx
 Mjc4LC0zNjU3NzE5MDEsODA5NzAwNDg3LC05NjUzNDg3ODAsLT
 EwODIyNDUzMzgsMTMzNjc4MzkyLC0xNzM2MjE0MDUzLC0xNzIy
