@@ -472,7 +472,7 @@ Configure MySQL server for log based CDC. Edit MySQL server configuration file t
     wait_timeout=500  
     binlog_rows_query_log_events=ON
 
-Create a new user with the name "cdcuser" and password "PasswOrd@123", and grant  necessary privileges.
+Create a new user with the name "cdcuser" and a choosen password "PasswOrd@123".  Grant  necessary privileges.
 
     CREATE USER 'cdcuser'@'%' IDENTIFIED BY 'PasswOrd@123';  
     GRANT SELECT, RELOAD, SHOW DATABASES, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'cdcuser'@'%';  
@@ -696,11 +696,11 @@ Run kafka avro console consumer to view the change events.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2MjM1NjQ0NCw1NDI5NDY4MzAsLTI2Mj
-M1MjEzOCwxMzU4NDM0NzY4LDE4MjM3MTgxMDcsMTc1Nzg1OTU0
-MywxMTA1ODQ5ODI3LC03MTM1ODkxNzcsLTIwMTA1NDE5NzYsMT
-M0MjI1MTI3OCwtMzY1NzcxOTAxLDgwOTcwMDQ4NywtOTY1MzQ4
-NzgwLC0xMDgyMjQ1MzM4LDEzMzY3ODM5MiwtMTczNjIxNDA1My
-wtMTcyMjU2OTc4LC0xODY2Nzc0MjY3LDE3NDI1NTA2MDgsMjA3
-Nzg2NjA5NF19
+eyJoaXN0b3J5IjpbLTE2NTU2MDkxNjUsNTQyOTQ2ODMwLC0yNj
+IzNTIxMzgsMTM1ODQzNDc2OCwxODIzNzE4MTA3LDE3NTc4NTk1
+NDMsMTEwNTg0OTgyNywtNzEzNTg5MTc3LC0yMDEwNTQxOTc2LD
+EzNDIyNTEyNzgsLTM2NTc3MTkwMSw4MDk3MDA0ODcsLTk2NTM0
+ODc4MCwtMTA4MjI0NTMzOCwxMzM2NzgzOTIsLTE3MzYyMTQwNT
+MsLTE3MjI1Njk3OCwtMTg2Njc3NDI2NywxNzQyNTUwNjA4LDIw
+Nzc4NjYwOTRdfQ==
 -->
