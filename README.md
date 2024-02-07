@@ -12,7 +12,7 @@ The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka
  #### To run the docker image
  - You have  kafka cluster configured in any of the `PLAINTEXT`, `SSL`, `SASL_PLAINTEXT`, `SASL_SSL` mode.
  -  A schema registry server running with/without `SSL` mode.
- -  You want to convert data for Kafka Connect to and from in Avro format.
+ -  You want to convert data for Kafka Connect to and from in `AVRO` format.
  -  For testing query/log based CDC connector a `MySQL` DB server is configured .
 
 ### About AVRO converter
@@ -443,6 +443,15 @@ Location for JMX configuration for Kafka connect metrics: `/u01/cnfkfk/etc/kafka
     Name: SCHEMA_REGISTRY_MODE
     Default value: NULL
     Description: Kafka connect connection protocol to schema registry server. Values can be either HTTP or HTTPS
+    
+    Name: KAFKA_OPTS
+    Default value: -Dlogging.level=TRACE
+    Description: Environment variable to set kafka connect server settings  
+    
+    Name: KAFKA_HEAP_OPTS
+    Default value: -Xmx512M -Xms512M
+    Description: Set the JVM heap size on the host
+    
 
 ### Configure MySQL for log based change data capture(CDC)
 
@@ -521,6 +530,19 @@ Create a databse/table and push some records
     VALUES ('Product_3', 103, CURRENT_TIMESTAMP);  
 
 ### Test
+#### Kafka env variable in container
+
+    kafka@connect-worker-1:~$ env | grep KAFKA
+    KAFKA_JMX_PORT=8080
+    KAFKA_JMX_OPTS=-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=connect-worker-1 -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml
+    KAFKA_OPTS=-Dlogging.level=INFO
+    KAFKA_HOME=/u01/cnfkfk
+    KAFKA_HEAP_OPTS=-Xmx512M -Xms512M
+    KAFKA_VERSION=3.5.0
+    KAFKA_JMX_HOSTNAME=connect-worker-1
+
+ 
+
 #### Verify Kafka connect and JMX open port
 
     $ netstat -pltn
@@ -666,13 +688,13 @@ Run kafka avro console consumer to view the change events.
 ### References:
 
  - https://docs.confluent.io/platform/current/connect/index.html
-
+https://kow3ns.github.io/kubernetes-kafka/manifests/kafka_micro.yaml
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NTM0ODc4MCwtMTA4MjI0NTMzOCwxMz
-M2NzgzOTIsLTE3MzYyMTQwNTMsLTE3MjI1Njk3OCwtMTg2Njc3
-NDI2NywxNzQyNTUwNjA4LDIwNzc4NjYwOTQsLTEzNzMxNjgxOS
-w4NzI1OTQ1MDMsLTE0OTgwMTc1NTYsLTIwNjY2MjU1MDAsMTM5
-NjYwNzEzOSwxOTg5NzYzNzAxLC0xMDc3OTY0MDU4LDE0NDg0MD
-U4ODAsLTM0ODg1Njc4MiwtMTA2MzY3NTg2LDI2NzEyMjI1NSwx
-NDA4NzIxOTgyXX0=
+eyJoaXN0b3J5IjpbLTIwMTA1NDE5NzYsMTM0MjI1MTI3OCwtMz
+Y1NzcxOTAxLDgwOTcwMDQ4NywtOTY1MzQ4NzgwLC0xMDgyMjQ1
+MzM4LDEzMzY3ODM5MiwtMTczNjIxNDA1MywtMTcyMjU2OTc4LC
+0xODY2Nzc0MjY3LDE3NDI1NTA2MDgsMjA3Nzg2NjA5NCwtMTM3
+MzE2ODE5LDg3MjU5NDUwMywtMTQ5ODAxNzU1NiwtMjA2NjYyNT
+UwMCwxMzk2NjA3MTM5LDE5ODk3NjM3MDEsLTEwNzc5NjQwNTgs
+MTQ0ODQwNTg4MF19
 -->
