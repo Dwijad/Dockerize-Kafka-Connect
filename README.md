@@ -448,9 +448,9 @@ Location for JMX configuration for Kafka connect metrics: `/u01/cnfkfk/etc/kafka
     Default value: -Dlogging.level=TRACE
     Description: Kafka connect connection protocol to schema registry server. Values can be either HTTP or HTTPS  
     
-    Name: KAFKA_OPTS
-    Default value: -Dlogging.level=TRACE
-    Description: Kafka connect connection protocol to schema registry server. Values can be either HTTP or HTTPS
+    Name: KAFKA_HEAP_OPTS
+    Default value: -Xmx512M -Xms512M
+    Description: JAVA heap size
     
 
 ### Configure MySQL for log based change data capture(CDC)
@@ -677,7 +677,7 @@ Run kafka avro console consumer to view the change events.
  - https://docs.confluent.io/platform/current/connect/index.html
 https://kow3ns.github.io/kubernetes-kafka/manifests/kafka_micro.yaml
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2NzU1MjUyNywtMzY1NzcxOTAxLDgwOT
+eyJoaXN0b3J5IjpbLTI3MDQwNzM1NiwtMzY1NzcxOTAxLDgwOT
 cwMDQ4NywtOTY1MzQ4NzgwLC0xMDgyMjQ1MzM4LDEzMzY3ODM5
 MiwtMTczNjIxNDA1MywtMTcyMjU2OTc4LC0xODY2Nzc0MjY3LD
 E3NDI1NTA2MDgsMjA3Nzg2NjA5NCwtMTM3MzE2ODE5LDg3MjU5
