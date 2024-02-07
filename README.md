@@ -476,12 +476,9 @@ Create a new user with the name "cdcuser" and password "PasswOrd@123", and grant
     ALTER USER 'cdcuser'@'%' IDENTIFIED WITH mysql_native_password BY 'PasswOrd@123';  
     FLUSH PRIVILEGES;
 
-Set the GTID Mode/GTID Consistency 
-
-    SET @@GLOBAL.ENFORCE_GTID_CONSISTENCY = OFF;  
-    SET @@GLOBAL.ENFORCE_GTID_CONSISTENCY = ON;  
-    SET @@GLOBAL.GTID_MODE = OFF;  
-    SET @@GLOBAL.GTID_MODE = OFF_PERMISSIVE;  
+Set the GTID Mode/GTID Consistency     
+     
+    SET @@GLOBAL.ENFORCE_GTID_CONSISTENCY = ON;     
     SET @@GLOBAL.GTID_MODE = ON_PERMISSIVE;
 
 Check if the following table shows a value of '0'
@@ -689,11 +686,11 @@ Run kafka avro console consumer to view the change events.
 
  - https://docs.confluent.io/platform/current/connect/index.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxMzU4OTE3NywtMjAxMDU0MTk3NiwxMz
-QyMjUxMjc4LC0zNjU3NzE5MDEsODA5NzAwNDg3LC05NjUzNDg3
-ODAsLTEwODIyNDUzMzgsMTMzNjc4MzkyLC0xNzM2MjE0MDUzLC
-0xNzIyNTY5NzgsLTE4NjY3NzQyNjcsMTc0MjU1MDYwOCwyMDc3
-ODY2MDk0LC0xMzczMTY4MTksODcyNTk0NTAzLC0xNDk4MDE3NT
-U2LC0yMDY2NjI1NTAwLDEzOTY2MDcxMzksMTk4OTc2MzcwMSwt
-MTA3Nzk2NDA1OF19
+eyJoaXN0b3J5IjpbMTEwNTg0OTgyNywtNzEzNTg5MTc3LC0yMD
+EwNTQxOTc2LDEzNDIyNTEyNzgsLTM2NTc3MTkwMSw4MDk3MDA0
+ODcsLTk2NTM0ODc4MCwtMTA4MjI0NTMzOCwxMzM2NzgzOTIsLT
+E3MzYyMTQwNTMsLTE3MjI1Njk3OCwtMTg2Njc3NDI2NywxNzQy
+NTUwNjA4LDIwNzc4NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1MD
+MsLTE0OTgwMTc1NTYsLTIwNjY2MjU1MDAsMTM5NjYwNzEzOSwx
+OTg5NzYzNzAxXX0=
 -->
