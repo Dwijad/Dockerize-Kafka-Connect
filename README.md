@@ -50,7 +50,7 @@ If the kafka broker is running on `SASL_SSL` or `SSL` mode then rebuild the dock
 
 #### Use case - I
 
-Run the Kafka connect docker image when Kafka broker listener is configured in PLAINTEXT mode. The schema registry is running in either secured or non-secured mode.
+Run the Kafka connect docker image when Kafka broker listener is configured in `PLAINTEXT` mode. The schema registry is configued with `https` or `http`.
 
     Schema registry is running in http
     $ docker run -d --name=connect-worker-1 -e BOOTSTRAP_SERVERS="kafka:9092" -e SECURITY_PROTOCOL="PLAINTEXT" -e LISTENER_PORT="8081" -e REST_ADVERTISED_LISTENER="http" -e SCHEMA_REGISTRY_MODE="HTTP" -e BROKER_LISTENER_MODE="PLAINTEXT" -e KAFKA_JMX_PORT="8080" -e SCHEMA_REGISTRY_URL="http://sr-service-http.default.svc:8081" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=$(KAFKA_JMX_HOSTNAME) -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml" dwijad/kafka-connect:latest 
@@ -61,7 +61,7 @@ Run the Kafka connect docker image when Kafka broker listener is configured in P
 Generated connect distributed properties files are [connect-distributed.properties.plaintext.with.sr.http](https://gist.github.com/Dwijad/4731a41a694eeb23fc3d9d5a389c6120) and [connect-distributed.properties.plaintext.with.sr.https](https://gist.github.com/Dwijad/e02e4d92e159fa83b77f7acf746a11b2)
 
 #### Use case - II
-Run Kafka connect worker with Kafka broker listener configured in SSL mode. The schema registry is running in either secured or non-secured mode.
+Run Kafka connect worker with Kafka broker listener configured in `SSL` mode. The schema registry is configued with `https` or `http`.
 
     Schema registry is running in http
     $ docker run -d --name=connect-worker-1 -e BOOTSTRAP_SERVERS="kafka:9092" -e SECURITY_PROTOCOL="SSL" -e LISTENER_PORT="8081" -e REST_ADVERTISED_LISTENER="https" -e SCHEMA_REGISTRY_MODE="HTTP" -e BROKER_LISTENER_MODE="SSL" -e KAFKA_JMX_PORT="8080" -e SCHEMA_REGISTRY_URL="http://sr-service-http.default.svc:8081" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=$(KAFKA_JMX_HOSTNAME) -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml" dwijad/kafka-connect:latest         
@@ -72,7 +72,7 @@ Run Kafka connect worker with Kafka broker listener configured in SSL mode. The 
 Generated connect distributed properties files are [connect-distributed.properties.ssl.with.sr.http](https://gist.github.com/Dwijad/770863589f3f8aa6b4c8516c85ce3ce6) and [connect-distributed.properties.ssl.with.sr.https](https://gist.github.com/Dwijad/56b23e078bb7ac374ebe5ce45f2b8ff9)
 
 #### Use case - III
-Run Kafka connect worker with Kafka broker listener configured in SASL_SSL mode. The schema registry is running in either secured or non-secured mode.
+Run Kafka connect worker with Kafka broker listener configured in `SASL_SSL` mode. The schema registry is configued with `https` or `http`.
 
     Schema registry is running in http
     $ docker run -d --name=connect-worker-1 -e BOOTSTRAP_SERVERS="kafka:9092" -e SECURITY_PROTOCOL="SASL_SSL" -e LISTENER_PORT="8081" -e REST_ADVERTISED_LISTENER="https" -e SCHEMA_REGISTRY_MODE="HTTP" -e BROKER_LISTENER_MODE="SASL_SSL" -e KAFKA_JMX_PORT="8080" -e SCHEMA_REGISTRY_URL="http://sr-service-http.default.svc:8081" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=$(KAFKA_JMX_HOSTNAME) -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml" -e SASL_USER=user1 -e SASL_PASSWORD=password -e KEY_CONVERTER_SCHEMA_REGISTRY_URL="http://sr-service-http.default.svc:8081" -e VALUE_CONVERTER_SCHEMA_REGISTRY_URL="http://sr-service-http.default.svc:8081" dwijad/kafka-connect:latest 
@@ -83,7 +83,7 @@ Run Kafka connect worker with Kafka broker listener configured in SASL_SSL mode.
 Generated connect distributed properties files are [connect-distributed.properties.sasl_ssl.with.sr.http](https://gist.github.com/Dwijad/af69aefba552fdbbb73f30d4640b3601) and [connect-distributed.properties.sasl_ssl.with.sr.https](https://gist.github.com/Dwijad/79992c6bf65399fe84254abe9564b0e4)
 
 #### Use case - IV
-Run Kafka connect worker with Kafka broker listener configured in SASL_PLAINTEXT mode. The schema registry is running in either secured or non-secured mode.
+Run Kafka connect worker with Kafka broker listener configured in `SASL_PLAINTEXT` mode. The schema registry is configued with `https` or `http`.
 
     Schema registry is running in http
     $ docker run -d --name=connect-worker-1 -e BOOTSTRAP_SERVERS="kafka:9092" -e SECURITY_PROTOCOL="SASL_PLAINTEXT" -e LISTENER_PORT="8081" -e REST_ADVERTISED_LISTENER="http" -e SCHEMA_REGISTRY_MODE="HTTP" -e BROKER_LISTENER_MODE="SASL_PLAINTEXT" -e KAFKA_JMX_PORT="8080" -e SCHEMA_REGISTRY_URL="http://sr-service-http.default.svc:8081" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=$(KAFKA_JMX_HOSTNAME) -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml" -e SASL_USER=user1 -e SASL_PASSWORD=password -e KEY_CONVERTER_SCHEMA_REGISTRY_URL="http://sr-service-http.default.svc:8081" -e VALUE_CONVERTER_SCHEMA_REGISTRY_URL="http://sr-service-http.default.svc:8081" dwijad/kafka-connect:latest 
@@ -104,6 +104,9 @@ Location for JMX configuration for Kafka connect metrics: `/u01/cnfkfk/etc/kafka
 
 
 ### Docker environment variable
+
+Environmental variables used in the Dockerfile are listed below.
+
     Name: UID
     Default value: 1000
     Description: User ID used to build Dockerfile   
@@ -469,7 +472,7 @@ Configure MySQL server for log based CDC. Edit MySQL server configuration file t
     wait_timeout=500  
     binlog_rows_query_log_events=ON
 
-Create a new user with the name "cdcuser" and password "PasswOrd@123", and grant  necessary privileges.
+Create a new user with the name "cdcuser" and a choosen password "PasswOrd@123".  Grant  necessary privileges.
 
     CREATE USER 'cdcuser'@'%' IDENTIFIED BY 'PasswOrd@123';  
     GRANT SELECT, RELOAD, SHOW DATABASES, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'cdcuser'@'%';  
@@ -528,6 +531,8 @@ Create a databse/table and push some records
 
 ### Test
 #### Kafka env variable in container
+
+Exec into the container to list the environment variable.
 
     kafka@connect-worker-1:~$ env | grep KAFKA
     KAFKA_JMX_PORT=8080
@@ -635,7 +640,7 @@ Run kafka avro console consumer
 
 The Debezium MySQL connector reads the binlog, produces change events for row-level `INSERT`, `UPDATE`, and `DELETE` operations, and emits the change events to a Kafka topics. Client applications read those Kafka topics.
 
-The following connector will make use of Debezium source connector which records all changes made to the database and push these changes to the configured kafka topic when some insert/update/delete event  occur in the database.
+The following connector will make use of Debezium source connector which records all changes made to the database and push these changes to the configured kafka topic when some insert/update/delete event  occur in the database.  More on Debezium MySQL connector can be found [here](https://debezium.io/documentation/reference/stable/connectors/mysql.html).
 
     curl -k -X POST -H "Content-Type: application/json" --data '{
         "name": "sales_source",
@@ -690,14 +695,15 @@ Run kafka avro console consumer to view the change events.
 
 ### References:
  - https://docs.confluent.io/platform/current/connect/index.html
+ - https://debezium.io/documentation/reference/stable/connectors/mysql.html
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQyOTQ2ODMwLC0yNjIzNTIxMzgsMTM1OD
-QzNDc2OCwxODIzNzE4MTA3LDE3NTc4NTk1NDMsMTEwNTg0OTgy
-NywtNzEzNTg5MTc3LC0yMDEwNTQxOTc2LDEzNDIyNTEyNzgsLT
-M2NTc3MTkwMSw4MDk3MDA0ODcsLTk2NTM0ODc4MCwtMTA4MjI0
-NTMzOCwxMzM2NzgzOTIsLTE3MzYyMTQwNTMsLTE3MjI1Njk3OC
-wtMTg2Njc3NDI2NywxNzQyNTUwNjA4LDIwNzc4NjYwOTQsLTEz
-NzMxNjgxOV19
+eyJoaXN0b3J5IjpbLTg2MTE2NzA4NCw1NDI5NDY4MzAsLTI2Mj
+M1MjEzOCwxMzU4NDM0NzY4LDE4MjM3MTgxMDcsMTc1Nzg1OTU0
+MywxMTA1ODQ5ODI3LC03MTM1ODkxNzcsLTIwMTA1NDE5NzYsMT
+M0MjI1MTI3OCwtMzY1NzcxOTAxLDgwOTcwMDQ4NywtOTY1MzQ4
+NzgwLC0xMDgyMjQ1MzM4LDEzMzY3ODM5MiwtMTczNjIxNDA1My
+wtMTcyMjU2OTc4LC0xODY2Nzc0MjY3LDE3NDI1NTA2MDgsMjA3
+Nzg2NjA5NF19
 -->
