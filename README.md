@@ -636,7 +636,7 @@ Run kafka avro console consumer
 
 The Debezium MySQL connector reads the binlog, produces change events for row-level `INSERT`, `UPDATE`, and `DELETE` operations, and emits the change events to a Kafka topics. Client applications read those Kafka topics.
 
-The following connector will make use of Debezium source connector which records all changes made to the database when some insert/update/delete event  occur in the database.
+The following connector will make use of Debezium source connector which records all changes made to the database and push these changes to the configured kafka topic when some insert/update/delete event  occur in the database.
 
     curl -k -X POST -H "Content-Type: application/json" --data '{
         "name": "sales-connector",
@@ -695,11 +695,11 @@ sales_service.saleDB.sale
 schema-changes.sales
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMzcxODEwNywxNzU3ODU5NTQzLDExMD
-U4NDk4MjcsLTcxMzU4OTE3NywtMjAxMDU0MTk3NiwxMzQyMjUx
-Mjc4LC0zNjU3NzE5MDEsODA5NzAwNDg3LC05NjUzNDg3ODAsLT
-EwODIyNDUzMzgsMTMzNjc4MzkyLC0xNzM2MjE0MDUzLC0xNzIy
-NTY5NzgsLTE4NjY3NzQyNjcsMTc0MjU1MDYwOCwyMDc3ODY2MD
-k0LC0xMzczMTY4MTksODcyNTk0NTAzLC0xNDk4MDE3NTU2LC0y
-MDY2NjI1NTAwXX0=
+eyJoaXN0b3J5IjpbLTI3NTIwNTIwNywxODIzNzE4MTA3LDE3NT
+c4NTk1NDMsMTEwNTg0OTgyNywtNzEzNTg5MTc3LC0yMDEwNTQx
+OTc2LDEzNDIyNTEyNzgsLTM2NTc3MTkwMSw4MDk3MDA0ODcsLT
+k2NTM0ODc4MCwtMTA4MjI0NTMzOCwxMzM2NzgzOTIsLTE3MzYy
+MTQwNTMsLTE3MjI1Njk3OCwtMTg2Njc3NDI2NywxNzQyNTUwNj
+A4LDIwNzc4NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1MDMsLTE0
+OTgwMTc1NTZdfQ==
 -->
