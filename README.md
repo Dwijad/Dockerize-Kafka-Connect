@@ -658,9 +658,13 @@ The following connector will make use of Debezium source connector which records
         }
     }' https://connect-worker-1:8081/connectors/ | jq .
 
-While the connector is loading, update a record in the MySQL database and simultaneously  run `kafka-avro-console-consumer` to view the change events.
+While the connector is loading, update a record in the `MySQL` database and simultaneously  run `kafka-avro-console-consumer` to view the change events.
 
-Create `client.properties` file.
+    mysql> update sale set product_code=106 where product_name='Product_3';
+    Query OK, 1 row affected (0.01 sec)
+    Rows matched: 1  Changed: 1  Warnings: 0
+
+In case, broker is configured with SASL_SSL/SSL/SASL_PLAINTEXT, Create `client.properties` file.
 
     cat << EOF > /u01/cnfkfk/etc/ssl/client.properties
     security.protocol=SASL_SSL
@@ -695,7 +699,7 @@ sales_service.saleDB.sale
 schema-changes.sales
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3NzMyNDQxNCwxODIzNzE4MTA3LDE3NT
+eyJoaXN0b3J5IjpbMTAzMDc3ODAxMywxODIzNzE4MTA3LDE3NT
 c4NTk1NDMsMTEwNTg0OTgyNywtNzEzNTg5MTc3LC0yMDEwNTQx
 OTc2LDEzNDIyNTEyNzgsLTM2NTc3MTkwMSw4MDk3MDA0ODcsLT
 k2NTM0ODc4MCwtMTA4MjI0NTMzOCwxMzM2NzgzOTIsLTE3MzYy
