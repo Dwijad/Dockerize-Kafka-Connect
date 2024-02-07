@@ -664,7 +664,7 @@ While the connector is loading, update a record in the `MySQL` database and simu
     Query OK, 1 row affected (0.01 sec)
     Rows matched: 1  Changed: 1  Warnings: 0
 
-In case, broker is configured with `SASL_SSL`, `SSL` or `SASL_PLAINTEXT, a properties a `client.properties` file .
+In case, broker is configured with `SASL_SSL`, `SSL` or `SASL_PLAINTEXT`, a kafka client properties files needs to be configured to run kafka avro console consumer or producer.
 
     cat << EOF > /u01/cnfkfk/etc/ssl/client.properties
     security.protocol=SASL_SSL
@@ -699,11 +699,11 @@ sales_service.saleDB.sale
 schema-changes.sales
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODYxMzUxMjkxLDE4MjM3MTgxMDcsMTc1Nz
-g1OTU0MywxMTA1ODQ5ODI3LC03MTM1ODkxNzcsLTIwMTA1NDE5
-NzYsMTM0MjI1MTI3OCwtMzY1NzcxOTAxLDgwOTcwMDQ4NywtOT
-Y1MzQ4NzgwLC0xMDgyMjQ1MzM4LDEzMzY3ODM5MiwtMTczNjIx
-NDA1MywtMTcyMjU2OTc4LC0xODY2Nzc0MjY3LDE3NDI1NTA2MD
-gsMjA3Nzg2NjA5NCwtMTM3MzE2ODE5LDg3MjU5NDUwMywtMTQ5
-ODAxNzU1Nl19
+eyJoaXN0b3J5IjpbLTE4MTM4ODM3MDUsMTgyMzcxODEwNywxNz
+U3ODU5NTQzLDExMDU4NDk4MjcsLTcxMzU4OTE3NywtMjAxMDU0
+MTk3NiwxMzQyMjUxMjc4LC0zNjU3NzE5MDEsODA5NzAwNDg3LC
+05NjUzNDg3ODAsLTEwODIyNDUzMzgsMTMzNjc4MzkyLC0xNzM2
+MjE0MDUzLC0xNzIyNTY5NzgsLTE4NjY3NzQyNjcsMTc0MjU1MD
+YwOCwyMDc3ODY2MDk0LC0xMzczMTY4MTksODcyNTk0NTAzLC0x
+NDk4MDE3NTU2XX0=
 -->
