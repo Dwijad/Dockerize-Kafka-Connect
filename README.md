@@ -530,6 +530,19 @@ Create a databse/table and push some records
     VALUES ('Product_3', 103, CURRENT_TIMESTAMP);  
 
 ### Test
+#### Kafka env variable in container
+
+    kafka@connect-worker-1:~$ env | grep KAFKA
+    KAFKA_JMX_PORT=8080
+    KAFKA_JMX_OPTS=-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=connect-worker-1 -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml
+    KAFKA_OPTS=-Dlogging.level=INFO
+    KAFKA_HOME=/u01/cnfkfk
+    KAFKA_HEAP_OPTS=-Xmx512M -Xms512M
+    KAFKA_VERSION=3.5.0
+    KAFKA_JMX_HOSTNAME=connect-worker-1
+
+ 
+
 #### Verify Kafka connect and JMX open port
 
     $ netstat -pltn
@@ -677,11 +690,11 @@ Run kafka avro console consumer to view the change events.
  - https://docs.confluent.io/platform/current/connect/index.html
 https://kow3ns.github.io/kubernetes-kafka/manifests/kafka_micro.yaml
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MjI1MTI3OCwtMzY1NzcxOTAxLDgwOT
-cwMDQ4NywtOTY1MzQ4NzgwLC0xMDgyMjQ1MzM4LDEzMzY3ODM5
-MiwtMTczNjIxNDA1MywtMTcyMjU2OTc4LC0xODY2Nzc0MjY3LD
-E3NDI1NTA2MDgsMjA3Nzg2NjA5NCwtMTM3MzE2ODE5LDg3MjU5
-NDUwMywtMTQ5ODAxNzU1NiwtMjA2NjYyNTUwMCwxMzk2NjA3MT
-M5LDE5ODk3NjM3MDEsLTEwNzc5NjQwNTgsMTQ0ODQwNTg4MCwt
-MzQ4ODU2NzgyXX0=
+eyJoaXN0b3J5IjpbLTIwMTA1NDE5NzYsMTM0MjI1MTI3OCwtMz
+Y1NzcxOTAxLDgwOTcwMDQ4NywtOTY1MzQ4NzgwLC0xMDgyMjQ1
+MzM4LDEzMzY3ODM5MiwtMTczNjIxNDA1MywtMTcyMjU2OTc4LC
+0xODY2Nzc0MjY3LDE3NDI1NTA2MDgsMjA3Nzg2NjA5NCwtMTM3
+MzE2ODE5LDg3MjU5NDUwMywtMTQ5ODAxNzU1NiwtMjA2NjYyNT
+UwMCwxMzk2NjA3MTM5LDE5ODk3NjM3MDEsLTEwNzc5NjQwNTgs
+MTQ0ODQwNTg4MF19
 -->
