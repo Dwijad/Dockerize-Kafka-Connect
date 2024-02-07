@@ -446,7 +446,7 @@ Location for JMX configuration for Kafka connect metrics: `/u01/cnfkfk/etc/kafka
     
     Name: KAFKA_OPTS
     Default value: -Dlogging.level=TRACE
-    Description: Environment variable for kafka connect server settings  
+    Description: Environment variable to set kafka connect server settings  
     
     Name: KAFKA_HEAP_OPTS
     Default value: -Xmx512M -Xms512M
@@ -677,11 +677,11 @@ Run kafka avro console consumer to view the change events.
  - https://docs.confluent.io/platform/current/connect/index.html
 https://kow3ns.github.io/kubernetes-kafka/manifests/kafka_micro.yaml
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDQwMDkxNzQsLTM2NTc3MTkwMSw4MD
-k3MDA0ODcsLTk2NTM0ODc4MCwtMTA4MjI0NTMzOCwxMzM2Nzgz
-OTIsLTE3MzYyMTQwNTMsLTE3MjI1Njk3OCwtMTg2Njc3NDI2Ny
-wxNzQyNTUwNjA4LDIwNzc4NjYwOTQsLTEzNzMxNjgxOSw4NzI1
-OTQ1MDMsLTE0OTgwMTc1NTYsLTIwNjY2MjU1MDAsMTM5NjYwNz
-EzOSwxOTg5NzYzNzAxLC0xMDc3OTY0MDU4LDE0NDg0MDU4ODAs
-LTM0ODg1Njc4Ml19
+eyJoaXN0b3J5IjpbMTM0MjI1MTI3OCwtMzY1NzcxOTAxLDgwOT
+cwMDQ4NywtOTY1MzQ4NzgwLC0xMDgyMjQ1MzM4LDEzMzY3ODM5
+MiwtMTczNjIxNDA1MywtMTcyMjU2OTc4LC0xODY2Nzc0MjY3LD
+E3NDI1NTA2MDgsMjA3Nzg2NjA5NCwtMTM3MzE2ODE5LDg3MjU5
+NDUwMywtMTQ5ODAxNzU1NiwtMjA2NjYyNTUwMCwxMzk2NjA3MT
+M5LDE5ODk3NjM3MDEsLTEwNzc5NjQwNTgsMTQ0ODQwNTg4MCwt
+MzQ4ODU2NzgyXX0=
 -->
