@@ -25,7 +25,7 @@ Converters change the format of data from one format to another. The default con
 To build from scratch, clone the repo and copy kafka keystore/truststore certificates and public certificate authority (CA) file of kafka broker to `script/ca` folder.
 
     $ git clone https://github.com/Dwijad/Dockerize-Kafka-Connect.git
-    $ copy {ca-cert, kafka.truststore.jks, kafka.keystore.jks} to ~/cloned-repo/script/ca 
+    $ copy {ca-cert, kafka.truststore.jks, kafka.keystore.jks} to ~/Dockerize-Kafka-Connect/script/ca 
     $ DOCKER_BUILDKIT=1 docker buildx build -t dwijad/kafka-connect:latest --no-cache --progress=plain .
 
 Or rebuild the existing image using a `Dockerfile` like:
@@ -43,7 +43,7 @@ Or rebuild the existing image using a `Dockerfile` like:
      
 ### Run
 
-Create container from the docker image if the kafka broker's listener mode is configured on `PLAINTEXT` or `SASL_PLAINTEXT`  as described below (Use case - I and Use case - IV)
+Create container from docker image if the kafka broker's listener mode is configured on `PLAINTEXT` or `SASL_PLAINTEXT`  as described below (Use case - I and Use case - IV)
 
 If the kafka broker is running on `SASL_SSL` or `SSL` mode then rebuild the docker image as described above by incorporating the truststore/keystore file and public CA cert of  kafka broker. (Use case II and  Use case III)
 
@@ -698,11 +698,11 @@ Run kafka avro console consumer to view the change events.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MDE1OTkyMCwtMTEwMTEzODcyMSwtOT
-cwOTQ5MjMyLC04NjExNjcwODQsNTQyOTQ2ODMwLC0yNjIzNTIx
-MzgsMTM1ODQzNDc2OCwxODIzNzE4MTA3LDE3NTc4NTk1NDMsMT
-EwNTg0OTgyNywtNzEzNTg5MTc3LC0yMDEwNTQxOTc2LDEzNDIy
-NTEyNzgsLTM2NTc3MTkwMSw4MDk3MDA0ODcsLTk2NTM0ODc4MC
-wtMTA4MjI0NTMzOCwxMzM2NzgzOTIsLTE3MzYyMTQwNTMsLTE3
-MjI1Njk3OF19
+eyJoaXN0b3J5IjpbLTExMDI4NTYyMDUsLTM3MDE1OTkyMCwtMT
+EwMTEzODcyMSwtOTcwOTQ5MjMyLC04NjExNjcwODQsNTQyOTQ2
+ODMwLC0yNjIzNTIxMzgsMTM1ODQzNDc2OCwxODIzNzE4MTA3LD
+E3NTc4NTk1NDMsMTEwNTg0OTgyNywtNzEzNTg5MTc3LC0yMDEw
+NTQxOTc2LDEzNDIyNTEyNzgsLTM2NTc3MTkwMSw4MDk3MDA0OD
+csLTk2NTM0ODc4MCwtMTA4MjI0NTMzOCwxMzM2NzgzOTIsLTE3
+MzYyMTQwNTNdfQ==
 -->
