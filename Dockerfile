@@ -251,7 +251,7 @@ WORKDIR /u01/cnfkfk/
 
 ENV PATH="${PATH}:/u01/cnfkfk/java/bin:/u01/cnfkfk/bin" 
 ENV JAVA_HOME="/u01/cnfkfk/java"
-ENV CNFKC_HOME="/u01/cnfkfk/" 
+#ENV CNFKC_HOME="/u01/cnfkfk/" 
 ENV CLASSPATH="${CLASSPATH}:/u01/cnfkfk/share/java/kafka-connect-jdbc/*:/u01/cnfkfk/share/java/kafka/*"
 
 WORKDIR /u01/cnfkfk/etc/ssl
