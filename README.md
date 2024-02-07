@@ -476,12 +476,9 @@ Create a new user with the name "cdcuser" and password "PasswOrd@123", and grant
     ALTER USER 'cdcuser'@'%' IDENTIFIED WITH mysql_native_password BY 'PasswOrd@123';  
     FLUSH PRIVILEGES;
 
-Set the GTID Mode/GTID Consistency 
-
-    SET @@GLOBAL.ENFORCE_GTID_CONSISTENCY = OFF;  
-    SET @@GLOBAL.ENFORCE_GTID_CONSISTENCY = ON;  
-    SET @@GLOBAL.GTID_MODE = OFF;  
-    SET @@GLOBAL.GTID_MODE = OFF_PERMISSIVE;  
+Set the GTID Mode/GTID Consistency     
+     
+    SET @@GLOBAL.ENFORCE_GTID_CONSISTENCY = ON;     
     SET @@GLOBAL.GTID_MODE = ON_PERMISSIVE;
 
 Check if the following table shows a value of '0'
@@ -541,9 +538,8 @@ Create a databse/table and push some records
     KAFKA_VERSION=3.5.0
     KAFKA_JMX_HOSTNAME=connect-worker-1
 
- 
 
-#### Verify Kafka connect and JMX open port
+#### Verify Kafka Connect and JMX Port
 
     $ netstat -pltn
     Active Internet connections (only servers)
@@ -552,7 +548,7 @@ Create a databse/table and push some records
     tcp        0      0 0.0.0.0:38421           0.0.0.0:*               LISTEN      237/java            
     tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      237/java
 
-#### Check logs
+#### Check kafka connect logs
 
     $ tail -f logs/connect-worker-trace.log 
     [2024-02-06 15:41:23,868] TRACE [Consumer clientId=connect-cluster--configs, groupId=connect-cluster] Polling for fetches with timeout 2147475609 (org.apache.kafka.clients.consumer.KafkaConsumer)
@@ -639,13 +635,13 @@ Run kafka avro console consumer
 
 The Debezium MySQL connector reads the binlog, produces change events for row-level `INSERT`, `UPDATE`, and `DELETE` operations, and emits the change events to a Kafka topics. Client applications read those Kafka topics.
 
-The following connector will make use of Debezium source connector which records all changes made to the database when some insert/update/delete event  occur in the database.
+The following connector will make use of Debezium source connector which records all changes made to the database and push these changes to the configured kafka topic when some insert/update/delete event  occur in the database.
 
     curl -k -X POST -H "Content-Type: application/json" --data '{
-        "name": "sales-connector",
+        "name": "sales_source",
         "config": {
                    "connector.class": "io.debezium.connector.mysql.MySqlConnector",
-                   "database.hostname": "host.minikube.internal",
+                   "database.hostname": "ec2-54-151-173-22.ap-southeast-1.compute.amazonaws.com",
                    "database.port": "3306",
                    "database.user": "cdcuser",
                    "database.password": "PasswOrd@123",
@@ -659,11 +655,15 @@ The following connector will make use of Debezium source connector which records
                    "key.converter.schema.registry.url": "https://sr-service-https.default.svc:8082",
                    "value.converter.schema.registry.url": "https://sr-service-https.default.svc:8082"
         }
-    }' https://connect-worker-1:8081/connectors/ | jq .
+    }' https://connect-worker-1:8082/connectors/ | jq .
 
-While the connector is loading, Run `kafka-avro-console-consumer` to view the change events.
+While the connector is loading, update a record in the `MySQL` database and simultaneously  run `kafka-avro-console-consumer` to view the change events.
 
-Create `client.properties` file.
+    mysql> update sale set product_code=106 where product_name='Product_3';
+    Query OK, 1 row affected (0.01 sec)
+    Rows matched: 1  Changed: 1  Warnings: 0
+
+In case, broker is configured with `SASL_SSL`, `SSL` or `SASL_PLAINTEXT`, a kafka client properties files needs to be configured to run kafka avro console consumer or producer.
 
     cat << EOF > /u01/cnfkfk/etc/ssl/client.properties
     security.protocol=SASL_SSL
@@ -683,17 +683,21 @@ Create `client.properties` file.
 Run kafka avro console consumer to view the change events.
 
     $ export SCHEMA_REGISTRY_OPTS="-Djavax.net.ssl.keyStore=/u01/cnfkfk/etc/ssl/kafka-broker-0.keystore.jks -Djavax.net.ssl.trustStore=/u01/cnfkfk/etc/ssl/kafka.truststore.jks -Djavax.net.ssl.keyStorePassword=password -Djavax.net.ssl.trustStorePassword=password"
-    $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic test --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
+    $ kafka-avro-console-consumer --bootstrap-server test-kafka.default.svc.cluster.local:9092 --topic sales_service.saleDB.sale --property schema.registry.url="https://sr-service-https.default.svc:8082"  --consumer.config /u01/cnfkfk/etc/ssl/client.properties --from-beginning
+    {"before":{"sales_service.saleDB.sale.Value":{"id":3,"product_name":"Product_3","product_code":109,"sale_time":{"string":"2024-02-07T09:18:23Z"}}},"after":{"sales_service.saleDB.sale.Value":{"id":3,"product_name":"Product_3","product_code":106,"sale_time":{"string":"2024-02-07T09:18:23Z"}}},"source":{"version":"2.4.2.Final","connector":"mysql","name":"sales_service","ts_ms":1707311828000,"snapshot":{"string":"false"},"db":"saleDB","sequence":null,"table":{"string":"sale"},"server_id":184054,"gtid":{"string":"937de382-c598-11ee-8fc9-060947aa73f3:16"},"file":"mysql-bin.000005","pos":3092,"row":0,"thread":{"long":58},"query":null},"op":"u","ts_ms":{"long":1707311828997},"transaction":null}
+    ...
+    ...
 
 ### References:
-
  - https://docs.confluent.io/platform/current/connect/index.html
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxMzU4OTE3NywtMjAxMDU0MTk3NiwxMz
-QyMjUxMjc4LC0zNjU3NzE5MDEsODA5NzAwNDg3LC05NjUzNDg3
-ODAsLTEwODIyNDUzMzgsMTMzNjc4MzkyLC0xNzM2MjE0MDUzLC
-0xNzIyNTY5NzgsLTE4NjY3NzQyNjcsMTc0MjU1MDYwOCwyMDc3
-ODY2MDk0LC0xMzczMTY4MTksODcyNTk0NTAzLC0xNDk4MDE3NT
-U2LC0yMDY2NjI1NTAwLDEzOTY2MDcxMzksMTk4OTc2MzcwMSwt
-MTA3Nzk2NDA1OF19
+eyJoaXN0b3J5IjpbNTQyOTQ2ODMwLC0yNjIzNTIxMzgsMTM1OD
+QzNDc2OCwxODIzNzE4MTA3LDE3NTc4NTk1NDMsMTEwNTg0OTgy
+NywtNzEzNTg5MTc3LC0yMDEwNTQxOTc2LDEzNDIyNTEyNzgsLT
+M2NTc3MTkwMSw4MDk3MDA0ODcsLTk2NTM0ODc4MCwtMTA4MjI0
+NTMzOCwxMzM2NzgzOTIsLTE3MzYyMTQwNTMsLTE3MjI1Njk3OC
+wtMTg2Njc3NDI2NywxNzQyNTUwNjA4LDIwNzc4NjYwOTQsLTEz
+NzMxNjgxOV19
 -->
