@@ -45,7 +45,7 @@ Or rebuild the existing image using a `Dockerfile` like:
 
 Create container from the docker image if the kafka broker's listener mode is configured on `PLAINTEXT` or `SASL_PLAINTEXT`  as described below (Use case - I and Use case - IV)
 
-If the kafka broker is running on `SASL_SSL` or `SSL` mode then rebuild the docker image as described above by incorporating the truststore/keystore file and public CA cert of your  kafka broker. (Use case II and  Use case III)
+If the kafka broker is running on `SASL_SSL` or `SSL` mode then rebuild the docker image as described above by incorporating the truststore/keystore file and public CA cert of  kafka broker. (Use case II and  Use case III)
 
 #### Use case - I
 
@@ -698,11 +698,11 @@ Run kafka avro console consumer to view the change events.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2Mjg1MTkwLC05NzA5NDkyMzIsLTg2MT
-E2NzA4NCw1NDI5NDY4MzAsLTI2MjM1MjEzOCwxMzU4NDM0NzY4
-LDE4MjM3MTgxMDcsMTc1Nzg1OTU0MywxMTA1ODQ5ODI3LC03MT
-M1ODkxNzcsLTIwMTA1NDE5NzYsMTM0MjI1MTI3OCwtMzY1Nzcx
-OTAxLDgwOTcwMDQ4NywtOTY1MzQ4NzgwLC0xMDgyMjQ1MzM4LD
-EzMzY3ODM5MiwtMTczNjIxNDA1MywtMTcyMjU2OTc4LC0xODY2
-Nzc0MjY3XX0=
+eyJoaXN0b3J5IjpbLTExMDExMzg3MjEsLTk3MDk0OTIzMiwtOD
+YxMTY3MDg0LDU0Mjk0NjgzMCwtMjYyMzUyMTM4LDEzNTg0MzQ3
+NjgsMTgyMzcxODEwNywxNzU3ODU5NTQzLDExMDU4NDk4MjcsLT
+cxMzU4OTE3NywtMjAxMDU0MTk3NiwxMzQyMjUxMjc4LC0zNjU3
+NzE5MDEsODA5NzAwNDg3LC05NjUzNDg3ODAsLTEwODIyNDUzMz
+gsMTMzNjc4MzkyLC0xNzM2MjE0MDUzLC0xNzIyNTY5NzgsLTE4
+NjY3NzQyNjddfQ==
 -->
