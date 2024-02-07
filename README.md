@@ -664,7 +664,7 @@ While the connector is loading, update a record in the `MySQL` database and simu
     Query OK, 1 row affected (0.01 sec)
     Rows matched: 1  Changed: 1  Warnings: 0
 
-In case, broker is configured with SASL_SSL/SSL/SASL_PLAINTEXT, Create `client.properties` file.
+In case, broker is configured with `SASL_SSL`, `SSL` or `SASL_PLAINTEXT, a properties a `client.properties` file .
 
     cat << EOF > /u01/cnfkfk/etc/ssl/client.properties
     security.protocol=SASL_SSL
@@ -699,11 +699,11 @@ sales_service.saleDB.sale
 schema-changes.sales
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMDc3ODAxMywxODIzNzE4MTA3LDE3NT
-c4NTk1NDMsMTEwNTg0OTgyNywtNzEzNTg5MTc3LC0yMDEwNTQx
-OTc2LDEzNDIyNTEyNzgsLTM2NTc3MTkwMSw4MDk3MDA0ODcsLT
-k2NTM0ODc4MCwtMTA4MjI0NTMzOCwxMzM2NzgzOTIsLTE3MzYy
-MTQwNTMsLTE3MjI1Njk3OCwtMTg2Njc3NDI2NywxNzQyNTUwNj
-A4LDIwNzc4NjYwOTQsLTEzNzMxNjgxOSw4NzI1OTQ1MDMsLTE0
-OTgwMTc1NTZdfQ==
+eyJoaXN0b3J5IjpbODYxMzUxMjkxLDE4MjM3MTgxMDcsMTc1Nz
+g1OTU0MywxMTA1ODQ5ODI3LC03MTM1ODkxNzcsLTIwMTA1NDE5
+NzYsMTM0MjI1MTI3OCwtMzY1NzcxOTAxLDgwOTcwMDQ4NywtOT
+Y1MzQ4NzgwLC0xMDgyMjQ1MzM4LDEzMzY3ODM5MiwtMTczNjIx
+NDA1MywtMTcyMjU2OTc4LC0xODY2Nzc0MjY3LDE3NDI1NTA2MD
+gsMjA3Nzg2NjA5NCwtMTM3MzE2ODE5LDg3MjU5NDUwMywtMTQ5
+ODAxNzU1Nl19
 -->
