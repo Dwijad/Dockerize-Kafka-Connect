@@ -42,6 +42,10 @@ spec:
       value: "SASL_SSL"
     - name: SCHEMA_REGISTRY_MODE
       value: "HTTP"
+    - name: KAFKA_HEAP_OPTS
+      value : "-Xmx512M -Xms512M"
+    - name: KAFKA_OPTS
+      value: "-Dlogging.level=INFO"
     resources: {}
   imagePullSecrets:
     - name: regcred
