@@ -450,7 +450,7 @@ Location for JMX configuration for Kafka connect metrics: `/u01/cnfkfk/etc/kafka
     
     Name: KAFKA_HEAP_OPTS
     Default value: -Xmx512M -Xms512M
-    Description: JAVA heap size
+    Description: Set the JVM heap size on the host
     
 
 ### Configure MySQL for log based change data capture(CDC)
@@ -677,11 +677,11 @@ Run kafka avro console consumer to view the change events.
  - https://docs.confluent.io/platform/current/connect/index.html
 https://kow3ns.github.io/kubernetes-kafka/manifests/kafka_micro.yaml
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3MDQwNzM1NiwtMzY1NzcxOTAxLDgwOT
-cwMDQ4NywtOTY1MzQ4NzgwLC0xMDgyMjQ1MzM4LDEzMzY3ODM5
-MiwtMTczNjIxNDA1MywtMTcyMjU2OTc4LC0xODY2Nzc0MjY3LD
-E3NDI1NTA2MDgsMjA3Nzg2NjA5NCwtMTM3MzE2ODE5LDg3MjU5
-NDUwMywtMTQ5ODAxNzU1NiwtMjA2NjYyNTUwMCwxMzk2NjA3MT
-M5LDE5ODk3NjM3MDEsLTEwNzc5NjQwNTgsMTQ0ODQwNTg4MCwt
-MzQ4ODU2NzgyXX0=
+eyJoaXN0b3J5IjpbOTgyMzQxNzcyLC0zNjU3NzE5MDEsODA5Nz
+AwNDg3LC05NjUzNDg3ODAsLTEwODIyNDUzMzgsMTMzNjc4Mzky
+LC0xNzM2MjE0MDUzLC0xNzIyNTY5NzgsLTE4NjY3NzQyNjcsMT
+c0MjU1MDYwOCwyMDc3ODY2MDk0LC0xMzczMTY4MTksODcyNTk0
+NTAzLC0xNDk4MDE3NTU2LC0yMDY2NjI1NTAwLDEzOTY2MDcxMz
+ksMTk4OTc2MzcwMSwtMTA3Nzk2NDA1OCwxNDQ4NDA1ODgwLC0z
+NDg4NTY3ODJdfQ==
 -->
