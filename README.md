@@ -638,10 +638,10 @@ The Debezium MySQL connector reads the binlog, produces change events for row-le
 The following connector will make use of Debezium source connector which records all changes made to the database and push these changes to the configured kafka topic when some insert/update/delete event  occur in the database.
 
     curl -k -X POST -H "Content-Type: application/json" --data '{
-        "name": "sales-connector",
+        "name": "sales_source",
         "config": {
                    "connector.class": "io.debezium.connector.mysql.MySqlConnector",
-                   "database.hostname": "host.minikube.internal",
+                   "database.hostname": "ec2-54-151-173-22.ap-southeast-1.compute.amazonaws.com",
                    "database.port": "3306",
                    "database.user": "cdcuser",
                    "database.password": "PasswOrd@123",
@@ -655,7 +655,7 @@ The following connector will make use of Debezium source connector which records
                    "key.converter.schema.registry.url": "https://sr-service-https.default.svc:8082",
                    "value.converter.schema.registry.url": "https://sr-service-https.default.svc:8082"
         }
-    }' https://connect-worker-1:8081/connectors/ | jq .
+    }' https://connect-worker-1:8082/connectors/ | jq .
 
 While the connector is loading, update a record in the `MySQL` database and simultaneously  run `kafka-avro-console-consumer` to view the change events.
 
@@ -693,11 +693,11 @@ Run kafka avro console consumer to view the change events.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MjM1MjEzOCwxMzU4NDM0NzY4LDE4Mj
-M3MTgxMDcsMTc1Nzg1OTU0MywxMTA1ODQ5ODI3LC03MTM1ODkx
-NzcsLTIwMTA1NDE5NzYsMTM0MjI1MTI3OCwtMzY1NzcxOTAxLD
-gwOTcwMDQ4NywtOTY1MzQ4NzgwLC0xMDgyMjQ1MzM4LDEzMzY3
-ODM5MiwtMTczNjIxNDA1MywtMTcyMjU2OTc4LC0xODY2Nzc0Mj
-Y3LDE3NDI1NTA2MDgsMjA3Nzg2NjA5NCwtMTM3MzE2ODE5LDg3
-MjU5NDUwM119
+eyJoaXN0b3J5IjpbNTQyOTQ2ODMwLC0yNjIzNTIxMzgsMTM1OD
+QzNDc2OCwxODIzNzE4MTA3LDE3NTc4NTk1NDMsMTEwNTg0OTgy
+NywtNzEzNTg5MTc3LC0yMDEwNTQxOTc2LDEzNDIyNTEyNzgsLT
+M2NTc3MTkwMSw4MDk3MDA0ODcsLTk2NTM0ODc4MCwtMTA4MjI0
+NTMzOCwxMzM2NzgzOTIsLTE3MzYyMTQwNTMsLTE3MjI1Njk3OC
+wtMTg2Njc3NDI2NywxNzQyNTUwNjA4LDIwNzc4NjYwOTQsLTEz
+NzMxNjgxOV19
 -->
