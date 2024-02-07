@@ -499,7 +499,7 @@ Again change the GTID Mode to “ON” and then exit the MySQL shell.
     SET @@GLOBAL.GTID_MODE = ON;
     exit
 
-Restart the MySQL server.
+Restart MySQL server.
 
     sudo systemctl restart mysqld
 
@@ -698,11 +698,11 @@ Run kafka avro console consumer to view the change events.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDExMzg3MjEsLTk3MDk0OTIzMiwtOD
-YxMTY3MDg0LDU0Mjk0NjgzMCwtMjYyMzUyMTM4LDEzNTg0MzQ3
-NjgsMTgyMzcxODEwNywxNzU3ODU5NTQzLDExMDU4NDk4MjcsLT
-cxMzU4OTE3NywtMjAxMDU0MTk3NiwxMzQyMjUxMjc4LC0zNjU3
-NzE5MDEsODA5NzAwNDg3LC05NjUzNDg3ODAsLTEwODIyNDUzMz
-gsMTMzNjc4MzkyLC0xNzM2MjE0MDUzLC0xNzIyNTY5NzgsLTE4
-NjY3NzQyNjddfQ==
+eyJoaXN0b3J5IjpbLTM3MDE1OTkyMCwtMTEwMTEzODcyMSwtOT
+cwOTQ5MjMyLC04NjExNjcwODQsNTQyOTQ2ODMwLC0yNjIzNTIx
+MzgsMTM1ODQzNDc2OCwxODIzNzE4MTA3LDE3NTc4NTk1NDMsMT
+EwNTg0OTgyNywtNzEzNTg5MTc3LC0yMDEwNTQxOTc2LDEzNDIy
+NTEyNzgsLTM2NTc3MTkwMSw4MDk3MDA0ODcsLTk2NTM0ODc4MC
+wtMTA4MjI0NTMzOCwxMzM2NzgzOTIsLTE3MzYyMTQwNTMsLTE3
+MjI1Njk3OF19
 -->
