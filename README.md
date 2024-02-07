@@ -1,6 +1,6 @@
 # Dockerize Confluent Kafka Connect
 
-Build and run docker image for secured Confluent kafka Connect worker with Debzeium MySQL connector and JDBC source/sink connector. Run the docker image using docker CLI or use a kubernetes manifest to create kafka connect cluster in a distributed way. 
+Build and run docker image for secured Confluent kafka Connect worker with Debzeium `MySQL` connector and `JDBC` source/sink connector. Run the docker image using docker CLI or use a kubernetes manifest to create kafka connect cluster in a distributed way. 
 
 The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka-connect)
 
@@ -23,7 +23,7 @@ Converters change the format of data from one format to another. The default con
 
 ### Build
 
-To build from scratch, clone the repo and copy kafka keystore and truststore certificates and public certificate authority (CA) file of kafka broker to `script/ca` folder.
+To build from scratch, clone the repo and copy kafka keystore/truststore certificates and public certificate authority (CA) file of kafka broker to `script/ca` folder.
 
     $ git clone https://github.com/Dwijad/Dockerize-Kafka-Connect.git
     $ copy {ca-cert, kafka.truststore.jks, kafka.keystore.jks} to ~/cloned-repo/script/ca 
@@ -699,11 +699,11 @@ Run kafka avro console consumer to view the change events.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MDk0OTIzMiwtODYxMTY3MDg0LDU0Mj
-k0NjgzMCwtMjYyMzUyMTM4LDEzNTg0MzQ3NjgsMTgyMzcxODEw
-NywxNzU3ODU5NTQzLDExMDU4NDk4MjcsLTcxMzU4OTE3NywtMj
-AxMDU0MTk3NiwxMzQyMjUxMjc4LC0zNjU3NzE5MDEsODA5NzAw
-NDg3LC05NjUzNDg3ODAsLTEwODIyNDUzMzgsMTMzNjc4MzkyLC
-0xNzM2MjE0MDUzLC0xNzIyNTY5NzgsLTE4NjY3NzQyNjcsMTc0
-MjU1MDYwOF19
+eyJoaXN0b3J5IjpbLTU4MzY5MDIwNCwtOTcwOTQ5MjMyLC04Nj
+ExNjcwODQsNTQyOTQ2ODMwLC0yNjIzNTIxMzgsMTM1ODQzNDc2
+OCwxODIzNzE4MTA3LDE3NTc4NTk1NDMsMTEwNTg0OTgyNywtNz
+EzNTg5MTc3LC0yMDEwNTQxOTc2LDEzNDIyNTEyNzgsLTM2NTc3
+MTkwMSw4MDk3MDA0ODcsLTk2NTM0ODc4MCwtMTA4MjI0NTMzOC
+wxMzM2NzgzOTIsLTE3MzYyMTQwNTMsLTE3MjI1Njk3OCwtMTg2
+Njc3NDI2N119
 -->
