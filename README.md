@@ -685,9 +685,12 @@ Run kafka avro console consumer to view the change events.
 ### References:
 
  - https://docs.confluent.io/platform/current/connect/index.html
-
+$ java --version
+java 17.0.10 2024-01-16 LTS
+Java(TM) SE Runtime Environment (build 17.0.10+11-LTS-240)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.10+11-LTS-240, mixed mode, sharing)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NjYxOTk1MSwxMTA1ODQ5ODI3LC03MT
+eyJoaXN0b3J5IjpbMTc1Nzg1OTU0MywxMTA1ODQ5ODI3LC03MT
 M1ODkxNzcsLTIwMTA1NDE5NzYsMTM0MjI1MTI3OCwtMzY1Nzcx
 OTAxLDgwOTcwMDQ4NywtOTY1MzQ4NzgwLC0xMDgyMjQ1MzM4LD
 EzMzY3ODM5MiwtMTczNjIxNDA1MywtMTcyMjU2OTc4LC0xODY2
