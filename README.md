@@ -658,7 +658,7 @@ The following connector will make use of Debezium source connector which records
         }
     }' https://connect-worker-1:8081/connectors/ | jq .
 
-While the connector is loading, Run `kafka-avro-console-consumer` to view the change events.
+While the connector is loading, update a record in the MySQL database and simultaneously  run `kafka-avro-console-consumer` to view the change events.
 
 Create `client.properties` file.
 
@@ -695,7 +695,7 @@ sales_service.saleDB.sale
 schema-changes.sales
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3NTIwNTIwNywxODIzNzE4MTA3LDE3NT
+eyJoaXN0b3J5IjpbLTI3NzMyNDQxNCwxODIzNzE4MTA3LDE3NT
 c4NTk1NDMsMTEwNTg0OTgyNywtNzEzNTg5MTc3LC0yMDEwNTQx
 OTc2LDEzNDIyNTEyNzgsLTM2NTc3MTkwMSw4MDk3MDA0ODcsLT
 k2NTM0ODc4MCwtMTA4MjI0NTMzOCwxMzM2NzgzOTIsLTE3MzYy
