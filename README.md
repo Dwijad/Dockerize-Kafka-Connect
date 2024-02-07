@@ -532,6 +532,8 @@ Create a databse/table and push some records
 ### Test
 #### Kafka env variable in container
 
+Exec into the container to list the environment variable.
+
     kafka@connect-worker-1:~$ env | grep KAFKA
     KAFKA_JMX_PORT=8080
     KAFKA_JMX_OPTS=-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=connect-worker-1 -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml
@@ -696,11 +698,11 @@ Run kafka avro console consumer to view the change events.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTU2MDkxNjUsNTQyOTQ2ODMwLC0yNj
-IzNTIxMzgsMTM1ODQzNDc2OCwxODIzNzE4MTA3LDE3NTc4NTk1
-NDMsMTEwNTg0OTgyNywtNzEzNTg5MTc3LC0yMDEwNTQxOTc2LD
-EzNDIyNTEyNzgsLTM2NTc3MTkwMSw4MDk3MDA0ODcsLTk2NTM0
-ODc4MCwtMTA4MjI0NTMzOCwxMzM2NzgzOTIsLTE3MzYyMTQwNT
-MsLTE3MjI1Njk3OCwtMTg2Njc3NDI2NywxNzQyNTUwNjA4LDIw
-Nzc4NjYwOTRdfQ==
+eyJoaXN0b3J5IjpbNjIyOTkyMTc5LDU0Mjk0NjgzMCwtMjYyMz
+UyMTM4LDEzNTg0MzQ3NjgsMTgyMzcxODEwNywxNzU3ODU5NTQz
+LDExMDU4NDk4MjcsLTcxMzU4OTE3NywtMjAxMDU0MTk3NiwxMz
+QyMjUxMjc4LC0zNjU3NzE5MDEsODA5NzAwNDg3LC05NjUzNDg3
+ODAsLTEwODIyNDUzMzgsMTMzNjc4MzkyLC0xNzM2MjE0MDUzLC
+0xNzIyNTY5NzgsLTE4NjY3NzQyNjcsMTc0MjU1MDYwOCwyMDc3
+ODY2MDk0XX0=
 -->
