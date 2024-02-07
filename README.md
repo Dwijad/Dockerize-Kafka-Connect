@@ -50,7 +50,7 @@ If the kafka broker is running on `SASL_SSL` or `SSL` mode then rebuild the dock
 
 #### Use case - I
 
-Run the Kafka connect docker image when Kafka broker listener is configured in PLAINTEXT mode. The schema registry is running in either secured or non-secured mode.
+Run the Kafka connect docker image when Kafka broker listener is configured in `PLAINTEXT` mode. The schema registry is running in either secured or non-secured mode.
 
     Schema registry is running in http
     $ docker run -d --name=connect-worker-1 -e BOOTSTRAP_SERVERS="kafka:9092" -e SECURITY_PROTOCOL="PLAINTEXT" -e LISTENER_PORT="8081" -e REST_ADVERTISED_LISTENER="http" -e SCHEMA_REGISTRY_MODE="HTTP" -e BROKER_LISTENER_MODE="PLAINTEXT" -e KAFKA_JMX_PORT="8080" -e SCHEMA_REGISTRY_URL="http://sr-service-http.default.svc:8081" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=$(KAFKA_JMX_HOSTNAME) -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml" dwijad/kafka-connect:latest 
@@ -61,7 +61,7 @@ Run the Kafka connect docker image when Kafka broker listener is configured in P
 Generated connect distributed properties files are [connect-distributed.properties.plaintext.with.sr.http](https://gist.github.com/Dwijad/4731a41a694eeb23fc3d9d5a389c6120) and [connect-distributed.properties.plaintext.with.sr.https](https://gist.github.com/Dwijad/e02e4d92e159fa83b77f7acf746a11b2)
 
 #### Use case - II
-Run Kafka connect worker with Kafka broker listener configured in SSL mode. The schema registry is running in either secured or non-secured mode.
+Run Kafka connect worker with Kafka broker listener configured in `SSL` mode. The schema registry is configued with https or http
 
     Schema registry is running in http
     $ docker run -d --name=connect-worker-1 -e BOOTSTRAP_SERVERS="kafka:9092" -e SECURITY_PROTOCOL="SSL" -e LISTENER_PORT="8081" -e REST_ADVERTISED_LISTENER="https" -e SCHEMA_REGISTRY_MODE="HTTP" -e BROKER_LISTENER_MODE="SSL" -e KAFKA_JMX_PORT="8080" -e SCHEMA_REGISTRY_URL="http://sr-service-http.default.svc:8081" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=$(KAFKA_JMX_HOSTNAME) -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml" dwijad/kafka-connect:latest         
@@ -693,11 +693,11 @@ Run kafka avro console consumer to view the change events.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQyOTQ2ODMwLC0yNjIzNTIxMzgsMTM1OD
-QzNDc2OCwxODIzNzE4MTA3LDE3NTc4NTk1NDMsMTEwNTg0OTgy
-NywtNzEzNTg5MTc3LC0yMDEwNTQxOTc2LDEzNDIyNTEyNzgsLT
-M2NTc3MTkwMSw4MDk3MDA0ODcsLTk2NTM0ODc4MCwtMTA4MjI0
-NTMzOCwxMzM2NzgzOTIsLTE3MzYyMTQwNTMsLTE3MjI1Njk3OC
-wtMTg2Njc3NDI2NywxNzQyNTUwNjA4LDIwNzc4NjYwOTQsLTEz
-NzMxNjgxOV19
+eyJoaXN0b3J5IjpbLTIwNDA1ODczMjksNTQyOTQ2ODMwLC0yNj
+IzNTIxMzgsMTM1ODQzNDc2OCwxODIzNzE4MTA3LDE3NTc4NTk1
+NDMsMTEwNTg0OTgyNywtNzEzNTg5MTc3LC0yMDEwNTQxOTc2LD
+EzNDIyNTEyNzgsLTM2NTc3MTkwMSw4MDk3MDA0ODcsLTk2NTM0
+ODc4MCwtMTA4MjI0NTMzOCwxMzM2NzgzOTIsLTE3MzYyMTQwNT
+MsLTE3MjI1Njk3OCwtMTg2Njc3NDI2NywxNzQyNTUwNjA4LDIw
+Nzc4NjYwOTRdfQ==
 -->
