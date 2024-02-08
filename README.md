@@ -1,6 +1,6 @@
 # Dockerize Confluent Kafka Connect
 
-Build and run docker image for secured Confluent kafka Connect worker with Debzeium MySQL connector and JDBC source/sink connector. Run the docker image using docker CLI or use a kubernetes manifest to create kafka connect cluster in a distributed way. 
+Build and run docker image for secured Confluent kafka Connect worker with Debzeium `MySQL` connector and `JDBC` source/sink connector. Run the docker image using docker CLI or use a kubernetes manifest to create kafka connect cluster in a distributed way.  Further, Kafka connect will be configured for converting data to and from in `AVRO` format.
 
 The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka-connect)
 
@@ -10,10 +10,9 @@ The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka
  - Install docker with buildx plugin as described [here](https://docs.docker.com/engine/install/ubuntu/)
  
  #### To run the docker image
- - You have  kafka cluster configured in any of the `PLAINTEXT`, `SSL`, `SASL_PLAINTEXT`, `SASL_SSL` mode.
- -  A schema registry server running with/without `SSL` mode.
- -  You want to convert data for Kafka Connect to and from in `AVRO` format.
- -  For testing query/log based CDC connector a `MySQL` DB server is configured .
+ - A kafka cluster configured in any of the `PLAINTEXT`, `SSL`, `SASL_PLAINTEXT`, `SASL_SSL` mode.
+ -  A schema registry server running with/without `SSL` mode
+ -  For testing query/log based CDC connector a `MySQL` DB server is already configured .
 
 ### About AVRO converter
 
@@ -23,10 +22,10 @@ Converters change the format of data from one format to another. The default con
 
 ### Build
 
-To build from scratch, clone the repo and copy kafka keystore and truststore certificates and public certificate authority (CA) file of kafka broker to `script/ca` folder.
+To build from scratch, clone the repo and copy kafka keystore/truststore certificates and public certificate authority (CA) file of kafka broker to `script/ca` folder.
 
     $ git clone https://github.com/Dwijad/Dockerize-Kafka-Connect.git
-    $ copy {ca-cert, kafka.truststore.jks, kafka.keystore.jks} to ~/cloned-repo/script/ca 
+    $ copy {ca-cert, kafka.truststore.jks, kafka.keystore.jks} to ~/Dockerize-Kafka-Connect/script/ca 
     $ DOCKER_BUILDKIT=1 docker buildx build -t dwijad/kafka-connect:latest --no-cache --progress=plain .
 
 Or rebuild the existing image using a `Dockerfile` like:
@@ -44,9 +43,9 @@ Or rebuild the existing image using a `Dockerfile` like:
      
 ### Run
 
-Create container from the docker image if the kafka broker's listener mode is configured on `PLAINTEXT` or `SASL_PLAINTEXT`  as described below (Use case - I and Use case - IV)
+Create container from docker image if the kafka broker's listener mode is configured on `PLAINTEXT` or `SASL_PLAINTEXT`  as described below (Use case - I and Use case - IV)
 
-If the kafka broker is running on `SASL_SSL` or `SSL` mode then rebuild the docker image as described above by incorporating the truststore/keystore file and public CA cert of your  kafka broker. (Use case II and  Use case III)
+If the kafka broker is running on `SASL_SSL` or `SSL` mode then rebuild the docker image as described above by incorporating the truststore/keystore file and public CA cert of  kafka broker. (Use case II and  Use case III)
 
 #### Use case - I
 
@@ -96,7 +95,7 @@ Generated connect distributed properties files are [connect-distributed.properti
 ### JMX
 To enable JMX, use the environmental variable `KAFKA_JMX_PORT` and `KAFKA_JMX_OPTS` The value for the environmental variable `KAFKA_JMX_HOSTNAME` will be picked up from container.
 
-    docker run -d --name=connect-worker-1 -e KAFKA_JMX_PORT="8080" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=$(KAFKA_JMX_HOSTNAME) -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml"
+    $ docker run -d --name=connect-worker-1 -e KAFKA_JMX_PORT="8080" -e KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.rmi.port=8080 -Djava.rmi.server.hostname=$(KAFKA_JMX_HOSTNAME) -javaagent:/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar=8080:/u01/cnfkfk/etc/kafka/kafka-connect.yml"
 
 Location for prometheus java agent: `/u01/cnfkfk/etc/kafka/jmx_prometheus_javaagent-0.20.0.jar`
 
@@ -500,7 +499,7 @@ Again change the GTID Mode to “ON” and then exit the MySQL shell.
     SET @@GLOBAL.GTID_MODE = ON;
     exit
 
-Restart the MySQL server.
+Restart MySQL server.
 
     sudo systemctl restart mysqld
 
@@ -699,11 +698,11 @@ Run kafka avro console consumer to view the change events.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2MTE2NzA4NCw1NDI5NDY4MzAsLTI2Mj
-M1MjEzOCwxMzU4NDM0NzY4LDE4MjM3MTgxMDcsMTc1Nzg1OTU0
-MywxMTA1ODQ5ODI3LC03MTM1ODkxNzcsLTIwMTA1NDE5NzYsMT
-M0MjI1MTI3OCwtMzY1NzcxOTAxLDgwOTcwMDQ4NywtOTY1MzQ4
-NzgwLC0xMDgyMjQ1MzM4LDEzMzY3ODM5MiwtMTczNjIxNDA1My
-wtMTcyMjU2OTc4LC0xODY2Nzc0MjY3LDE3NDI1NTA2MDgsMjA3
-Nzg2NjA5NF19
+eyJoaXN0b3J5IjpbMTkyMjc1MzQ2NywtMTEwMjg1NjIwNSwtMz
+cwMTU5OTIwLC0xMTAxMTM4NzIxLC05NzA5NDkyMzIsLTg2MTE2
+NzA4NCw1NDI5NDY4MzAsLTI2MjM1MjEzOCwxMzU4NDM0NzY4LD
+E4MjM3MTgxMDcsMTc1Nzg1OTU0MywxMTA1ODQ5ODI3LC03MTM1
+ODkxNzcsLTIwMTA1NDE5NzYsMTM0MjI1MTI3OCwtMzY1NzcxOT
+AxLDgwOTcwMDQ4NywtOTY1MzQ4NzgwLC0xMDgyMjQ1MzM4LDEz
+MzY3ODM5Ml19
 -->
