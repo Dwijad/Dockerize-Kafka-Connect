@@ -12,7 +12,7 @@ The image is available in the [Docker Hub](https://hub.docker.com/r/dwijad/kafka
  #### To run the docker image
  - A kafka cluster configured in any of the `PLAINTEXT`, `SSL`, `SASL_PLAINTEXT`, `SASL_SSL` mode.
  -  A schema registry server running with/without `SSL` mode
- -  For testing query/log based CDC connector a `MySQL` DB server is configured .
+ -  For testing query/log based CDC connector a `MySQL` DB server is already configured .
 
 ### About AVRO converter
 
@@ -698,11 +698,11 @@ Run kafka avro console consumer to view the change events.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDI4NTYyMDUsLTM3MDE1OTkyMCwtMT
-EwMTEzODcyMSwtOTcwOTQ5MjMyLC04NjExNjcwODQsNTQyOTQ2
-ODMwLC0yNjIzNTIxMzgsMTM1ODQzNDc2OCwxODIzNzE4MTA3LD
-E3NTc4NTk1NDMsMTEwNTg0OTgyNywtNzEzNTg5MTc3LC0yMDEw
-NTQxOTc2LDEzNDIyNTEyNzgsLTM2NTc3MTkwMSw4MDk3MDA0OD
-csLTk2NTM0ODc4MCwtMTA4MjI0NTMzOCwxMzM2NzgzOTIsLTE3
-MzYyMTQwNTNdfQ==
+eyJoaXN0b3J5IjpbMTkyMjc1MzQ2NywtMTEwMjg1NjIwNSwtMz
+cwMTU5OTIwLC0xMTAxMTM4NzIxLC05NzA5NDkyMzIsLTg2MTE2
+NzA4NCw1NDI5NDY4MzAsLTI2MjM1MjEzOCwxMzU4NDM0NzY4LD
+E4MjM3MTgxMDcsMTc1Nzg1OTU0MywxMTA1ODQ5ODI3LC03MTM1
+ODkxNzcsLTIwMTA1NDE5NzYsMTM0MjI1MTI3OCwtMzY1NzcxOT
+AxLDgwOTcwMDQ4NywtOTY1MzQ4NzgwLC0xMDgyMjQ1MzM4LDEz
+MzY3ODM5Ml19
 -->
