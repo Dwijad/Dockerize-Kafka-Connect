@@ -3,7 +3,6 @@
 HOSTNAME=$(hostname -f)
 echo export KAFKA_JMX_HOSTNAME=$HOSTNAME >> .bashrc
 . .bashrc
-
 KAFKA_HOME=/u01/cnfkfk
 
 cat << EOF > $KAFKA_HOME/etc/kafka/connect-distributed.properties
@@ -279,4 +278,5 @@ EOF
 fi
 fi
 
+connect-distributed $KAFKA_HOME/etc/kafka/connect-distributed.properties  & echo $! > $KAFKA_HOME/etc/kafka/connect-distributed.pid &
 sleep infinity
