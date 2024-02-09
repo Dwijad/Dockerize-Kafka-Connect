@@ -196,7 +196,7 @@ ENV KAFKA_VERSION=$kafka_version \
 
 ENV PATH=${PATH}:${KAFKA_HOME}/bin
 USER root
-WORKDIR /u01/cnfkfk
+WORKDIR $KAFKA_HOME
 
 RUN set -eux  \
     && apt-get update  \
@@ -206,18 +206,18 @@ RUN set -eux  \
     && apt autoremove -y  \
     && apt -f install  \
     && apt-get install -y --no-install-recommends netcat sudo \
-    && mkdir -p /u01/cnfkfk  \
+    && mkdir -p $KAFKA_HOME  \
     && groupadd --gid $GID $USERNAME \
-    && adduser --uid $UID --gid $GID --disabled-password --gecos "" kafka --home /u01/cnfkfk --shell /bin/bash \
+    && adduser --uid $UID --gid $GID --disabled-password --gecos "" kafka --home $KAFKA_HOME --shell /bin/bash \
     && sudo echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME \
-    && cp -r /etc/skel/.[^.]* /u01/cnfkfk \
-    && mkdir -p /u01/cnfkfk/java \
+    && cp -r /etc/skel/.[^.]* $KAFKA_HOME \
+    && mkdir -p $KAFKA_HOME/java \
     && chown -R kafka:kafka /u01 \
-    && chmod -R 755  /u01/cnfkfk 
+    && chmod -R 755  $KAFKA_HOME 
 
 USER kafka
-WORKDIR /u01/cnfkfk
+WORKDIR $KAFKA_HOME
 
 ADD --chown=kafka:kafka --chmod=755 https://packages.confluent.io/archive/7.5/confluent-community-7.5.3.tar.gz /u01/cnfkfk/
 ADD --chown=kafka:kafka --chmod=755 https://download.oracle.com/java/17/archive/jdk-17.0.10_linux-x64_bin.tar.gz /u01/cnfkfk/
@@ -227,40 +227,38 @@ ADD --chown=kafka:kafka --chmod=755 https://repo1.maven.org/maven2/io/debezium/d
 ADD --chown=kafka:kafka --chmod=755 https://repo.maven.apache.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/0.20.0/jmx_prometheus_javaagent-0.20.0.jar /u01/cnfkfk/etc/kafka/
 ADD --chown=kafka:kafka --chmod=755 config/kafka-connect.yml $KAFKA_HOME/etc/kafka
 
-RUN ls -l /u01/cnfkfk && \
-    mkdir -p /u01/cnfkfk/java && \
-    tar -zx -C /u01/cnfkfk/java --strip-components=1 -f jdk-17.0.10_linux-x64_bin.tar.gz && \
+RUN mkdir -p $KAFKA_HOME/java && \
+    tar -zx -C $KAFKA_HOME/java --strip-components=1 -f jdk-17.0.10_linux-x64_bin.tar.gz && \
     rm -f jdk-17.0.10_linux-x64_bin.tar.gz && \
     unzip confluentinc-kafka-connect-jdbc-10.7.4.zip && \
-    mkdir -p /u01/cnfkfk/share/java/kafka-connect-jdbc && \
-    mv confluentinc-kafka-connect-jdbc-10.7.4/lib/* /u01/cnfkfk/share/java/kafka-connect-jdbc/ && \
+    mkdir -p $KAFKA_HOME/share/java/kafka-connect-jdbc && \
+    mv confluentinc-kafka-connect-jdbc-10.7.4/lib/* $KAFKA_HOME/share/java/kafka-connect-jdbc/ && \
     rm -rf confluentinc* && \
-    mv mariadb-java-client-3.3.2.jar /u01/cnfkfk/share/java/kafka-connect-jdbc/ && \
-    tar -zx -C /u01/cnfkfk --strip-components=1 -f confluent-community-7.5.3.tar.gz && \
+    mv mariadb-java-client-3.3.2.jar $KAFKA_HOME/share/java/kafka-connect-jdbc/ && \
+    tar -zx -C $KAFKA_HOME --strip-components=1 -f confluent-community-7.5.3.tar.gz && \
     rm -rf confluent* && \
-    tar -zx -C /u01/cnfkfk/share/java/kafka-connect-jdbc --strip-components=1 -f debezium-connector-mysql-2.4.2.Final-plugin.tar.gz && \
+    tar -zx -C $KAFKA_HOME/share/java/kafka-connect-jdbc --strip-components=1 -f debezium-connector-mysql-2.4.2.Final-plugin.tar.gz && \
     rm -rf debezium-connector-mysql-2.4.2.Final-plugin.tar.gz && \
-    chown -R kafka:kafka /u01/cnfkfk && \
-    mkdir -p /u01/cnfkfk/etc/ssl
+    chown -R kafka:kafka $KAFKA_HOME && \
+    mkdir -p $KAFKA_HOME/etc/ssl
 
 ADD --chown=kafka:kafka --chmod=755 script/generate_pem_cert.sh $KAFKA_HOME/etc/ssl
 ADD --chown=kafka:kafka --chmod=755 script/ca/ $KAFKA_HOME/etc/ssl/
 ADD --chown=kafka:kafka --chmod=755 config/connect-log4j.properties $KAFKA_HOME/etc/kafka
 
-WORKDIR /u01/cnfkfk/
+WORKDIR $KAFKA_HOME
 
-ENV PATH="${PATH}:/u01/cnfkfk/java/bin:/u01/cnfkfk/bin" 
-ENV JAVA_HOME="/u01/cnfkfk/java"
-#ENV CNFKC_HOME="/u01/cnfkfk/" 
-ENV CLASSPATH="${CLASSPATH}:/u01/cnfkfk/share/java/kafka-connect-jdbc/*:/u01/cnfkfk/share/java/kafka/*"
+ENV PATH="${PATH}:$KAFKA_HOME/java/bin:$KAFKA_HOME/bin" 
+ENV JAVA_HOME="$KAFKA_HOME/java"
+ENV CLASSPATH="${CLASSPATH}:$KAFKA_HOME/share/java/kafka-connect-jdbc/*:$KAFKA_HOME/share/java/kafka/*"
 
-WORKDIR /u01/cnfkfk/etc/ssl
+WORKDIR $KAFKA_HOME/etc/ssl
 
 RUN chmod u+x $KAFKA_HOME/etc/ssl/generate_pem_cert.sh \    
     && $KAFKA_HOME/etc/ssl/generate_pem_cert.sh  
 
 
-WORKDIR /u01/cnfkfk
+WORKDIR $KAFKA_HOME
 ADD --chown=kafka:kafka --chmod=755 script/start.sh $KAFKA_HOME
 
 
