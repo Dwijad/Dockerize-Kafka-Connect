@@ -182,7 +182,7 @@ Environmental variables used in the Dockerfile are listed below.
     Default value: 500
     Description: The amount of time to wait by kafka connect before attempting to retry a failed fetch request to a given topic partition.
     
-    Name: SECURITY.PROTOCOL
+    Name: SECURITY_PROTOCOL
     Default value: SASL_SSL
     Description: The security protocol used by kafka connect while connecting to kafka broker.
     
@@ -698,11 +698,11 @@ Run kafka avro console consumer to view the change events.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMjc1MzQ2NywtMTEwMjg1NjIwNSwtMz
-cwMTU5OTIwLC0xMTAxMTM4NzIxLC05NzA5NDkyMzIsLTg2MTE2
-NzA4NCw1NDI5NDY4MzAsLTI2MjM1MjEzOCwxMzU4NDM0NzY4LD
-E4MjM3MTgxMDcsMTc1Nzg1OTU0MywxMTA1ODQ5ODI3LC03MTM1
-ODkxNzcsLTIwMTA1NDE5NzYsMTM0MjI1MTI3OCwtMzY1NzcxOT
-AxLDgwOTcwMDQ4NywtOTY1MzQ4NzgwLC0xMDgyMjQ1MzM4LDEz
-MzY3ODM5Ml19
+eyJoaXN0b3J5IjpbLTI4Mjc2NDk1MCwxOTIyNzUzNDY3LC0xMT
+AyODU2MjA1LC0zNzAxNTk5MjAsLTExMDExMzg3MjEsLTk3MDk0
+OTIzMiwtODYxMTY3MDg0LDU0Mjk0NjgzMCwtMjYyMzUyMTM4LD
+EzNTg0MzQ3NjgsMTgyMzcxODEwNywxNzU3ODU5NTQzLDExMDU4
+NDk4MjcsLTcxMzU4OTE3NywtMjAxMDU0MTk3NiwxMzQyMjUxMj
+c4LC0zNjU3NzE5MDEsODA5NzAwNDg3LC05NjUzNDg3ODAsLTEw
+ODIyNDUzMzhdfQ==
 -->
